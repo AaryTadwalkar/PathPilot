@@ -95,10 +95,17 @@ export async function sendChatMessage(
   message: string,
   sessionId?: number
 ): Promise<ChatResponse> {
+  // Read user_id from localStorage so backend can fetch their saved profile
+  const storedUser = typeof window !== "undefined" ? localStorage.getItem("user") : null;
+  const userId = storedUser ? JSON.parse(storedUser)?.id : undefined;
+
   const body: Record<string, unknown> = { message };
   if (sessionId) body.session_id = sessionId;
+  if (userId) body.user_id = userId;
+
   return apiRequest<ChatResponse>("/learning/chat", { method: "POST", body: JSON.stringify(body) });
 }
+
 
 export async function generateLearningPath(payload: {
   goal_id: string;

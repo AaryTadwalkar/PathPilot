@@ -92,7 +92,7 @@ def _extract_text_via_vision(doc: fitz.Document) -> str:
         ))
 
         response = client.models.generate_content(
-            model="gemini-2.5-flash",
+            model="gemini-3.6-flash",
             contents=parts,
         )
         extracted = response.text.strip()
@@ -306,7 +306,7 @@ def extract_profile_data(resume_text: str) -> dict:
         for attempt in range(3):
             try:
                 response = client.models.generate_content(
-                    model="gemini-2.5-flash",
+                    model="gemini-3.6-flash",
                     contents=prompt,
                 )
                 break

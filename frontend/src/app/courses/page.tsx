@@ -51,24 +51,24 @@ export default function CoursesPage() {
   return (
     <div className="min-h-screen bg-brand-bg flex flex-col">
       <header className="bg-brand-bg border-b border-brand-border h-16 flex items-center px-6 sticky top-0 z-10">
-        <Button variant="ghost" size="icon" onClick={() => router.push("/")} className="mr-4 text-brand-text hover:text-white">
+        <Button variant="ghost" size="icon" onClick={() => router.push("/")} className="mr-4 text-brand-text hover:text-brand-heading">
           <ArrowLeft className="h-5 w-5" />
         </Button>
         <BookOpen className="h-6 w-6 text-brand-primary mr-2" />
-        <h1 className="text-xl font-bold text-white">Course Explorer</h1>
+        <h1 className="text-xl font-bold text-brand-heading">Course Explorer</h1>
       </header>
 
       <main className="flex-grow max-w-7xl w-full mx-auto p-6 space-y-6">
         
         {/* Search & Filters */}
-        <div className="bg-white/5 border border-white/10 rounded-xl p-4 flex flex-col md:flex-row gap-4">
+        <div className="bg-white shadow-sm border border-brand-border rounded-xl p-4 flex flex-col md:flex-row gap-4">
           <div className="relative flex-grow">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-brand-text" />
             <Input 
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search for courses, skills, or topics..." 
-              className="pl-10 bg-black/20 border-white/10 text-white w-full"
+              className="pl-10 bg-white shadow-inner border-brand-border text-brand-heading w-full"
             />
           </div>
           <div className="flex gap-2">
@@ -76,7 +76,7 @@ export default function CoursesPage() {
               <Button 
                 key={level} 
                 variant={levelFilter === level ? "default" : "outline"}
-                className={levelFilter === level ? "bg-brand-primary text-white" : "text-brand-text border-white/20"}
+                className={levelFilter === level ? "bg-brand-primary text-white" : "text-brand-text border-gray-300"}
                 onClick={() => setLevelFilter(level)}
               >
                 {level}
@@ -91,7 +91,7 @@ export default function CoursesPage() {
             <Button
               key={domain}
               variant="ghost"
-              className={`rounded-full px-4 text-sm whitespace-nowrap ${domainFilter === domain ? 'bg-white/20 text-white' : 'text-brand-text hover:bg-white/10'}`}
+              className={`rounded-full px-4 text-sm whitespace-nowrap ${domainFilter === domain ? 'bg-gray-200 text-brand-heading' : 'text-brand-text hover:bg-gray-100'}`}
               onClick={() => setDomainFilter(domain)}
             >
               {domain}
@@ -111,13 +111,13 @@ export default function CoursesPage() {
         ) : filteredCourses.length === 0 ? (
           <div className="text-center py-20">
             <BookOpen className="h-16 w-16 text-brand-text mx-auto mb-4 opacity-30" />
-            <h2 className="text-xl text-white font-bold mb-2">No courses found</h2>
+            <h2 className="text-xl text-brand-heading font-bold mb-2">No courses found</h2>
             <p className="text-brand-text">Try adjusting your search or filters.</p>
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredCourses.map(course => (
-              <Card key={course.id} className="bg-white/5 border-white/10 hover:border-white/20 transition-colors flex flex-col h-full">
+              <Card key={course.id} className="bg-white shadow-sm border-brand-border hover:border-gray-300 transition-colors flex flex-col h-full">
                 <CardContent className="p-5 flex flex-col flex-grow">
                   <div className="flex justify-between items-start mb-3">
                     <span className="text-xs font-semibold px-2 py-1 bg-brand-secondary text-brand-primary rounded">{course.provider}</span>
@@ -129,17 +129,17 @@ export default function CoursesPage() {
                     </div>
                   </div>
                   
-                  <h3 className="font-bold text-white text-lg mb-2">{course.title}</h3>
+                  <h3 className="font-bold text-brand-heading text-lg mb-2">{course.title}</h3>
                   <p className="text-sm text-brand-text mb-4 line-clamp-2 flex-grow">{course.description}</p>
                   
                   <div className="flex flex-wrap gap-1 mb-4">
                     {course.skills_taught.slice(0, 3).map(skill => (
-                      <span key={skill} className="text-[10px] px-2 py-0.5 bg-white/10 text-white rounded-full">{skill}</span>
+                      <span key={skill} className="text-[10px] px-2 py-0.5 bg-gray-100 text-brand-heading rounded-full">{skill}</span>
                     ))}
                     {course.skills_taught.length > 3 && <span className="text-[10px] px-2 py-0.5 text-brand-text">+{course.skills_taught.length - 3}</span>}
                   </div>
                   
-                  <div className="flex justify-between items-center pt-4 border-t border-white/10 mt-auto">
+                  <div className="flex justify-between items-center pt-4 border-t border-brand-border mt-auto">
                     <span className="text-xs text-brand-text flex items-center"><BookOpen className="w-3 h-3 mr-1"/> {course.duration_hours}h</span>
                     <a href={course.url} target="_blank" rel="noreferrer" className="flex items-center text-sm text-brand-primary hover:text-brand-primary/80 transition-colors">
                       View Course <ArrowRight className="w-4 h-4 ml-1" />

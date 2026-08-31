@@ -112,7 +112,7 @@ export default function LearningPathPage() {
     return (
       <div className="min-h-screen bg-brand-bg flex flex-col items-center justify-center p-4">
         <Map className="h-16 w-16 text-brand-text mb-4 opacity-50" />
-        <h2 className="text-2xl font-bold text-white mb-2">No Learning Path Yet</h2>
+        <h2 className="text-2xl font-bold text-brand-heading mb-2">No Learning Path Yet</h2>
         <p className="text-brand-text mb-6 text-center max-w-md">You haven't generated a learning path yet. Chat with PathPilot to create one tailored to your goals.</p>
         <Button onClick={() => router.push("/chat")} className="bg-brand-primary hover:bg-brand-primary/90">
           Create Learning Path
@@ -128,68 +128,68 @@ export default function LearningPathPage() {
   return (
     <div className="min-h-screen bg-brand-bg flex flex-col">
       <header className="bg-brand-bg border-b border-brand-border h-16 flex items-center px-6 sticky top-0 z-10">
-        <Button variant="ghost" size="icon" onClick={() => router.push("/")} className="mr-4 text-brand-text hover:text-white">
+        <Button variant="ghost" size="icon" onClick={() => router.push("/")} className="mr-4 text-brand-text hover:text-brand-heading">
           <ArrowLeft className="h-5 w-5" />
         </Button>
         <Map className="h-6 w-6 text-brand-primary mr-2" />
-        <h1 className="text-xl font-bold text-white">My Learning Path</h1>
+        <h1 className="text-xl font-bold text-brand-heading">My Learning Path</h1>
       </header>
 
       <main className="flex-grow max-w-7xl w-full mx-auto p-6 space-y-6">
         
         {/* Top Stats Bar */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-          <Card className="bg-white/5 border-white/10">
+          <Card className="bg-white shadow-sm border-brand-border">
             <CardContent className="p-4 flex items-center gap-4">
               <div className="h-10 w-10 rounded-full bg-brand-secondary flex items-center justify-center">
                 <BookOpen className="h-5 w-5 text-brand-primary" />
               </div>
               <div>
                 <p className="text-sm text-brand-text">Total Courses</p>
-                <p className="text-2xl font-bold text-white">{pathData.total_courses}</p>
+                <p className="text-2xl font-bold text-brand-heading">{pathData.total_courses}</p>
               </div>
             </CardContent>
           </Card>
           
-          <Card className="bg-white/5 border-white/10">
+          <Card className="bg-white shadow-sm border-brand-border">
             <CardContent className="p-4 flex items-center gap-4">
               <div className="h-10 w-10 rounded-full bg-blue-500/20 flex items-center justify-center">
                 <Clock className="h-5 w-5 text-blue-400" />
               </div>
               <div>
                 <p className="text-sm text-brand-text">Estimated Time</p>
-                <p className="text-2xl font-bold text-white">{pathData.total_weeks} weeks</p>
+                <p className="text-2xl font-bold text-brand-heading">{pathData.total_weeks} weeks</p>
               </div>
             </CardContent>
           </Card>
           
-          <Card className="bg-white/5 border-white/10">
+          <Card className="bg-white shadow-sm border-brand-border">
             <CardContent className="p-4 flex items-center gap-4">
               <div className="h-10 w-10 rounded-full bg-green-500/20 flex items-center justify-center">
                 <CheckCircle className="h-5 w-5 text-green-400" />
               </div>
               <div>
                 <p className="text-sm text-brand-text">Completed</p>
-                <p className="text-2xl font-bold text-white">{completedCourses.size}</p>
+                <p className="text-2xl font-bold text-brand-heading">{completedCourses.size}</p>
               </div>
             </CardContent>
           </Card>
 
-          <Card className="bg-white/5 border-white/10">
+          <Card className="bg-white shadow-sm border-brand-border">
             <CardContent className="p-4 flex items-center gap-4">
               <div className="h-10 w-10 rounded-full bg-orange-500/20 flex items-center justify-center">
                 <Award className="h-5 w-5 text-orange-400" />
               </div>
               <div>
                 <p className="text-sm text-brand-text">Progress</p>
-                <p className="text-2xl font-bold text-white">{completionPercentage}%</p>
+                <p className="text-2xl font-bold text-brand-heading">{completionPercentage}%</p>
               </div>
             </CardContent>
           </Card>
         </div>
 
         {/* Progress Bar */}
-        <div className="w-full bg-white/10 rounded-full h-2.5 mb-6">
+        <div className="w-full bg-gray-100 rounded-full h-2.5 mb-6">
           <div className="bg-brand-primary h-2.5 rounded-full transition-all duration-500" style={{ width: `${completionPercentage}%` }}></div>
         </div>
 
@@ -197,12 +197,12 @@ export default function LearningPathPage() {
           
           {/* Main Phases Content */}
           <div className="flex-grow space-y-4">
-            <h2 className="text-2xl font-bold text-white mb-4">Goal: {pathData.goal_name}</h2>
+            <h2 className="text-2xl font-bold text-brand-heading mb-4">Goal: {pathData.goal_name}</h2>
             
             {pathData.phases.map((phase) => (
-              <Card key={phase.phase_number} className="bg-white/5 border-white/10 overflow-hidden">
+              <Card key={phase.phase_number} className="bg-white shadow-sm border-brand-border overflow-hidden">
                 <div 
-                  className="p-4 cursor-pointer hover:bg-white/5 transition-colors flex justify-between items-center"
+                  className="p-4 cursor-pointer hover:bg-white shadow-sm transition-colors flex justify-between items-center"
                   onClick={() => togglePhase(phase.phase_number)}
                 >
                   <div className="flex items-center gap-4">
@@ -210,7 +210,7 @@ export default function LearningPathPage() {
                       {phase.phase_number}
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-white">{phase.phase_name}</h3>
+                      <h3 className="text-lg font-bold text-brand-heading">{phase.phase_name}</h3>
                       <p className="text-sm text-brand-text">{phase.estimated_weeks} weeks</p>
                     </div>
                   </div>
@@ -218,18 +218,18 @@ export default function LearningPathPage() {
                 </div>
                 
                 {expandedPhases.has(phase.phase_number) && (
-                  <div className="p-4 border-t border-white/10 bg-black/20">
+                  <div className="p-4 border-t border-brand-border bg-white shadow-inner">
                     <p className="text-brand-text mb-4 text-sm">{phase.description}</p>
                     
                     <div className="flex flex-wrap gap-2 mb-6">
                       {phase.skills_gained.map(skill => (
-                        <span key={skill} className="px-2 py-1 bg-white/10 text-xs rounded text-white">{skill}</span>
+                        <span key={skill} className="px-2 py-1 bg-gray-100 text-xs rounded text-brand-heading">{skill}</span>
                       ))}
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                       {phase.courses.map(course => (
-                        <Card key={course.id} className="bg-white/5 border-white/10 hover:border-white/20 transition-colors flex flex-col">
+                        <Card key={course.id} className="bg-white shadow-sm border-brand-border hover:border-gray-300 transition-colors flex flex-col">
                           <CardContent className="p-4 flex-grow flex flex-col">
                             <div className="flex justify-between items-start mb-2">
                               <span className="text-xs font-semibold px-2 py-1 bg-brand-secondary text-brand-primary rounded">{course.provider}</span>
@@ -237,12 +237,12 @@ export default function LearningPathPage() {
                                 {course.level}
                               </span>
                             </div>
-                            <h4 className="font-bold text-white text-sm mb-1 line-clamp-2">{course.title}</h4>
+                            <h4 className="font-bold text-brand-heading text-sm mb-1 line-clamp-2">{course.title}</h4>
                             <p className="text-xs text-brand-text mb-3">{course.duration_hours} hours</p>
                             
                             <p className="text-xs text-brand-text mb-4 line-clamp-3 italic flex-grow">"{course.why_recommended}"</p>
                             
-                            <div className="flex justify-between items-center mt-auto pt-4 border-t border-white/10">
+                            <div className="flex justify-between items-center mt-auto pt-4 border-t border-brand-border">
                               <Button 
                                 variant="ghost" 
                                 size="sm" 
@@ -268,7 +268,7 @@ export default function LearningPathPage() {
 
           {/* Side Panel */}
           <div className="w-full lg:w-80 flex-shrink-0 space-y-4">
-            <Card className="bg-white/5 border-white/10">
+            <Card className="bg-white shadow-sm border-brand-border">
               <CardHeader className="p-4 pb-2">
                 <CardTitle className="text-sm uppercase text-brand-text tracking-wider">Target Skills (Gaps)</CardTitle>
               </CardHeader>
@@ -284,7 +284,7 @@ export default function LearningPathPage() {
               </CardContent>
             </Card>
 
-            <Card className="bg-white/5 border-white/10">
+            <Card className="bg-white shadow-sm border-brand-border">
               <CardHeader className="p-4 pb-2">
                 <CardTitle className="text-sm uppercase text-brand-text tracking-wider">Already Known</CardTitle>
               </CardHeader>

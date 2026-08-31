@@ -1,74 +1,97 @@
-# PathPilot 🎯 — AI-Powered Personalized Learning Path Recommender
+# PathPilot 🎯
+### AI-Powered Personalized Learning Path Recommender
 
-[![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi)](https://fastapi.tiangolo.com)
-[![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=next.js&logoColor=white)](https://nextjs.org/)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
-[![Gemini AI](https://img.shields.io/badge/Google%20Gemini-4285F4?style=flat&logo=google&logoColor=white)](https://ai.google.dev/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
+[![Next.js](https://img.shields.io/badge/Next.js_15-000000?style=flat&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL_15-316192?style=flat&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+[![pgvector](https://img.shields.io/badge/pgvector-0064a5?style=flat&logo=postgresql&logoColor=white)](https://github.com/pgvector/pgvector)
+[![Gemini AI](https://img.shields.io/badge/Google_Gemini-4285F4?style=flat&logo=google&logoColor=white)](https://ai.google.dev/)
+[![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)](https://docker.com)
 
----
-
-## 📖 Problem Statement
-Online learning platforms offer thousands of courses, but learners struggle to identify the **right sequence** of resources needed to reach a specific goal. A one-size-fits-all approach is ineffective given different skill levels, interests, and learning preferences.
-
-**PathPilot** bridges this gap with an AI-powered Personalized Learning Path Recommender that understands a learner's profile, identifies skill gaps, and generates a structured, ordered learning roadmap tailored to the individual.
+> **Hackathon Project** — Built for the AI-Powered Personalized Learning Path Recommender Challenge 2026
 
 ---
 
-## ✨ Key Features
+## 📌 Problem Statement
+
+Online learning platforms offer thousands of courses, but learners face three core problems:
+
+- **No clear sequence** — which course do I take first?
+- **No personalization** — recommendations ignore existing skills
+- **No goal alignment** — courses aren't mapped to career outcomes
+
+**PathPilot** solves all three. It understands your background from your resume, converses with you to understand your goal, identifies your exact skill gaps, and generates a **structured, phase-by-phase learning roadmap** tailored entirely to you.
+
+---
+
+## ✨ Features
 
 | Feature | Description |
 |---|---|
-| 🤖 **AI Conversational Interface** | Chat with an AI assistant that understands your goals in natural language |
-| 🧠 **Learner Profiling Engine** | Captures interests, experience level, current skills, and learning objectives |
-| 🗺️ **Learning Path Generator** | Generates prerequisite-aware, phased learning roadmaps |
-| 📚 **Course Recommendation Engine** | Semantically matches courses from a curated catalog to your skill gaps |
-| 💬 **AI Explainability** | Every recommendation comes with a "why this?" explanation |
-| 📊 **Progress Dashboard** | Visual skill development tracking, milestone completion, and next actions |
-| 🔍 **Course Explorer** | Browse and search 60+ curated courses across all tech domains |
+| 📄 **Resume-Aware Profiling** | Upload your PDF resume — AI extracts your skills automatically. No manual entry. |
+| 🤖 **Conversational Goal Detection** | One-message chat: just say your goal, AI knows your profile already |
+| 🗺️ **Phased Learning Path Generator** | Prerequisite-aware, ordered roadmap across beginner → advanced |
+| 🎯 **Skill Gap Analysis** | Compares your current skills against goal requirements |
+| 🔍 **Course Explorer** | Search and filter 50+ curated courses by domain, level, and skill |
+| 📊 **Progress Dashboard** | Visual skill radar, completion stats, and active path tracker |
+| ✅ **Progress Tracking** | Mark courses complete, track your journey phase by phase |
+| 🔐 **Secure Auth** | JWT + OTP email verification |
 
 ---
 
 ## 🏗 System Architecture
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                    PathPilot Frontend                       │
-│              Next.js 16 (App Router) + TypeScript           │
-│  /chat  /learning-path  /dashboard  /courses  /profile      │
-└─────────────────┬────────────────────────────────────────────┘
-                  │ HTTP (REST API)
-┌─────────────────▼────────────────────────────────────────────┐
-│                    PathPilot Backend                        │
-│                FastAPI + Python 3.11                        │
+┌──────────────────────────────────────────────────────────────┐
+│                    PathPilot Frontend                        │
+│          Next.js 15 · TypeScript · Tailwind CSS v4           │
 │                                                              │
-│  ┌─────────────┐  ┌──────────────┐  ┌───────────────────┐  │
-│  │ Chat Engine │  │ Path Generator│  │ Skill Gap Engine  │  │
-│  │  (Gemini)   │  │(Prereq Graph)│  │ (Knowledge Gaps)  │  │
-│  └─────────────┘  └──────────────┘  └───────────────────┘  │
-│  ┌─────────────┐  ┌──────────────┐  ┌───────────────────┐  │
-│  │Recommender  │  │ Explainability│  │  LLM Gateway     │  │
-│  │  Engine     │  │   Engine     │  │(Gemini+Fallback)  │  │
-│  └─────────────┘  └──────────────┘  └───────────────────┘  │
-└─────────────────┬────────────────────────────────────────────┘
-                  │
-┌─────────────────▼────────────────────────────────────────────┐
-│              Data Layer                                     │
-│  PostgreSQL + pgvector | JSON Datasets (60+ courses)        │
-└─────────────────────────────────────────────────────────────┘
+│   /auth   /profile-setup   /chat   /learning-path            │
+│   /dashboard   /courses                                      │
+└───────────────────────┬──────────────────────────────────────┘
+                        │ REST API (HTTP/JSON)
+                        │ Authorization: Bearer <JWT>
+┌───────────────────────▼──────────────────────────────────────┐
+│                    PathPilot Backend                         │
+│              FastAPI · Python 3.11 · Uvicorn                 │
+│                                                              │
+│  ┌──────────────────┐   ┌──────────────────────────────────┐ │
+│  │  Resume Extractor │   │       Chat Engine                │ │
+│  │  PyMuPDF + Gemini │   │  Gemini 3.6-flash + Keyword      │ │
+│  │  (PDF → Skills)  │   │  Bypass (no redundant questions) │ │
+│  └──────────────────┘   └──────────────────────────────────┘ │
+│  ┌──────────────────┐   ┌──────────────────────────────────┐ │
+│  │  Path Generator  │   │     Skill Gap Engine             │ │
+│  │  Topological Sort│   │  Current Skills vs Goal Skills   │ │
+│  │  Prereq Graphs   │   │  → Ordered Course Sequence       │ │
+│  └──────────────────┘   └──────────────────────────────────┘ │
+│  ┌──────────────────┐   ┌──────────────────────────────────┐ │
+│  │ BGE Embeddings   │   │     Explainability Engine        │ │
+│  │ Semantic Search  │   │  "Why this course for you?"      │ │
+│  └──────────────────┘   └──────────────────────────────────┘ │
+└───────────────────────┬──────────────────────────────────────┘
+                        │
+┌───────────────────────▼──────────────────────────────────────┐
+│                     Data Layer                               │
+│   PostgreSQL 15 + pgvector   (Docker: pathpilot-db)          │
+│   courses_catalog.json (50+ courses)                         │
+│   learning_goals.json  (20 career goals)                     │
+└──────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 🤖 AI/ML Techniques Used
+## 🤖 AI/ML Techniques
 
-| Technique | Application |
+| Technique | Where Used |
 |---|---|
-| **Google Gemini API** | Conversational profiling, natural language goal extraction, explainability |
-| **Sentence Transformers (BGE-small-en-v1.5)** | Semantic similarity between user goals and course descriptions |
-| **pgvector** | Vector similarity search for course matching |
-| **Prerequisite Graph (Topological Sort)** | Orders courses by dependency chain |
-| **Gap Analysis Engine** | Identifies skill gaps between current and target state |
-| **Deterministic Fallback** | All LLM calls have rule-based fallbacks for 100% uptime |
+| **Google Gemini 3.6-flash** | Resume text extraction, conversational profiling, course explanations |
+| **Sentence Transformers** `BGE-small-en-v1.5` | 384-dim semantic embeddings for course-goal matching |
+| **pgvector** | Vector similarity search in PostgreSQL |
+| **Topological Sort (DAG)** | Orders courses respecting prerequisites (Foundations → Advanced) |
+| **Keyword Goal Detection** | Deterministic goal matching — skips LLM when profile is loaded |
+| **Skill Gap Analysis** | Set difference between user skills and goal-required skills |
+| **LLM Fallback Chain** | All Gemini calls have rule-based fallbacks for 100% uptime |
 
 ---
 
@@ -76,173 +99,267 @@ Online learning platforms offer thousands of courses, but learners struggle to i
 
 | Layer | Technology |
 |---|---|
-| **Frontend** | Next.js 16, React, TypeScript, Tailwind CSS v4, shadcn/ui |
-| **Backend** | Python 3.11+, FastAPI, SQLAlchemy, Pydantic v2 |
-| **AI/ML** | Google Gemini API, Sentence-Transformers (BGE-small-en-v1.5) |
-| **Database** | PostgreSQL 15 + pgvector extension |
-| **Auth** | JWT (PyJWT) + OTP email verification |
-| **Embeddings** | 384-dimensional BGE embeddings for semantic search |
+| **Frontend** | Next.js 15, React 18, TypeScript, Tailwind CSS v4, shadcn/ui |
+| **Backend** | Python 3.11, FastAPI, SQLAlchemy 2.0, Pydantic v2, Uvicorn |
+| **AI/ML** | Google Gemini API (3.6-flash), Sentence-Transformers (BGE-small-en-v1.5) |
+| **Database** | PostgreSQL 15 + pgvector 0.5.1 (via Docker) |
+| **Auth** | JWT (PyJWT) + SMTP OTP email verification |
+| **PDF Parsing** | PyMuPDF (fitz) |
+| **Containerization** | Docker (`ankane/pgvector` image) |
 
 ---
 
 ## 📂 Project Structure
 
 ```
-.
+pathpilot/
 ├── backend/
 │   ├── app/
-│   │   ├── main.py              # All API route handlers (FastAPI)
-│   │   ├── models.py            # SQLAlchemy ORM models
-│   │   ├── schemas.py           # Pydantic request/response schemas
+│   │   ├── main.py                   # All FastAPI route handlers
+│   │   ├── models.py                 # SQLAlchemy ORM models
+│   │   ├── schemas.py                # Pydantic request/response schemas
+│   │   ├── database.py               # DB connection & session management
 │   │   └── services/
-│   │       ├── learning/        # NEW: Core PathPilot engines
-│   │       │   ├── chat_engine.py       # Gemini conversational profiler
-│   │       │   ├── path_generator.py    # Learning path generation
-│   │       │   └── explainability.py    # AI recommendation explanations
-│   │       ├── prs/             # Skill gap analysis engines
-│   │       │   ├── skill_engine.py      # Skill gap detection
-│   │       │   └── recommendation_engine.py  # Course recommendations
-│   │       └── career/          # Milestone & timeline engines
-│   │           ├── milestone_engine.py  # Learning milestone sequencing
-│   │           └── eta_engine.py        # Study timeline estimation
+│   │       ├── learning/             # Core PathPilot AI engines
+│   │       │   ├── chat_engine.py    # Gemini conversational profiler + bypass
+│   │       │   ├── path_generator.py # Topological sort path generation
+│   │       │   └── explainability.py # "Why this course?" AI explanations
+│   │       ├── prs/                  # Skill recommendation engines
+│   │       │   ├── skill_engine.py
+│   │       │   └── recommendation_engine.py
+│   │       ├── extraction.py         # PDF resume → structured skills (Gemini)
+│   │       └── embeddings.py         # BGE sentence embeddings
+│   ├── .env                          # Environment variables (not committed)
 │   └── requirements.txt
 ├── frontend/
 │   └── src/
 │       ├── app/
-│       │   ├── chat/            # NEW: Conversational AI interface
-│       │   ├── learning-path/   # NEW: Visual learning roadmap
-│       │   ├── dashboard/       # NEW: Progress dashboard
-│       │   ├── courses/         # NEW: Course catalog browser
-│       │   ├── auth/            # Authentication (login/signup)
-│       │   └── profile-setup/   # Learner profile creation
-│       └── services/
-│           └── learning.service.ts  # NEW: PathPilot API calls
+│       │   ├── page.tsx              # Home / landing
+│       │   ├── auth/                 # Login + OTP signup
+│       │   ├── profile-setup/        # Resume upload + profile
+│       │   ├── chat/                 # AI conversational interface
+│       │   ├── learning-path/        # Phased roadmap viewer
+│       │   ├── dashboard/            # Progress & skill radar
+│       │   └── courses/              # Course catalog browser
+│       ├── services/
+│       │   ├── learning.service.ts   # PathPilot API calls
+│       │   └── api.ts                # Base API client with auth
+│       └── components/ui/            # shadcn/ui components
 ├── datasets/
-│   ├── courses_catalog.json     # NEW: 60+ curated courses
-│   ├── learning_goals.json      # NEW: 20 learning goals with skill maps
-│   ├── role_skill_mapping.json  # Skill requirements per goal
-│   └── ...
-└── memory-bank/                 # Project documentation
+│   ├── courses_catalog.json          # 50+ curated real courses
+│   └── learning_goals.json          # 20 career goals with skill maps
+└── README.md
 ```
 
 ---
 
-## 🚀 Setup & Installation
+## 🚀 Quick Start
 
 ### Prerequisites
-- Python 3.11+
-- Node.js 18+
-- PostgreSQL 15+ with `pgvector` extension installed
-- Google Gemini API key ([Get one free](https://ai.google.dev/))
+- **Docker Desktop** (running)
+- **Node.js 18+**
+- **Python 3.11+**
+- **Google Gemini API key** — [Get free at ai.google.dev](https://ai.google.dev/)
 
-### 1. Clone the Repository
+---
+
+### Step 1 — Start the Database
+
 ```bash
-git clone https://github.com/AaryTadwalkar/pathpilot
-cd pathpilot
+# Pull and run PostgreSQL with pgvector on port 5433
+docker run -d --name pathpilot-db \
+  -e POSTGRES_USER=admin \
+  -e POSTGRES_PASSWORD=password123 \
+  -e POSTGRES_DB=pathpilot \
+  -p 5433:5432 \
+  ankane/pgvector:latest
+
+# Enable pgvector extension
+docker exec pathpilot-db psql -U admin -d pathpilot \
+  -c "CREATE EXTENSION IF NOT EXISTS vector;"
 ```
 
-### 2. Backend Setup
+---
+
+### Step 2 — Backend Setup
+
 ```bash
 cd backend
 
 # Create virtual environment
 python -m venv venv
-venv\Scripts\activate       # Windows
-# source venv/bin/activate  # Linux/Mac
+
+# Activate (Windows)
+venv\Scripts\activate
+# Activate (Linux/Mac)
+source venv/bin/activate
 
 # Install dependencies
 pip install -r requirements.txt
-
-# Configure environment
-cp .env.example .env
-# Edit .env with your database URL and Gemini API key
 ```
 
-### 3. Configure `.env`
+---
+
+### Step 3 — Configure Environment
+
+Create `backend/.env`:
+
 ```env
-DATABASE_URL=postgresql://user:password@localhost:5432/pathpilot
-GEMINI_API_KEY=your_google_gemini_api_key
-SECRET_KEY=your_jwt_signing_secret_min_32_chars
+DATABASE_URL=postgresql://admin:password123@localhost:5433/pathpilot
+GEMINI_API_KEY=your_google_gemini_api_key_here
+SECRET_KEY=your_random_64_char_secret_key_here
 SMTP_USERNAME=your_gmail@gmail.com
 SMTP_PASSWORD=your_gmail_app_password
-PRS_DETERMINISTIC_MODE=true
+PRS_DETERMINISTIC_MODE=false
+PATHPILOT_DATASET_DIR=../datasets
 ```
 
-### 4. Initialize Database
+> **Gmail App Password**: Go to Google Account → Security → 2-Step Verification → App Passwords → Generate for "Mail"
+
+---
+
+### Step 4 — Start Backend
+
 ```bash
-# Make sure PostgreSQL is running with pgvector extension
-psql -U postgres -c "CREATE DATABASE pathpilot;"
-psql -U postgres -d pathpilot -c "CREATE EXTENSION IF NOT EXISTS vector;"
-
-# Start the backend (auto-creates all tables)
-uvicorn app.main:app --reload
+# From the backend/ directory, with venv active
+uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
 ```
 
-### 5. Frontend Setup
+✅ You should see:
+```
+MAIN FILE LOADED
+INFO: Application startup complete.
+```
+
+---
+
+### Step 5 — Frontend Setup
+
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
 
-### 6. Access the Application
-- **Frontend**: http://localhost:3000
-- **Backend API**: http://127.0.0.1:8000
-- **API Docs**: http://127.0.0.1:8000/docs
+---
+
+### Step 6 — Open the App
+
+| Service | URL |
+|---|---|
+| **Application** | http://localhost:3000 |
+| **API** | http://127.0.0.1:8000 |
+| **API Docs (Swagger)** | http://127.0.0.1:8000/docs |
 
 ---
 
-## 🐳 Docker Setup (Quick Start)
-```bash
-cd backend
-docker-compose up -d
-# Then run frontend separately: npm run dev
+## 🎬 Demo Flow (User Journey)
+
+```
+1. Sign Up
+   └── Enter email → receive OTP → verify → account created
+
+2. Upload Resume
+   └── /profile-setup → upload PDF → Gemini extracts skills automatically
+       → profile saved (name, 30+ skills, experience)
+
+3. AI Chat
+   └── /chat → green badge "Profile loaded · 37 skills"
+       → type: "I want to become a machine learning engineer"
+       → AI responds instantly (no re-asking for skills!)
+       → ✨ Generate My Learning Path button appears
+
+4. Learning Path
+   └── /learning-path → 3-phase roadmap
+       Phase 1: Foundations  (Python, Math, SQL)
+       Phase 2: Core ML      (Scikit-learn, Pandas, Feature Engineering)
+       Phase 3: Advanced     (Deep Learning, MLOps, Deployment)
+       → Click courses to mark complete
+
+5. Course Explorer
+   └── /courses → search "python" → filter Beginner
+       → 50+ courses from Coursera, Udemy, fast.ai
+
+6. Dashboard
+   └── /dashboard → skill radar chart + progress stats
 ```
 
 ---
 
-## 🔌 Key API Endpoints
+## 🔌 API Reference
 
+### Auth
 | Method | Endpoint | Description |
 |---|---|---|
-| `POST` | `/auth/signup` | Register new learner |
-| `POST` | `/auth/login` | Authenticate and get JWT |
-| `GET` | `/learning/goals` | List all available learning goals |
-| `POST` | `/learning/chat` | Send message to AI learning assistant |
-| `POST` | `/learning/path/generate` | Generate personalized learning path |
-| `GET` | `/learning/path/{id}` | Retrieve a saved learning path |
-| `POST` | `/learning/path/{id}/progress` | Mark course as complete |
+| `POST` | `/auth/signup` | Register + send OTP |
+| `POST` | `/auth/verify-otp` | Verify OTP → create account |
+| `POST` | `/auth/login` | Login → JWT token |
+
+### Learning (PathPilot Core)
+| Method | Endpoint | Description |
+|---|---|---|
+| `POST` | `/learning/chat` | Send message to AI assistant |
+| `POST` | `/learning/path/generate` | Generate personalized path |
+| `GET` | `/learning/path/{id}` | Fetch a saved learning path |
+| `GET` | `/learning/paths` | List user's generated paths |
+| `POST` | `/learning/path/{id}/progress` | Mark course complete |
 | `GET` | `/learning/courses/search` | Search course catalog |
-| `GET` | `/learning/profile` | Get learner profile summary |
+| `GET` | `/learning/goals` | List all career goals |
+| `GET` | `/learning/profile` | Get user profile summary |
+
+### Profile
+| Method | Endpoint | Description |
+|---|---|---|
+| `POST` | `/profile/upload-resume` | Upload PDF → extract skills |
+| `POST` | `/profile/save` | Save learner profile |
 
 ---
 
-## 📊 User Journey
+## 🛠 Utility Commands
 
-```
-1. Sign Up → Create Account (email + OTP verification)
-       ↓
-2. Profile Setup → Describe background, skills, learning goals
-       ↓
-3. Chat with AI → "I want to become a machine learning engineer"
-       ↓
-4. Path Generated → AI creates phased roadmap:
-       Phase 1: Python Foundations (3 weeks)
-       Phase 2: Data Science Core (6 weeks)
-       Phase 3: Machine Learning (8 weeks)
-       ↓
-5. Track Progress → Mark courses complete, view skill development
-       ↓
-6. Get Explanations → AI explains "Why this course?" for each recommendation
+```bash
+# Reset all user data (fresh demo slate)
+docker exec pathpilot-db psql -U admin -d pathpilot \
+  -c "TRUNCATE TABLE users CASCADE;"
+
+# Restart database container (after PC reboot)
+docker start pathpilot-db
+
+# Check backend health
+curl http://127.0.0.1:8000/health
+
+# Check logs if something fails
+docker logs pathpilot-db
 ```
 
 ---
 
-## 🤝 Team / Contributors
-- AI-Powered Personalized Learning Path Recommender
-- Built for [Hackathon Name] — 2026
+## 🌱 Environment Variables Reference
+
+| Variable | Required | Description |
+|---|---|---|
+| `DATABASE_URL` | ✅ | PostgreSQL connection string |
+| `GEMINI_API_KEY` | ✅ | Google AI Studio API key |
+| `SECRET_KEY` | ✅ | JWT signing secret (min 32 chars) |
+| `SMTP_USERNAME` | ✅ | Gmail address for OTP emails |
+| `SMTP_PASSWORD` | ✅ | Gmail app password (not account password) |
+| `PRS_DETERMINISTIC_MODE` | ❌ | `false` = use Gemini, `true` = rule-based only |
+| `PATHPILOT_DATASET_DIR` | ❌ | Path to datasets folder (default: `../datasets`) |
+| `OLLAMA_BASE_URL` | ❌ | Set to `http://localhost:11434` to use local LLM |
+| `OLLAMA_MODEL` | ❌ | Ollama model name (default: `mistral`) |
+
+---
+
+## 🤝 Contributors
+
+Built for the **AI-Powered Personalized Learning Path Recommender Hackathon 2026**
+
+| Name | Role |
+|---|---|
+| Aary Tadwalkar | Full-Stack AI Engineer |
 
 ---
 
 ## 📄 License
-MIT License
+
+MIT License — see [LICENSE](LICENSE) for details.

@@ -829,12 +829,13 @@ async def upload_resume(
     db: Session = Depends(get_db)
 ):
     """
-    Accepts a PDF, reads it into memory for AI extraction, saves the file to MinIO,
-    and returns both the pre-signed storage URL and the Gemini-structured profile data.
+    Accepts a PDF resume, extracts text via PyMuPDF, runs Gemini AI extraction
+    to parse profile fields, and returns the structured data to the frontend.
 
     Auth: Bearer token preferred; user_id form-param accepted as legacy fallback.
+    Note: File storage (MinIO) is intentionally skipped — PathPilot does not
+    require persisting the physical PDF, only the extracted structured data.
     """
-    # BUG-001 fix: resolve user identity from JWT first, user_id as fallback
     user = _resolve_user_from_token(authorization, user_id, db)
 
     if not file.filename.lower().endswith(".pdf"):
@@ -848,56 +849,17 @@ async def upload_resume(
     try:
         extracted_ai_data = extraction.extract_profile_data(resume_text)
     except ValueError as ve:
-        # Empty/image PDF detected — return 400 with human-readable detail
         raise HTTPException(status_code=400, detail=str(ve))
 
-    # 3. CRITICAL: Reset the file pointer to the beginning of the file.
-    # Because we just read the file for the AI, the pointer is at the end.
-    # If we don't reset it to 0, MinIO will upload an empty 0-byte file.
-    await file.seek(0)
+    # 3. Return extracted AI data directly — no file storage needed
+    return {
+        "message": "Resume parsed successfully",
+        "file_key": f"user_{user.id}_resume.pdf",
+        "presigned_url": None,
+        "extracted_data": extracted_ai_data
+    }
 
-    s3_client = boto3.client(
-        "s3",
-        endpoint_url=f"http://{os.getenv('MINIO_ENDPOINT')}",
-        aws_access_key_id=os.getenv("MINIO_ACCESS_KEY"),
-        aws_secret_access_key=os.getenv("MINIO_SECRET_KEY")
-    )
 
-    bucket_name = os.getenv("MINIO_BUCKET_NAME")
-    unique_filename = f"user_{user.id}_{uuid.uuid4().hex}.pdf"  # use resolved user.id
-
-    try:
-        # Check if the bucket exists; create if missing
-        try:
-            s3_client.head_bucket(Bucket=bucket_name)
-        except Exception:
-            s3_client.create_bucket(Bucket=bucket_name)
-
-        # 4. Upload the physical PDF to MinIO
-        s3_client.upload_fileobj(
-            file.file,
-            bucket_name,
-            unique_filename,
-            ExtraArgs={"ContentType": "application/pdf"}
-        )
-
-        presigned_url = s3_client.generate_presigned_url(
-            'get_object',
-            Params={'Bucket': bucket_name, 'Key': unique_filename},
-            ExpiresIn=604800  # BUG-005 partial fix: 7 days instead of 15 minutes
-        )
-
-        # 5. Return both the storage data and the AI data to the frontend
-        return {
-            "message": "Resume parsed and uploaded successfully",
-            "file_key": unique_filename,
-            "presigned_url": presigned_url,
-            "extracted_data": extracted_ai_data
-        }
-
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Storage error: {str(e)}")
-    
 @app.post("/profile/save", response_model=schemas.UserProfileResponse)
 def save_user_profile(
     profile_data: schemas.UserProfileCreate,
@@ -2563,50 +2525,207 @@ def get_learning_goals():
 @app.post("/learning/chat", response_model=schemas.ChatResponse, tags=["Learning"])
 def chat_profiling(
     request: schemas.ChatRequest,
+    authorization: str | None = Header(default=None),
     db: Session = Depends(get_db)
 ):
-    # Fetch session or create new
+    # ── Resolve user identity ─────────────────────────────────────────────────
+    user_id = request.user_id
+    if not user_id:
+        try:
+            u = _resolve_user_from_token(authorization, None, db)
+            user_id = u.id
+        except Exception:
+            user_id = 1
+
+    # ── Fetch saved profile (resume data) from DB ─────────────────────────────
+    user_profile_context = None
+    profile_user = None
+    try:
+        profile_user = db.query(models.User).filter(models.User.id == user_id).first()
+        if profile_user:
+            user_profile_context = {
+                "name": profile_user.name or "",
+                "skills": [s.skill for s in profile_user.skills] if profile_user.skills else [],
+                "career_interests": profile_user.career_interests or "",
+                "experience": [
+                    f"{e.role} at {e.company}" for e in profile_user.experiences
+                ] if profile_user.experiences else [],
+            }
+    except Exception:
+        user_profile_context = None
+
+    # ── Fetch or create session ───────────────────────────────────────────────
     if request.session_id:
-        session = db.query(models.ChatSession).filter(models.ChatSession.id == request.session_id).first()
+        session = db.query(models.ChatSession).filter(
+            models.ChatSession.id == request.session_id
+        ).first()
         if not session:
             raise HTTPException(status_code=404, detail="Session not found")
     else:
-        user_id = request.user_id
-        if not user_id:
-            user_id = 1  # Fallback for prototype
-        session = models.ChatSession(user_id=user_id, messages=[])
+        # ── NEW SESSION: inject profile as synthetic history ──────────────────
+        # Pre-populate with a user→model exchange so Gemini sees skills as
+        # "already stated in conversation" and NEVER re-asks.
+        # CRITICAL: Use "model" role (not "assistant") — Gemini API requirement.
+        seed_messages = []
+        if user_profile_context and user_profile_context.get("skills"):
+            skills_str = ", ".join(user_profile_context["skills"][:20])
+            name_str = user_profile_context.get("name", "")
+            career_str = user_profile_context.get("career_interests", "")
+            exp_list = user_profile_context.get("experience", [])
+
+            seed_messages = [
+                {
+                    "role": "user",
+                    "content": (
+                        f"Here is my complete profile. Do not ask me about any of this.\n"
+                        f"Name: {name_str}\n"
+                        f"Current skills: {skills_str}\n"
+                        + (f"Experience: {'; '.join(exp_list[:3])}\n" if exp_list else "")
+                        + (f"Career interests: {career_str}\n" if career_str else "")
+                        + "I am ready to tell you my learning goal now."
+                    )
+                },
+                {
+                    # MUST be "model" — Gemini rejects "assistant" role silently
+                    "role": "model",
+                    "content": (
+                        f"{'Hi ' + name_str + '! ' if name_str else ''}"
+                        f"I have your full profile with {len(user_profile_context['skills'])} skills. "
+                        f"I will NOT ask about your skills or experience. "
+                        f"What is your specific learning goal? "
+                        f"For example: 'I want to become a machine learning engineer'."
+                    )
+                }
+            ]
+
+        session = models.ChatSession(user_id=user_id, messages=seed_messages)
         db.add(session)
         db.commit()
         db.refresh(session)
-        
+
+    # ── DETERMINISTIC BYPASS — always runs when profile is loaded ────────────
+    # Skip Gemini entirely when we have the user's skills from resume.
+    # Use simple keyword matching to detect the goal from their message.
+    # request.session_id is None means this is the FIRST message of a new session.
+    # We also run this on ANY message if profile is loaded and no goal captured yet.
+    def _detect_goal(msg: str) -> str:
+        """Keyword matcher → goal_id string or empty string."""
+        m = msg.lower()
+        goal_map = [
+            ("GOAL_ML_ENGINEER",     ["machine learning engineer", "ml engineer", "machine learning"]),
+            ("GOAL_AI_ENGINEER",     ["ai engineer", "ai apps", "ai application", "deploy ai", "build ai",
+                                      "artificial intelligence", "generative ai", "gen ai", "llm"]),
+            ("GOAL_DL_RESEARCHER",   ["deep learning researcher", "nlp engineer", "research scientist"]),
+            ("GOAL_DATA_SCIENTIST",  ["data scientist", "data science"]),
+            ("GOAL_FRONTEND_DEV",    ["frontend", "front-end", "front end", "react developer",
+                                      "web developer", "web development", "ui developer"]),
+            ("GOAL_FULLSTACK_DEV",   ["full stack", "fullstack", "full-stack"]),
+            ("GOAL_BACKEND_DEV",     ["backend", "back-end", "back end", "api developer", "server side"]),
+            ("GOAL_DEVOPS_ENGINEER", ["devops", "dev ops", "site reliability", "sre", "infrastructure",
+                                      "kubernetes", "docker"]),
+            ("GOAL_DATA_ANALYST",    ["data analyst", "data analysis", "business analyst", "analytics"]),
+            ("GOAL_CLOUD_ARCHITECT", ["cloud architect", "cloud engineer", "aws", "azure", "gcp", "cloud"]),
+            ("GOAL_MOBILE_DEV",      ["mobile developer", "react native", "ios", "android"]),
+            ("GOAL_CYBERSECURITY",   ["cybersecurity", "cyber security", "security engineer",
+                                      "ethical hacker", "penetration"]),
+        ]
+        for goal_id, keywords in goal_map:
+            if any(kw in m for kw in keywords):
+                return goal_id
+        # Broad fallback for any goal-like sentence
+        if any(w in m for w in ["become", "engineer", "developer", "scientist", "analyst", "architect"]):
+            return "GOAL_ML_ENGINEER"
+        return ""
+
+    has_profile = bool(user_profile_context and user_profile_context.get("skills"))
+    # Bypass: always try when profile loaded AND session has no complete profile yet
+    already_complete = bool(session.extracted_profile and session.extracted_profile.get("goal_statement"))
+
+    if has_profile and not already_complete:
+        detected_goal = _detect_goal(request.message)
+        if detected_goal:
+            merged_skills = user_profile_context.get("skills", [])
+            extracted = {
+                "goal_id": detected_goal,
+                "goal_statement": request.message,
+                "current_skills": merged_skills,
+                "experience_level": "intermediate",
+                "weekly_hours": 10,
+                "interests": [],
+            }
+            session.extracted_profile = extracted
+            session.is_complete = True
+
+            reply = (
+                f"✅ Got it! Here's what I have:\n\n"
+                f"🎯 **Goal**: {request.message.capitalize()}\n"
+                f"💡 **Skills**: {len(merged_skills)} skills from your resume\n"
+                f"📊 **Level**: Intermediate\n"
+                f"⏰ **Study time**: 10 hrs/week\n\n"
+                f"Click **✨ Generate My Learning Path** below!"
+            )
+
+            msgs = list(session.messages)
+            msgs.append({"role": "user", "content": request.message})
+            msgs.append({"role": "model", "content": reply})
+            session.messages = msgs
+            db.commit()
+
+            return schemas.ChatResponse(
+                reply=reply,
+                session_id=session.id,
+                extracted_profile=extracted,
+                is_profile_complete=True
+            )
+
+    # ── Gemini / ChatEngine (only if no profile or goal not detected) ─────────
+
     engine = ChatEngine()
     history = session.messages
-    reply, draft, is_complete = engine.process_message(request.message, history)
-    
-    # Update session
+    reply, draft, is_complete = engine.process_message(
+        request.message, history, user_profile=user_profile_context
+    )
+
+    # ── Persist updated messages ──────────────────────────────────────────────
     messages = list(history)
     messages.append({"role": "user", "content": request.message})
     messages.append({"role": "assistant", "content": reply})
     session.messages = messages
-    
+
     if draft:
+        # Merge AI-extracted profile with resume skills so path generator is richer
+        merged_skills = list(set(
+            (draft.current_skills or []) +
+            (user_profile_context.get("skills", []) if user_profile_context else [])
+        ))
         session.extracted_profile = {
             "goal_statement": draft.goal_statement,
-            "current_skills": draft.current_skills,
+            "current_skills": merged_skills,
             "experience_level": draft.experience_level,
             "weekly_hours": draft.weekly_hours,
-            "interests": draft.interests
+            "interests": draft.interests,
         }
         session.is_complete = is_complete
-        
+    elif not session.extracted_profile and user_profile_context:
+        # Pre-fill extracted_profile with resume data so Generate button can
+        # unlock as soon as the user states their goal
+        session.extracted_profile = {
+            "goal_statement": "",
+            "current_skills": user_profile_context.get("skills", []),
+            "experience_level": "intermediate",
+            "weekly_hours": 10,
+            "interests": [],
+        }
+
     db.commit()
-    
+
     return schemas.ChatResponse(
         reply=reply,
         session_id=session.id,
-        extracted_profile=session.extracted_profile if draft else None,
+        extracted_profile=session.extracted_profile,
         is_profile_complete=is_complete
     )
+
 
 @app.post("/learning/path/generate", response_model=schemas.LearningPathResponse, tags=["Learning"])
 def generate_path(
@@ -2628,7 +2747,7 @@ def generate_path(
             goal_id=request.goal_id,
             current_skills=request.current_skills,
             experience_level=request.experience_level,
-            weekly_hours=request.weekly_hours,
+            weekly_hours=request.weekly_study_hours,
             datasets_dir=datasets_dir
         )
     except ValueError as e:
@@ -2646,7 +2765,7 @@ def generate_path(
         goal_name=goal_name,
         experience_level=request.experience_level,
         current_skills=request.current_skills,
-        weekly_study_hours=request.weekly_hours,
+        weekly_study_hours=request.weekly_study_hours,
         phases=result.phases,
         total_courses=len(result.course_list),
         total_weeks=result.total_weeks,
@@ -2692,11 +2811,25 @@ def get_user_paths(
     try:
         user = _resolve_user_from_token(authorization, user_id, db)
         uid = user.id
-    except:
+    except Exception:
         uid = 1
-        
+
     paths = db.query(models.LearningPath).filter(models.LearningPath.user_id == uid).all()
-    return paths
+    return {
+        "paths": [
+            {
+                "id": p.id,
+                "goal_name": p.goal_name,
+                "goal_id": p.goal_id,
+                "total_courses": p.total_courses,
+                "total_weeks": p.total_weeks,
+                "completed_course_ids": p.completed_course_ids or [],
+                "created_at": p.created_at.isoformat() if p.created_at else "",
+            }
+            for p in paths
+        ]
+    }
+
 
 @app.post("/learning/path/{path_id}/progress", tags=["Learning"])
 def update_progress(
@@ -2720,16 +2853,31 @@ def update_progress(
     return {"status": "success", "completed_courses": path.completed_course_ids}
 
 @app.get("/learning/courses/search", tags=["Learning"])
-def search_courses(query: str):
+def search_courses(query: str = "", level: str = ""):
     datasets_dir = os.getenv("PATHPILOT_DATASET_DIR", "../datasets")
     try:
         with open(os.path.join(datasets_dir, "courses_catalog.json"), "r") as f:
             catalog = json.load(f)
-            
-        results = [c for c in catalog if query.lower() in c.get("title", "").lower() or query.lower() in c.get("description", "").lower()]
-        return {"results": results}
-    except Exception:
-        return {"results": []}
+
+        results = catalog
+        # Text search filter (only apply if query is non-empty)
+        if query.strip():
+            q = query.lower()
+            results = [
+                c for c in results
+                if q in c.get("title", "").lower()
+                or q in c.get("description", "").lower()
+                or any(q in t.lower() for t in c.get("topics", []))
+                or any(q in s.lower() for s in c.get("skills_taught", []))
+                or q in c.get("domain", "").lower()
+            ]
+        # Level filter — case-insensitive
+        if level and level.lower() not in ("all", ""):
+            results = [c for c in results if c.get("level", "").lower() == level.lower()]
+
+        return {"courses": results}
+    except Exception as e:
+        return {"courses": []}
 
 @app.get("/learning/profile", tags=["Learning"])
 def get_learning_profile(
