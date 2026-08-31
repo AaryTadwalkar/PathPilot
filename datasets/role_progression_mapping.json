@@ -1,0 +1,303 @@
+[
+  {
+    "role": "Backend Developer",
+    "progression": {
+      "entry_path": [
+        "Software Developer",
+        "Junior Backend Developer"
+      ],
+      "next_roles": [
+        "Senior Backend Engineer",
+        "API Architect"
+      ],
+      "adjacent_roles": [
+        "Full Stack Developer",
+        "DevOps Engineer"
+      ],
+      "senior_path": "Engineering Manager",
+      "typical_experience_years": "0-3",
+      "typical_years_to_next": "2-4"
+    }
+  },
+  {
+    "role": "Frontend Developer",
+    "progression": {
+      "entry_path": [
+        "Software Developer",
+        "Junior Frontend Developer"
+      ],
+      "next_roles": [
+        "Senior Frontend Engineer",
+        "UI Architect"
+      ],
+      "adjacent_roles": [
+        "Full Stack Developer",
+        "UX Engineer"
+      ],
+      "senior_path": "Frontend Engineering Lead",
+      "typical_experience_years": "0-2",
+      "typical_years_to_next": "2-3"
+    }
+  },
+  {
+    "role": "Full Stack Developer",
+    "progression": {
+      "entry_path": [
+        "Frontend Developer",
+        "Backend Developer"
+      ],
+      "next_roles": [
+        "Senior Full Stack Engineer",
+        "Technical Lead"
+      ],
+      "adjacent_roles": [
+        "Backend Developer",
+        "Frontend Developer"
+      ],
+      "senior_path": "Engineering Manager",
+      "typical_experience_years": "1-3",
+      "typical_years_to_next": "2-4"
+    }
+  },
+  {
+    "role": "Software Developer",
+    "progression": {
+      "entry_path": [
+        "Software Intern",
+        "Junior Software Developer"
+      ],
+      "next_roles": [
+        "Backend Developer",
+        "Full Stack Developer",
+        "Frontend Developer"
+      ],
+      "adjacent_roles": [
+        "QA Engineer",
+        "DevOps Engineer"
+      ],
+      "senior_path": "Senior Software Engineer",
+      "typical_experience_years": "0-2",
+      "typical_years_to_next": "1-3"
+    }
+  },
+  {
+    "role": "AI Engineer",
+    "progression": {
+      "entry_path": [
+        "Software Developer",
+        "Junior ML Engineer"
+      ],
+      "next_roles": [
+        "Senior AI Engineer",
+        "ML Lead"
+      ],
+      "adjacent_roles": [
+        "Data Scientist",
+        "Machine Learning Engineer"
+      ],
+      "senior_path": "AI Research Scientist",
+      "typical_experience_years": "0-2",
+      "typical_years_to_next": "2-3"
+    }
+  },
+  {
+    "role": "Machine Learning Engineer",
+    "progression": {
+      "entry_path": [
+        "Data Analyst",
+        "Junior ML Engineer"
+      ],
+      "next_roles": [
+        "Senior ML Engineer",
+        "AI Research Engineer"
+      ],
+      "adjacent_roles": [
+        "AI Engineer",
+        "Data Scientist"
+      ],
+      "senior_path": "ML Platform Lead",
+      "typical_experience_years": "1-3",
+      "typical_years_to_next": "2-4"
+    }
+  },
+  {
+    "role": "Data Analyst",
+    "progression": {
+      "entry_path": [
+        "Business Analyst Intern",
+        "Junior Data Analyst"
+      ],
+      "next_roles": [
+        "Senior Data Analyst",
+        "Data Scientist"
+      ],
+      "adjacent_roles": [
+        "Business Intelligence Analyst",
+        "Product Analyst"
+      ],
+      "senior_path": "Analytics Manager",
+      "typical_experience_years": "0-2",
+      "typical_years_to_next": "2-3"
+    }
+  },
+  {
+    "role": "Data Scientist",
+    "progression": {
+      "entry_path": [
+        "Data Analyst",
+        "Junior Data Scientist"
+      ],
+      "next_roles": [
+        "Senior Data Scientist",
+        "ML Engineer"
+      ],
+      "adjacent_roles": [
+        "AI Engineer",
+        "Machine Learning Engineer"
+      ],
+      "senior_path": "Principal Data Scientist",
+      "typical_experience_years": "1-3",
+      "typical_years_to_next": "2-4"
+    }
+  },
+  {
+    "role": "Cybersecurity Analyst",
+    "progression": {
+      "entry_path": [
+        "IT Support Engineer",
+        "Junior Security Analyst"
+      ],
+      "next_roles": [
+        "Senior Security Analyst",
+        "Penetration Tester"
+      ],
+      "adjacent_roles": [
+        "Cloud Security Engineer",
+        "DevOps Engineer"
+      ],
+      "senior_path": "Security Architect",
+      "typical_experience_years": "0-3",
+      "typical_years_to_next": "2-4"
+    }
+  },
+  {
+    "role": "DevOps Engineer",
+    "progression": {
+      "entry_path": [
+        "Software Developer",
+        "Junior DevOps Engineer"
+      ],
+      "next_roles": [
+        "Senior DevOps Engineer",
+        "Site Reliability Engineer"
+      ],
+      "adjacent_roles": [
+        "Cloud Engineer",
+        "Backend Developer"
+      ],
+      "senior_path": "Platform Engineering Lead",
+      "typical_experience_years": "1-3",
+      "typical_years_to_next": "2-4"
+    }
+  },
+  {
+    "role": "Cloud Engineer",
+    "progression": {
+      "entry_path": [
+        "DevOps Engineer",
+        "Junior Cloud Engineer"
+      ],
+      "next_roles": [
+        "Senior Cloud Engineer",
+        "Cloud Architect"
+      ],
+      "adjacent_roles": [
+        "DevOps Engineer",
+        "Backend Developer"
+      ],
+      "senior_path": "Cloud Solutions Architect",
+      "typical_experience_years": "1-3",
+      "typical_years_to_next": "2-4"
+    }
+  },
+  {
+    "role": "Mobile App Developer",
+    "progression": {
+      "entry_path": [
+        "Software Developer",
+        "Junior Mobile Developer"
+      ],
+      "next_roles": [
+        "Senior Mobile Developer",
+        "Mobile Lead"
+      ],
+      "adjacent_roles": [
+        "Frontend Developer",
+        "Full Stack Developer"
+      ],
+      "senior_path": "Mobile Platform Architect",
+      "typical_experience_years": "0-2",
+      "typical_years_to_next": "2-3"
+    }
+  },
+  {
+    "role": "IoT Engineer",
+    "progression": {
+      "entry_path": [
+        "Embedded Engineer",
+        "Junior IoT Developer"
+      ],
+      "next_roles": [
+        "Senior IoT Engineer",
+        "IoT Solutions Architect"
+      ],
+      "adjacent_roles": [
+        "Embedded Engineer",
+        "Cloud Engineer"
+      ],
+      "senior_path": "IoT Platform Lead",
+      "typical_experience_years": "1-3",
+      "typical_years_to_next": "2-4"
+    }
+  },
+  {
+    "role": "Embedded Engineer",
+    "progression": {
+      "entry_path": [
+        "Electronics Intern",
+        "Junior Embedded Developer"
+      ],
+      "next_roles": [
+        "Senior Embedded Engineer",
+        "Firmware Engineer"
+      ],
+      "adjacent_roles": [
+        "IoT Engineer",
+        "Hardware Engineer"
+      ],
+      "senior_path": "Embedded Systems Architect",
+      "typical_experience_years": "1-3",
+      "typical_years_to_next": "3-5"
+    }
+  },
+  {
+    "role": "Product Manager",
+    "progression": {
+      "entry_path": [
+        "Business Analyst",
+        "Associate Product Manager"
+      ],
+      "next_roles": [
+        "Senior Product Manager",
+        "Group Product Manager"
+      ],
+      "adjacent_roles": [
+        "Product Marketing Manager",
+        "UX Researcher"
+      ],
+      "senior_path": "Director of Product",
+      "typical_experience_years": "1-3",
+      "typical_years_to_next": "3-5"
+    }
+  }
+]

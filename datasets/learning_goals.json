@@ -1,0 +1,204 @@
+{
+  "goals": [
+    {
+      "id": "G001",
+      "name": "Master Python",
+      "description": "Become an expert in Python",
+      "keywords": ["Python", "Expert", "Master"],
+      "required_skills": ["Python"],
+      "recommended_course_ids": ["C001", "C002", "C003"],
+      "difficulty": "Hard",
+      "estimated_weeks": 12
+    },
+    {
+      "id": "G002",
+      "name": "Master Machine Learning",
+      "description": "Become an expert in Machine Learning",
+      "keywords": ["Machine Learning", "Expert", "Master"],
+      "required_skills": ["Machine Learning"],
+      "recommended_course_ids": ["C006", "C007", "C008"],
+      "difficulty": "Hard",
+      "estimated_weeks": 12
+    },
+    {
+      "id": "G003",
+      "name": "Master Deep Learning",
+      "description": "Become an expert in Deep Learning",
+      "keywords": ["Deep Learning", "Expert", "Master"],
+      "required_skills": ["Deep Learning"],
+      "recommended_course_ids": ["C011", "C012", "C013"],
+      "difficulty": "Hard",
+      "estimated_weeks": 12
+    },
+    {
+      "id": "G004",
+      "name": "Master Web Development",
+      "description": "Become an expert in Web Development",
+      "keywords": ["Web Development", "Expert", "Master"],
+      "required_skills": ["Web Development"],
+      "recommended_course_ids": ["C016", "C017", "C018"],
+      "difficulty": "Hard",
+      "estimated_weeks": 12
+    },
+    {
+      "id": "G005",
+      "name": "Master Backend Development",
+      "description": "Become an expert in Backend Development",
+      "keywords": ["Backend Development", "Expert", "Master"],
+      "required_skills": ["Backend Development"],
+      "recommended_course_ids": ["C021", "C022", "C023"],
+      "difficulty": "Hard",
+      "estimated_weeks": 12
+    },
+    {
+      "id": "G006",
+      "name": "Master Data Science",
+      "description": "Become an expert in Data Science",
+      "keywords": ["Data Science", "Expert", "Master"],
+      "required_skills": ["Data Science"],
+      "recommended_course_ids": ["C026", "C027", "C028"],
+      "difficulty": "Hard",
+      "estimated_weeks": 12
+    },
+    {
+      "id": "G007",
+      "name": "Master Cloud Computing",
+      "description": "Become an expert in Cloud Computing",
+      "keywords": ["Cloud Computing", "Expert", "Master"],
+      "required_skills": ["Cloud Computing"],
+      "recommended_course_ids": ["C031", "C032", "C033"],
+      "difficulty": "Hard",
+      "estimated_weeks": 12
+    },
+    {
+      "id": "G008",
+      "name": "Master DevOps",
+      "description": "Become an expert in DevOps",
+      "keywords": ["DevOps", "Expert", "Master"],
+      "required_skills": ["DevOps"],
+      "recommended_course_ids": ["C036", "C037", "C038"],
+      "difficulty": "Hard",
+      "estimated_weeks": 12
+    },
+    {
+      "id": "G009",
+      "name": "Master Cybersecurity",
+      "description": "Become an expert in Cybersecurity",
+      "keywords": ["Cybersecurity", "Expert", "Master"],
+      "required_skills": ["Cybersecurity"],
+      "recommended_course_ids": ["C041", "C042", "C043"],
+      "difficulty": "Hard",
+      "estimated_weeks": 12
+    },
+    {
+      "id": "G010",
+      "name": "Master Mobile Development",
+      "description": "Become an expert in Mobile Development",
+      "keywords": ["Mobile Development", "Expert", "Master"],
+      "required_skills": ["Mobile Development"],
+      "recommended_course_ids": ["C046", "C047", "C048"],
+      "difficulty": "Hard",
+      "estimated_weeks": 12
+    },
+    {
+      "id": "G011",
+      "name": "Master UI/UX Design",
+      "description": "Become an expert in UI/UX Design",
+      "keywords": ["UI/UX Design", "Expert", "Master"],
+      "required_skills": ["UI/UX Design"],
+      "recommended_course_ids": ["C051", "C052", "C053"],
+      "difficulty": "Hard",
+      "estimated_weeks": 12
+    },
+    {
+      "id": "G012",
+      "name": "Master Database Engineering",
+      "description": "Become an expert in Database Engineering",
+      "keywords": ["Database Engineering", "Expert", "Master"],
+      "required_skills": ["Database Engineering"],
+      "recommended_course_ids": ["C056", "C057", "C058"],
+      "difficulty": "Hard",
+      "estimated_weeks": 12
+    },
+    {
+      "id": "G013",
+      "name": "Master Advanced Python",
+      "description": "Become an expert in Advanced Python",
+      "keywords": ["Python", "Expert", "Master"],
+      "required_skills": ["Python"],
+      "recommended_course_ids": ["C003", "C004", "C005"],
+      "difficulty": "Hard",
+      "estimated_weeks": 12
+    },
+    {
+      "id": "G014",
+      "name": "Master Advanced Machine Learning",
+      "description": "Become an expert in Advanced Machine Learning",
+      "keywords": ["Machine Learning", "Expert", "Master"],
+      "required_skills": ["Machine Learning"],
+      "recommended_course_ids": ["C008", "C009", "C010"],
+      "difficulty": "Hard",
+      "estimated_weeks": 12
+    },
+    {
+      "id": "G015",
+      "name": "Master Advanced Deep Learning",
+      "description": "Become an expert in Advanced Deep Learning",
+      "keywords": ["Deep Learning", "Expert", "Master"],
+      "required_skills": ["Deep Learning"],
+      "recommended_course_ids": ["C013", "C014", "C015"],
+      "difficulty": "Hard",
+      "estimated_weeks": 12
+    },
+    {
+      "id": "G016",
+      "name": "Master Advanced Web Development",
+      "description": "Become an expert in Advanced Web Development",
+      "keywords": ["Web Development", "Expert", "Master"],
+      "required_skills": ["Web Development"],
+      "recommended_course_ids": ["C018", "C019", "C020"],
+      "difficulty": "Hard",
+      "estimated_weeks": 12
+    },
+    {
+      "id": "G017",
+      "name": "Master Advanced Backend Development",
+      "description": "Become an expert in Advanced Backend Development",
+      "keywords": ["Backend Development", "Expert", "Master"],
+      "required_skills": ["Backend Development"],
+      "recommended_course_ids": ["C023", "C024", "C025"],
+      "difficulty": "Hard",
+      "estimated_weeks": 12
+    },
+    {
+      "id": "G018",
+      "name": "Master Advanced Data Science",
+      "description": "Become an expert in Advanced Data Science",
+      "keywords": ["Data Science", "Expert", "Master"],
+      "required_skills": ["Data Science"],
+      "recommended_course_ids": ["C028", "C029", "C030"],
+      "difficulty": "Hard",
+      "estimated_weeks": 12
+    },
+    {
+      "id": "G019",
+      "name": "Master Advanced Cloud Computing",
+      "description": "Become an expert in Advanced Cloud Computing",
+      "keywords": ["Cloud Computing", "Expert", "Master"],
+      "required_skills": ["Cloud Computing"],
+      "recommended_course_ids": ["C033", "C034", "C035"],
+      "difficulty": "Hard",
+      "estimated_weeks": 12
+    },
+    {
+      "id": "G020",
+      "name": "Master Advanced DevOps",
+      "description": "Become an expert in Advanced DevOps",
+      "keywords": ["DevOps", "Expert", "Master"],
+      "required_skills": ["DevOps"],
+      "recommended_course_ids": ["C038", "C039", "C040"],
+      "difficulty": "Hard",
+      "estimated_weeks": 12
+    }
+  ]
+}

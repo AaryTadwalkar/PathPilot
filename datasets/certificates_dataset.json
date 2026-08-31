@@ -1,0 +1,82 @@
+[
+  {
+    "certificate_id": "CERT001",
+    "certificate_name": "AWS Certified Developer - Associate",
+    "provider": "AWS",
+    "certificate_level": "associate",
+    "skills_covered": ["AWS", "Cloud Computing", "Deployment", "CI/CD", "Backend Development"],
+    "role_alignment": ["Backend Developer", "Cloud Engineer", "DevOps Engineer"],
+    "certificate_url": "https://aws.amazon.com/certification/certified-developer-associate/",
+    "industry_relevance": "High"
+  },
+  {
+    "certificate_id": "CERT002",
+    "certificate_name": "Microsoft Certified: Azure Fundamentals",
+    "provider": "Microsoft",
+    "certificate_level": "beginner",
+    "skills_covered": ["Azure", "Cloud Computing", "Networking", "Storage", "Governance"],
+    "role_alignment": ["Cloud Engineer", "DevOps Engineer", "Backend Developer"],
+    "certificate_url": "https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/",
+    "industry_relevance": "High"
+  },
+  {
+    "certificate_id": "CERT003",
+    "certificate_name": "Google Data Analytics Professional Certificate",
+    "provider": "Google",
+    "certificate_level": "beginner",
+    "skills_covered": ["SQL", "Data Analysis", "Data Visualization", "Spreadsheets", "Tableau"],
+    "role_alignment": ["Data Analyst"],
+    "certificate_url": "https://www.coursera.org/professional-certificates/google-data-analytics",
+    "industry_relevance": "High"
+  },
+  {
+    "certificate_id": "CERT004",
+    "certificate_name": "IBM Data Science Professional Certificate",
+    "provider": "IBM",
+    "certificate_level": "beginner",
+    "skills_covered": ["Python", "SQL", "Pandas", "Machine Learning", "Data Science"],
+    "role_alignment": ["Data Scientist", "AI Engineer", "Machine Learning Engineer"],
+    "certificate_url": "https://www.coursera.org/professional-certificates/ibm-data-science",
+    "industry_relevance": "High"
+  },
+  {
+    "certificate_id": "CERT005",
+    "certificate_name": "Meta Back-End Developer Professional Certificate",
+    "provider": "Meta",
+    "certificate_level": "beginner",
+    "skills_covered": ["Python", "Django", "REST APIs", "SQL", "Git", "Backend Development"],
+    "role_alignment": ["Backend Developer", "Full Stack Developer", "Software Developer"],
+    "certificate_url": "https://www.coursera.org/professional-certificates/meta-back-end-developer",
+    "industry_relevance": "High"
+  },
+  {
+    "certificate_id": "CERT006",
+    "certificate_name": "Google Cybersecurity Professional Certificate",
+    "provider": "Google",
+    "certificate_level": "beginner",
+    "skills_covered": ["Network Security", "Linux", "SIEM", "Incident Response", "Python"],
+    "role_alignment": ["Cybersecurity Analyst"],
+    "certificate_url": "https://www.coursera.org/professional-certificates/google-cybersecurity",
+    "industry_relevance": "High"
+  },
+  {
+    "certificate_id": "CERT007",
+    "certificate_name": "Google Cloud Professional Data Engineer",
+    "provider": "Google",
+    "certificate_level": "professional",
+    "skills_covered": ["GCP", "Data Engineering", "Machine Learning", "Data Pipelines", "Cloud Computing"],
+    "role_alignment": ["Data Engineer", "Cloud Engineer", "AI Engineer"],
+    "certificate_url": "https://cloud.google.com/learn/certification/data-engineer",
+    "industry_relevance": "High"
+  },
+  {
+    "certificate_id": "CERT008",
+    "certificate_name": "Deep Learning Specialization",
+    "provider": "DeepLearning.AI",
+    "certificate_level": "specialization",
+    "skills_covered": ["Deep Learning", "Neural Networks", "TensorFlow", "Computer Vision", "NLP"],
+    "role_alignment": ["AI Engineer", "Machine Learning Engineer", "Data Scientist"],
+    "certificate_url": "https://www.coursera.org/specializations/deep-learning",
+    "industry_relevance": "High"
+  }
+]

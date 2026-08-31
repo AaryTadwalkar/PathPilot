@@ -1,0 +1,102 @@
+[
+  {
+    "course_id": "COURSE001",
+    "course_name": "Meta Back-End Developer Professional Certificate",
+    "platform": "Coursera",
+    "provider": "Meta",
+    "difficulty_level": "Beginner",
+    "skills_covered": ["Python", "Django", "REST APIs", "SQL", "Git", "Cloud Hosting"],
+    "role_alignment": ["Backend Developer", "Full Stack Developer", "Software Developer"],
+    "course_url": "https://www.coursera.org/professional-certificates/meta-back-end-developer"
+  },
+  {
+    "course_id": "COURSE002",
+    "course_name": "Google Data Analytics Professional Certificate",
+    "platform": "Coursera",
+    "provider": "Google",
+    "difficulty_level": "Beginner",
+    "skills_covered": ["SQL", "Data Analysis", "Data Visualization", "Spreadsheets", "Tableau", "R"],
+    "role_alignment": ["Data Analyst"],
+    "course_url": "https://www.coursera.org/professional-certificates/google-data-analytics"
+  },
+  {
+    "course_id": "COURSE003",
+    "course_name": "IBM Data Science Professional Certificate",
+    "platform": "Coursera",
+    "provider": "IBM",
+    "difficulty_level": "Beginner",
+    "skills_covered": ["Python", "Pandas", "SQL", "Machine Learning", "Data Science", "Jupyter"],
+    "role_alignment": ["Data Scientist", "AI Engineer", "Machine Learning Engineer"],
+    "course_url": "https://www.coursera.org/professional-certificates/ibm-data-science"
+  },
+  {
+    "course_id": "COURSE004",
+    "course_name": "Machine Learning Specialization",
+    "platform": "Coursera",
+    "provider": "DeepLearning.AI and Stanford Online",
+    "difficulty_level": "Intermediate",
+    "skills_covered": ["Machine Learning", "Python", "Neural Networks", "Supervised Learning", "Unsupervised Learning"],
+    "role_alignment": ["AI Engineer", "Machine Learning Engineer", "Data Scientist"],
+    "course_url": "https://www.coursera.org/specializations/machine-learning-introduction"
+  },
+  {
+    "course_id": "COURSE005",
+    "course_name": "Deep Learning Specialization",
+    "platform": "Coursera",
+    "provider": "DeepLearning.AI",
+    "difficulty_level": "Advanced",
+    "skills_covered": ["Deep Learning", "TensorFlow", "Neural Networks", "Computer Vision", "NLP"],
+    "role_alignment": ["AI Engineer", "Machine Learning Engineer"],
+    "course_url": "https://www.coursera.org/specializations/deep-learning"
+  },
+  {
+    "course_id": "COURSE006",
+    "course_name": "Google Cybersecurity Professional Certificate",
+    "platform": "Coursera",
+    "provider": "Google",
+    "difficulty_level": "Beginner",
+    "skills_covered": ["Network Security", "Linux", "SIEM", "Incident Response", "Python", "Threat Detection"],
+    "role_alignment": ["Cybersecurity Analyst"],
+    "course_url": "https://www.coursera.org/professional-certificates/google-cybersecurity"
+  },
+  {
+    "course_id": "COURSE007",
+    "course_name": "AWS Cloud Technical Essentials",
+    "platform": "Coursera",
+    "provider": "AWS",
+    "difficulty_level": "Beginner",
+    "skills_covered": ["AWS", "Cloud Computing", "Compute", "Storage", "Networking"],
+    "role_alignment": ["Backend Developer", "Cloud Engineer", "DevOps Engineer"],
+    "course_url": "https://www.coursera.org/learn/aws-cloud-technical-essentials"
+  },
+  {
+    "course_id": "COURSE008",
+    "course_name": "Microsoft Azure Fundamentals",
+    "platform": "Microsoft Learn",
+    "provider": "Microsoft",
+    "difficulty_level": "Beginner",
+    "skills_covered": ["Azure", "Cloud Computing", "Networking", "Storage", "Governance"],
+    "role_alignment": ["Cloud Engineer", "DevOps Engineer", "Backend Developer"],
+    "course_url": "https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/"
+  },
+  {
+    "course_id": "COURSE009",
+    "course_name": "Docker Foundations Professional Certificate",
+    "platform": "LinkedIn Learning",
+    "provider": "Docker",
+    "difficulty_level": "Beginner",
+    "skills_covered": ["Docker", "Containerization", "Images", "Containers", "DevOps"],
+    "role_alignment": ["Backend Developer", "DevOps Engineer", "Cloud Engineer"],
+    "course_url": "https://www.linkedin.com/learning/paths/docker-foundations-professional-certificate"
+  },
+  {
+    "course_id": "COURSE010",
+    "course_name": "Google Business Intelligence Professional Certificate",
+    "platform": "Coursera",
+    "provider": "Google",
+    "difficulty_level": "Intermediate",
+    "skills_covered": ["Business Intelligence", "Data Visualization", "Dashboards", "SQL", "Tableau"],
+    "role_alignment": ["Data Analyst"],
+    "course_url": "https://www.coursera.org/professional-certificates/google-business-intelligence"
+  }
+]

@@ -1,0 +1,49 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+venv/
+.env
+*.env
+.env.*
+!.env.example
+!.env.docker
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+
+# Database / Keys
+*.pem
+*.key
+*.db
+*.sqlite
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Large files / Docs artifacts
+docs/*.pdf
+docs/Aary*
+docs/Yashraj*
+docs/Task*
+docs/Alumni*
+docs/module2*
+
+# Build artifacts
+dist/
+build/

@@ -1,0 +1,82 @@
+services:
+
+  postgres:
+    image: ankane/pgvector:latest
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-admin}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-password123}
+      POSTGRES_DB: ${POSTGRES_DB:-pathpilot}
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-admin} -d ${POSTGRES_DB:-pathpilot}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  minio:
+    image: minio/minio:latest
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER:-admin}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:-password123}
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    volumes:
+      - miniodata:/data
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    ports:
+      - "8000:8000"
+
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+    env_file:
+      - .env
+
+    environment:
+
+      DATABASE_URL: ${DATABASE_URL_DOCKER}
+
+      MINIO_ENDPOINT: ${MINIO_ENDPOINT_DOCKER}
+      MINIO_ACCESS_KEY: ${MINIO_ACCESS_KEY}
+      MINIO_SECRET_KEY: ${MINIO_SECRET_KEY}
+      MINIO_BUCKET_NAME: ${MINIO_BUCKET_NAME}
+
+      PRS_DATASET_DIR: /app/datasets
+
+      GEMINI_API_KEY: ${GEMINI_API_KEY}
+
+      HF_HOME: /app/.cache/hf
+      TRANSFORMERS_CACHE: /app/.cache/hf
+
+      JWT_SECRET: ${JWT_SECRET}
+      SECRET_KEY: ${SECRET_KEY}
+
+      SMTP_USERNAME: ${SMTP_USERNAME}
+      SMTP_PASSWORD: ${SMTP_PASSWORD}
+
+      JSEARCH_API_KEY: ${JSEARCH_API_KEY}
+      RAPIDAPI_KEY: ${RAPIDAPI_KEY}
+
+      PRS_DETERMINISTIC_MODE: ${PRS_DETERMINISTIC_MODE}
+
+    volumes:
+      - ../datasets:/app/datasets:ro
+      - hf_cache:/app/.cache/hf
+
+    restart: on-failure:3
+
+volumes:
+  pgdata:
+  miniodata:
+  hf_cache:

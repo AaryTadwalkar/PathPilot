@@ -1,0 +1,857 @@
+{
+  "Backend Developer": [
+    {
+      "id": "be_api_design",
+      "question": "Have you designed and documented REST or GraphQL APIs that were consumed by another developer or system?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_api_design", "label": "No, I have only consumed APIs built by others"},
+        {"code": "basic_endpoints", "label": "Yes, basic CRUD endpoints for personal projects"},
+        {"code": "multi_consumer_api", "label": "Yes, multi-endpoint APIs used by a frontend or mobile client"},
+        {"code": "versioned_documented_api", "label": "Yes, versioned APIs with documentation (Swagger/OpenAPI) used by multiple consumers"}
+      ]
+    },
+    {
+      "id": "be_database_design",
+      "question": "What is the most complex database design you have implemented?",
+      "type": "single_select",
+      "options": [
+        {"code": "single_table", "label": "Single table or no relational design"},
+        {"code": "basic_relations", "label": "Multiple tables with basic foreign key relationships"},
+        {"code": "normalized_schema", "label": "Normalized schema with indexes and query optimization"},
+        {"code": "advanced_schema", "label": "Advanced schema with transactions, migrations, and performance tuning"}
+      ]
+    },
+    {
+      "id": "be_auth_implementation",
+      "question": "Have you implemented authentication and authorization in a backend system?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_auth", "label": "No"},
+        {"code": "basic_auth", "label": "Basic username/password authentication"},
+        {"code": "jwt_or_session", "label": "JWT or session-based auth with protected routes"},
+        {"code": "oauth_rbac", "label": "OAuth2, SSO, or role-based access control (RBAC)"}
+      ]
+    },
+    {
+      "id": "be_performance_handling",
+      "question": "Have you dealt with performance or scalability challenges in a backend project?",
+      "type": "single_select",
+      "options": [
+        {"code": "not_considered", "label": "Not considered — focused on functionality only"},
+        {"code": "basic_optimization", "label": "Basic query optimization or reducing N+1 problems"},
+        {"code": "caching_or_pagination", "label": "Implemented caching (Redis/in-memory) or pagination"},
+        {"code": "load_scaling", "label": "Load testing, async processing, or horizontal scaling strategies"}
+      ]
+    },
+    {
+      "id": "be_error_handling",
+      "question": "How do you handle errors and logging in your backend applications?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_error_handling", "label": "Minimal — rely on default error outputs"},
+        {"code": "basic_try_catch", "label": "Basic try/catch with generic error messages"},
+        {"code": "structured_errors", "label": "Structured error responses with appropriate HTTP status codes"},
+        {"code": "centralized_logging", "label": "Centralized error handling, structured logging, and alerting"}
+      ]
+    }
+  ],
+  "Frontend Developer": [
+    {
+      "id": "fe_state_management",
+      "question": "How have you managed application state in your frontend projects?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_state_mgmt", "label": "Local component state only (useState)"},
+        {"code": "prop_drilling", "label": "Prop drilling across components"},
+        {"code": "context_or_redux", "label": "React Context, Redux, or Zustand for shared state"},
+        {"code": "advanced_state", "label": "Complex state with server state management (React Query, SWR, TanStack)"}
+      ]
+    },
+    {
+      "id": "fe_performance_optimization",
+      "question": "Have you optimized frontend performance in a project?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_optimization", "label": "No — not a focus"},
+        {"code": "basic_optimization", "label": "Basic: code splitting or lazy loading"},
+        {"code": "lighthouse_optimization", "label": "Improved Lighthouse scores, reduced bundle size, memoization"},
+        {"code": "advanced_performance", "label": "Core Web Vitals optimization, SSR/SSG strategies, CDN integration"}
+      ]
+    },
+    {
+      "id": "fe_responsive_design",
+      "question": "How do you approach responsive design in your projects?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_responsive", "label": "Desktop-only, not mobile-aware"},
+        {"code": "basic_responsive", "label": "Basic media queries for mobile breakpoints"},
+        {"code": "mobile_first", "label": "Mobile-first design with a CSS framework (Tailwind, Bootstrap)"},
+        {"code": "cross_device_tested", "label": "Tested across devices, handled edge cases like orientation and safe areas"}
+      ]
+    },
+    {
+      "id": "fe_api_integration",
+      "question": "How have you handled API integration and async data in frontend projects?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_api", "label": "Static data only, no API calls"},
+        {"code": "basic_fetch", "label": "Basic fetch/axios calls without error handling"},
+        {"code": "loading_error_states", "label": "Loading, error, and success states managed properly"},
+        {"code": "advanced_async", "label": "Optimistic updates, request debouncing, cancellation, or real-time (WebSocket)"}
+      ]
+    },
+    {
+      "id": "fe_component_architecture",
+      "question": "How do you structure your frontend components?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_structure", "label": "No formal structure — everything in one or a few files"},
+        {"code": "basic_components", "label": "Basic component separation by page"},
+        {"code": "reusable_components", "label": "Reusable component library with props and composition"},
+        {"code": "design_system", "label": "Design system with documented components, Storybook, or shared UI library"}
+      ]
+    }
+  ],
+  "Full Stack Developer": [
+    {
+      "id": "fs_end_to_end_feature",
+      "question": "Have you built a complete end-to-end feature (frontend + backend + database) independently?",
+      "type": "single_select",
+      "options": [
+        {"code": "partial_only", "label": "No — worked on only one layer at a time"},
+        {"code": "guided_fullstack", "label": "Yes, following a tutorial or guide"},
+        {"code": "independent_feature", "label": "Yes, independently designed and built a full feature"},
+        {"code": "production_fullstack", "label": "Yes, for a product used by real users with ongoing maintenance"}
+      ]
+    },
+    {
+      "id": "fs_framework_proficiency",
+      "question": "Which full stack frameworks or combinations have you built with?",
+      "type": "single_select",
+      "options": [
+        {"code": "single_framework", "label": "One framework, learned from tutorials (e.g., basic React)"},
+        {"code": "frontend_backend_separate", "label": "Separate frontend and backend with REST API integration"},
+        {"code": "fullstack_framework", "label": "Full stack framework (Next.js, Nuxt, SvelteKit) with SSR/SSG"},
+        {"code": "multi_stack", "label": "Multiple stacks used across different projects with deployment experience"}
+      ]
+    },
+    {
+      "id": "fs_deployment_experience",
+      "question": "How have you deployed your full stack applications?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_deployment", "label": "Not deployed — only runs locally"},
+        {"code": "basic_platform", "label": "Deployed via PaaS (Vercel, Heroku, Render) using defaults"},
+        {"code": "configured_deployment", "label": "Configured environment variables, domains, and build pipelines"},
+        {"code": "cloud_infra", "label": "Deployed to cloud infrastructure (AWS, GCP, Azure) with IaC or containers"}
+      ]
+    },
+    {
+      "id": "fs_data_modeling",
+      "question": "How do you approach data modeling when starting a new full stack project?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_planning", "label": "Start coding without formal data modeling"},
+        {"code": "basic_schema", "label": "Sketch a basic schema before coding"},
+        {"code": "normalized_design", "label": "Design normalized schema with relationships and constraints"},
+        {"code": "iterative_migration", "label": "Iterative schema design with migrations and versioning"}
+      ]
+    },
+    {
+      "id": "fs_cross_cutting_concerns",
+      "question": "How have you handled cross-cutting concerns like authentication, logging, and validation?",
+      "type": "single_select",
+      "options": [
+        {"code": "not_handled", "label": "Not handled — focused on core features only"},
+        {"code": "ad_hoc", "label": "Handled ad-hoc per route or component"},
+        {"code": "middleware_layer", "label": "Used middleware, interceptors, or shared utilities"},
+        {"code": "systematic_architecture", "label": "Systematic architecture: guards, validators, loggers applied consistently"}
+      ]
+    }
+  ],
+  "Software Developer": [
+    {
+      "id": "sw_code_quality",
+      "question": "How do you ensure code quality in your projects?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_practices", "label": "No formal practices"},
+        {"code": "code_review_self", "label": "Self-review before committing"},
+        {"code": "linting_testing", "label": "Linting, type checking, and unit tests"},
+        {"code": "tdd_ci", "label": "TDD, code reviews with others, and automated CI quality gates"}
+      ]
+    },
+    {
+      "id": "sw_design_patterns",
+      "question": "Have you applied software design patterns in your projects?",
+      "type": "single_select",
+      "options": [
+        {"code": "unaware", "label": "Not aware of design patterns"},
+        {"code": "aware_not_applied", "label": "Aware of patterns but not deliberately applied"},
+        {"code": "applied_common", "label": "Applied common patterns (Singleton, Factory, Observer) in projects"},
+        {"code": "architectural_patterns", "label": "Used architectural patterns (MVC, Clean Architecture, CQRS) in a project"}
+      ]
+    },
+    {
+      "id": "sw_debugging_proficiency",
+      "question": "How do you debug complex issues in your code?",
+      "type": "single_select",
+      "options": [
+        {"code": "print_debug", "label": "Mainly print statements / console.log"},
+        {"code": "debugger_basic", "label": "Use debugger tools in IDE for stepping through code"},
+        {"code": "systematic_isolation", "label": "Systematic isolation: reproduce, hypothesize, verify"},
+        {"code": "profiling_advanced", "label": "Profiling tools, memory analysis, and root cause documentation"}
+      ]
+    },
+    {
+      "id": "sw_collaborative_development",
+      "question": "How do you collaborate with others on software projects?",
+      "type": "single_select",
+      "options": [
+        {"code": "solo_only", "label": "Solo projects only"},
+        {"code": "informal_collab", "label": "Informal collaboration without structured process"},
+        {"code": "git_workflow", "label": "Git branching, pull requests, and code reviews"},
+        {"code": "agile_team", "label": "Agile team with sprints, standups, and assigned tasks"}
+      ]
+    },
+    {
+      "id": "sw_system_design",
+      "question": "Have you designed a system or architecture for a project?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_design", "label": "No formal design — started coding directly"},
+        {"code": "informal_sketch", "label": "Informal sketch of components before coding"},
+        {"code": "component_diagram", "label": "Defined components, interfaces, and data flow explicitly"},
+        {"code": "documented_architecture", "label": "Documented architecture with trade-off analysis and team review"}
+      ]
+    }
+  ],
+  "Data Analyst": [
+    {
+      "id": "da_data_cleaning",
+      "question": "How have you handled messy or incomplete data in your analysis projects?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_cleaning", "label": "Used clean datasets only (Kaggle, prepared datasets)"},
+        {"code": "basic_cleaning", "label": "Removed nulls and duplicates with basic filters"},
+        {"code": "systematic_cleaning", "label": "Systematic cleaning: outlier detection, imputation, type correction"},
+        {"code": "pipeline_cleaning", "label": "Built reusable data cleaning pipelines for recurring datasets"}
+      ]
+    },
+    {
+      "id": "da_visualization",
+      "question": "What is the most advanced visualization you have built for a data analysis project?",
+      "type": "single_select",
+      "options": [
+        {"code": "basic_charts", "label": "Basic bar, line, and pie charts"},
+        {"code": "multi_chart_notebook", "label": "Multi-chart Jupyter notebook with matplotlib/seaborn"},
+        {"code": "interactive_dashboard", "label": "Interactive dashboard (Plotly, Tableau, Power BI)"},
+        {"code": "published_dashboard", "label": "Published/shared dashboard used by a team or client for decisions"}
+      ]
+    },
+    {
+      "id": "da_sql_proficiency",
+      "question": "How have you used SQL in your data analysis work?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_sql", "label": "No SQL — only used pandas/Excel"},
+        {"code": "basic_sql", "label": "Basic SELECT, WHERE, and GROUP BY queries"},
+        {"code": "intermediate_sql", "label": "JOINs, subqueries, window functions, and aggregations"},
+        {"code": "advanced_sql", "label": "CTEs, query optimization, and schema design for analytics"}
+      ]
+    },
+    {
+      "id": "da_statistical_analysis",
+      "question": "Have you performed statistical analysis beyond descriptive statistics?",
+      "type": "single_select",
+      "options": [
+        {"code": "descriptive_only", "label": "Descriptive statistics only (mean, median, std)"},
+        {"code": "hypothesis_testing", "label": "Hypothesis testing (t-test, chi-square)"},
+        {"code": "regression_analysis", "label": "Regression analysis or correlation studies"},
+        {"code": "advanced_stats", "label": "Advanced: time series, A/B testing, Bayesian analysis"}
+      ]
+    },
+    {
+      "id": "da_business_impact",
+      "question": "Have your data analysis findings driven a decision or action?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_impact", "label": "No — analysis was for learning or grading only"},
+        {"code": "personal_decision", "label": "Used findings for a personal or academic decision"},
+        {"code": "team_decision", "label": "Analysis informed a team or project decision"},
+        {"code": "org_decision", "label": "Analysis influenced a business or organizational decision"}
+      ]
+    }
+  ],
+  "AI Engineer": [
+    {
+      "id": "ai_model_training",
+      "question": "Have you trained a machine learning or deep learning model end-to-end?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_training", "label": "No — only used pre-trained models via APIs"},
+        {"code": "tutorial_training", "label": "Yes, following a tutorial with a provided dataset"},
+        {"code": "custom_training", "label": "Yes, with a custom dataset, hyperparameter tuning, and evaluation"},
+        {"code": "production_training", "label": "Yes, with experiment tracking, model versioning, and deployment"}
+      ]
+    },
+    {
+      "id": "ai_model_serving",
+      "question": "How have you served or deployed a trained AI model?",
+      "type": "single_select",
+      "options": [
+        {"code": "not_deployed", "label": "Not deployed — used only in notebooks"},
+        {"code": "gradio_streamlit", "label": "Deployed via Gradio or Streamlit for demo"},
+        {"code": "rest_api_serving", "label": "Served via REST API (FastAPI, Flask) with inference endpoint"},
+        {"code": "production_serving", "label": "Production serving with batching, monitoring, and versioned updates"}
+      ]
+    },
+    {
+      "id": "ai_evaluation",
+      "question": "How do you evaluate the performance of an AI model beyond accuracy?",
+      "type": "single_select",
+      "options": [
+        {"code": "accuracy_only", "label": "Accuracy or loss only"},
+        {"code": "multiple_metrics", "label": "F1, precision/recall, RMSE depending on task"},
+        {"code": "confusion_matrix_analysis", "label": "Confusion matrix, ROC curves, error analysis on failure cases"},
+        {"code": "production_eval", "label": "Offline + online evaluation, drift detection, human-in-the-loop review"}
+      ]
+    },
+    {
+      "id": "ai_llm_integration",
+      "question": "Have you built an application using LLMs or foundation models (GPT, Gemini, LLaMA, etc.)?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_llm", "label": "No"},
+        {"code": "api_playground", "label": "Used API playground or simple prompt completion"},
+        {"code": "llm_app", "label": "Built an app with prompt engineering (RAG, tool use, or chain-of-thought)"},
+        {"code": "llm_production", "label": "Built a production LLM system with evaluation, safety checks, and cost monitoring"}
+      ]
+    },
+    {
+      "id": "ai_data_pipeline",
+      "question": "Have you built a data pipeline to prepare data for AI/ML training or inference?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_pipeline", "label": "No — used ready-made datasets directly"},
+        {"code": "basic_preprocessing", "label": "Basic preprocessing: normalization, train/test split"},
+        {"code": "feature_engineering", "label": "Feature engineering, augmentation, and systematic cleaning"},
+        {"code": "automated_pipeline", "label": "Automated pipeline with validation, versioning, and monitoring"}
+      ]
+    }
+  ],
+  "Cybersecurity Analyst": [
+    {
+      "id": "cs_vulnerability_assessment",
+      "question": "Have you performed vulnerability assessments or penetration testing?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_assessment", "label": "No"},
+        {"code": "ctf_labs", "label": "Practiced in CTF competitions or sandboxed labs only"},
+        {"code": "authorized_pentest", "label": "Performed authorized pen tests on owned or lab systems"},
+        {"code": "professional_assessment", "label": "Conducted professional assessments for a team or client with a report"}
+      ]
+    },
+    {
+      "id": "cs_threat_analysis",
+      "question": "Have you analyzed security threats, logs, or incidents?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_analysis", "label": "No"},
+        {"code": "log_reading", "label": "Read system/application logs to identify anomalies"},
+        {"code": "siem_analysis", "label": "Used SIEM tools (Splunk, ELK) for threat analysis"},
+        {"code": "incident_response", "label": "Led or participated in incident response with documented findings"}
+      ]
+    },
+    {
+      "id": "cs_secure_coding",
+      "question": "Do you apply secure coding practices in your development work?",
+      "type": "single_select",
+      "options": [
+        {"code": "not_applied", "label": "Not deliberately applied"},
+        {"code": "basic_awareness", "label": "Aware of OWASP Top 10 but not systematically applied"},
+        {"code": "applied_practices", "label": "Sanitize inputs, avoid hardcoded secrets, use HTTPS"},
+        {"code": "security_by_design", "label": "Security by design: threat modeling, code review for vulnerabilities, SAST tools"}
+      ]
+    },
+    {
+      "id": "cs_network_security",
+      "question": "What is your experience with network security concepts?",
+      "type": "single_select",
+      "options": [
+        {"code": "theoretical_only", "label": "Theoretical knowledge from courses only"},
+        {"code": "wireshark_analysis", "label": "Analyzed network traffic with Wireshark or similar tools"},
+        {"code": "firewall_vpn", "label": "Configured firewalls, VPNs, or IDS/IPS systems"},
+        {"code": "network_architecture", "label": "Designed or reviewed secure network architectures"}
+      ]
+    },
+    {
+      "id": "cs_compliance_awareness",
+      "question": "Are you familiar with security compliance frameworks or standards?",
+      "type": "single_select",
+      "options": [
+        {"code": "not_familiar", "label": "Not familiar"},
+        {"code": "aware_of_frameworks", "label": "Aware of GDPR, ISO 27001, NIST but not applied"},
+        {"code": "applied_controls", "label": "Applied specific controls from a framework in a project"},
+        {"code": "audit_experience", "label": "Participated in compliance audits or security assessments"}
+      ]
+    }
+  ],
+  "DevOps Engineer": [
+    {
+      "id": "devops_ci_cd_pipeline",
+      "question": "Have you built or maintained a CI/CD pipeline?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_cicd", "label": "No"},
+        {"code": "used_existing", "label": "Used an existing pipeline configured by someone else"},
+        {"code": "built_basic_pipeline", "label": "Built a pipeline with automated build, test, and deploy stages"},
+        {"code": "advanced_pipeline", "label": "Advanced pipeline with canary deployments, rollbacks, and multi-env support"}
+      ]
+    },
+    {
+      "id": "devops_containerization",
+      "question": "What is your experience with containers (Docker/Kubernetes)?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_containers", "label": "No experience"},
+        {"code": "docker_basic", "label": "Built Dockerfiles and ran containers locally"},
+        {"code": "docker_compose", "label": "Multi-container applications with Docker Compose"},
+        {"code": "kubernetes_orchestration", "label": "Kubernetes orchestration with deployments, services, and config maps"}
+      ]
+    },
+    {
+      "id": "devops_infrastructure_as_code",
+      "question": "Have you used Infrastructure as Code (IaC) tools?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_iac", "label": "No — configured infrastructure manually"},
+        {"code": "basic_scripts", "label": "Shell scripts for provisioning"},
+        {"code": "terraform_ansible", "label": "Terraform, Ansible, or similar IaC tools for cloud resources"},
+        {"code": "full_iac", "label": "Full IaC with modules, state management, and drift detection"}
+      ]
+    },
+    {
+      "id": "devops_monitoring",
+      "question": "Have you set up monitoring and alerting for a deployed system?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_monitoring", "label": "No monitoring configured"},
+        {"code": "basic_logs", "label": "Basic log aggregation and manual log inspection"},
+        {"code": "metrics_dashboards", "label": "Metrics dashboards (Grafana, Prometheus, CloudWatch)"},
+        {"code": "full_observability", "label": "Full observability: metrics, logs, traces, and automated alerting"}
+      ]
+    },
+    {
+      "id": "devops_cloud_services",
+      "question": "What cloud services have you configured and managed?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_cloud", "label": "No cloud experience"},
+        {"code": "basic_compute", "label": "Basic compute (EC2/VM) and object storage (S3/GCS)"},
+        {"code": "managed_services", "label": "Managed databases, queues, and load balancers"},
+        {"code": "multi_service_architecture", "label": "Multi-service architecture with networking, IAM, and cost optimization"}
+      ]
+    }
+  ],
+  "Machine Learning Engineer": [
+    {
+      "id": "mle_model_productionization",
+      "question": "Have you productionized a machine learning model (moved from notebook to a live system)?",
+      "type": "single_select",
+      "options": [
+        {"code": "notebook_only", "label": "No — models stay in notebooks"},
+        {"code": "basic_api", "label": "Wrapped in a basic REST API for demo"},
+        {"code": "production_api", "label": "Production API with error handling, logging, and versioning"},
+        {"code": "mlops_pipeline", "label": "MLOps pipeline with automated retraining, A/B testing, and monitoring"}
+      ]
+    },
+    {
+      "id": "mle_feature_engineering",
+      "question": "How advanced is your feature engineering experience?",
+      "type": "single_select",
+      "options": [
+        {"code": "raw_features", "label": "Used raw features directly from datasets"},
+        {"code": "basic_transforms", "label": "Basic normalization and encoding"},
+        {"code": "domain_features", "label": "Domain-specific feature creation and selection"},
+        {"code": "automated_fe", "label": "Automated feature stores, embeddings, and feature importance analysis"}
+      ]
+    },
+    {
+      "id": "mle_experiment_tracking",
+      "question": "How do you track machine learning experiments?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_tracking", "label": "No tracking — manually compare notebooks"},
+        {"code": "spreadsheet", "label": "Manual notes or spreadsheets"},
+        {"code": "mlflow_wandb", "label": "MLflow, Weights & Biases, or similar experiment tracking"},
+        {"code": "full_registry", "label": "Model registry with artifact versioning and reproducibility guarantees"}
+      ]
+    },
+    {
+      "id": "mle_model_optimization",
+      "question": "Have you optimized a model for inference speed or memory efficiency?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_optimization", "label": "No — used model as-is"},
+        {"code": "basic_batching", "label": "Basic batching for throughput"},
+        {"code": "quantization_pruning", "label": "Quantization, pruning, or ONNX export"},
+        {"code": "production_optimization", "label": "Latency-budgeted optimization with benchmarking for production SLAs"}
+      ]
+    },
+    {
+      "id": "mle_data_versioning",
+      "question": "How do you manage training data quality and versioning?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_versioning", "label": "No versioning — use latest available data"},
+        {"code": "snapshot_versioning", "label": "Manual snapshots or dated folder names"},
+        {"code": "dvc_tools", "label": "Data version control tools (DVC, Delta Lake)"},
+        {"code": "data_contracts", "label": "Data contracts, schema validation, and automated quality checks"}
+      ]
+    }
+  ],
+  "Data Scientist": [
+    {
+      "id": "ds_hypothesis_driven",
+      "question": "Do you formulate and test hypotheses before building models?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_hypothesis", "label": "No — build models first and interpret results after"},
+        {"code": "informal_hypotheses", "label": "Informal hypotheses based on intuition"},
+        {"code": "structured_hypotheses", "label": "Structured hypothesis → EDA → validation workflow"},
+        {"code": "scientific_method", "label": "Rigorous scientific method with pre-registered hypotheses and statistical power analysis"}
+      ]
+    },
+    {
+      "id": "ds_advanced_modeling",
+      "question": "What is the most advanced modeling technique you have applied?",
+      "type": "single_select",
+      "options": [
+        {"code": "linear_models", "label": "Linear/logistic regression"},
+        {"code": "tree_ensemble", "label": "Tree-based ensembles (Random Forest, XGBoost, LightGBM)"},
+        {"code": "deep_learning", "label": "Deep learning (CNNs, RNNs, Transformers)"},
+        {"code": "research_level", "label": "Research-level models or novel architectures applied to real problems"}
+      ]
+    },
+    {
+      "id": "ds_storytelling",
+      "question": "Have you communicated data science findings to a non-technical audience?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_communication", "label": "No — findings shared only with technical peers"},
+        {"code": "notebook_report", "label": "Written report or Jupyter notebook shared"},
+        {"code": "slide_presentation", "label": "Slide presentation with visualizations for a team"},
+        {"code": "executive_presentation", "label": "Executive or client presentation that drove a business decision"}
+      ]
+    },
+    {
+      "id": "ds_model_interpretability",
+      "question": "Have you worked on making ML model predictions explainable?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_interpretability", "label": "No — black-box models used without interpretation"},
+        {"code": "feature_importance", "label": "Feature importance plots from tree models"},
+        {"code": "shap_lime", "label": "SHAP or LIME for instance-level explanations"},
+        {"code": "interpretable_design", "label": "Intentionally chosen interpretable models for regulated or high-stakes domains"}
+      ]
+    },
+    {
+      "id": "ds_real_world_data",
+      "question": "Have you worked with real-world (non-Kaggle) datasets?",
+      "type": "single_select",
+      "options": [
+        {"code": "kaggle_only", "label": "Kaggle and course datasets only"},
+        {"code": "scraped_data", "label": "Self-collected data via scraping or APIs"},
+        {"code": "org_data", "label": "Data from an organization, company, or research institution"},
+        {"code": "messy_production_data", "label": "Messy production data with significant cleaning, privacy, and schema issues"}
+      ]
+    }
+  ],
+  "Cloud Engineer": [
+    {
+      "id": "ce_cloud_architecture",
+      "question": "Have you designed a cloud architecture for an application?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_architecture", "label": "No — used cloud for simple hosting only"},
+        {"code": "single_service", "label": "Single-service deployment (EC2, App Engine)"},
+        {"code": "multi_service", "label": "Multi-service architecture with managed databases and storage"},
+        {"code": "well_architected", "label": "Well-architected design covering HA, DR, cost optimization, and security"}
+      ]
+    },
+    {
+      "id": "ce_cost_optimization",
+      "question": "Have you worked on cloud cost optimization?",
+      "type": "single_select",
+      "options": [
+        {"code": "not_considered", "label": "Not considered — focus on functionality"},
+        {"code": "aware_costs", "label": "Aware of costs but no active optimization"},
+        {"code": "rightsizing", "label": "Rightsizing instances, using spot/preemptible instances"},
+        {"code": "cost_engineering", "label": "Reserved instances, cost allocation tags, and budget alerts with measurable savings"}
+      ]
+    },
+    {
+      "id": "ce_networking",
+      "question": "What cloud networking concepts have you configured?",
+      "type": "single_select",
+      "options": [
+        {"code": "default_networking", "label": "Default VPC and security groups only"},
+        {"code": "custom_vpc", "label": "Custom VPC with subnets and routing tables"},
+        {"code": "peering_endpoints", "label": "VPC peering, private endpoints, and NAT gateways"},
+        {"code": "hybrid_networking", "label": "Hybrid connectivity (VPN, Direct Connect, ExpressRoute) and multi-region networking"}
+      ]
+    },
+    {
+      "id": "ce_serverless",
+      "question": "Have you built applications using serverless or managed compute services?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_serverless", "label": "No — only used VMs or containers"},
+        {"code": "basic_functions", "label": "Basic Lambda/Cloud Functions for simple tasks"},
+        {"code": "event_driven", "label": "Event-driven architectures with triggers and queues"},
+        {"code": "serverless_platform", "label": "Full serverless platform with step functions, API Gateway, and DynamoDB"}
+      ]
+    },
+    {
+      "id": "ce_security_compliance",
+      "question": "How do you manage security and access in cloud environments?",
+      "type": "single_select",
+      "options": [
+        {"code": "admin_access", "label": "Admin/root access used for all tasks"},
+        {"code": "basic_iam", "label": "Basic IAM users and roles"},
+        {"code": "least_privilege", "label": "Least-privilege IAM policies, MFA, and secrets management"},
+        {"code": "security_posture", "label": "Security posture management with SCPs, GuardDuty, Security Hub, and compliance automation"}
+      ]
+    }
+  ],
+  "Mobile App Developer": [
+    {
+      "id": "mob_platform_experience",
+      "question": "On which mobile platforms have you shipped apps?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_shipped", "label": "No shipped app — only built locally"},
+        {"code": "one_platform", "label": "Shipped on one platform (iOS or Android)"},
+        {"code": "cross_platform", "label": "Shipped on both platforms via cross-platform framework (Flutter, React Native)"},
+        {"code": "store_published", "label": "Published on App Store or Google Play with active users"}
+      ]
+    },
+    {
+      "id": "mob_ui_implementation",
+      "question": "How closely do you match your implemented UI to the designed mockups?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_design", "label": "No mockups — build UI by feel"},
+        {"code": "rough_approximation", "label": "Rough approximation of the design"},
+        {"code": "pixel_close", "label": "Close to pixel-perfect with consistent spacing and typography"},
+        {"code": "pixel_perfect", "label": "Pixel-perfect with animations, transitions, and accessibility"}
+      ]
+    },
+    {
+      "id": "mob_offline_handling",
+      "question": "Have you implemented offline support or local data persistence in a mobile app?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_offline", "label": "No — fully online, crashes without internet"},
+        {"code": "basic_cache", "label": "Basic caching of API responses"},
+        {"code": "local_db", "label": "Local database (SQLite, Hive, Room) with sync logic"},
+        {"code": "full_offline", "label": "Full offline-first architecture with conflict resolution"}
+      ]
+    },
+    {
+      "id": "mob_performance",
+      "question": "Have you optimized mobile app performance?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_optimization", "label": "No formal optimization"},
+        {"code": "basic_fixes", "label": "Fixed obvious jank or slow screens"},
+        {"code": "profiled_fixes", "label": "Used profiling tools (Xcode Instruments, Android Profiler) to find and fix bottlenecks"},
+        {"code": "systematic_optimization", "label": "Systematic optimization: startup time, memory, battery, and network usage"}
+      ]
+    },
+    {
+      "id": "mob_native_features",
+      "question": "Have you integrated native device features in your app?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_native", "label": "No native features — basic UI only"},
+        {"code": "basic_native", "label": "Camera or location access"},
+        {"code": "multiple_native", "label": "Multiple native features: push notifications, biometrics, Bluetooth"},
+        {"code": "deep_native", "label": "Deep native integration with platform-specific APIs and background services"}
+      ]
+    }
+  ],
+  "IoT Engineer": [
+    {
+      "id": "iot_hardware_integration",
+      "question": "What hardware have you programmed or interfaced with?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_hardware", "label": "No hardware — software only"},
+        {"code": "arduino_basic", "label": "Arduino or similar microcontroller with basic sensors"},
+        {"code": "rpi_sensors", "label": "Raspberry Pi or ESP32 with multiple sensors and actuators"},
+        {"code": "custom_hardware", "label": "Custom PCB design or integration with industrial hardware"}
+      ]
+    },
+    {
+      "id": "iot_communication_protocols",
+      "question": "Which IoT communication protocols have you used?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_protocols", "label": "HTTP/REST only"},
+        {"code": "mqtt_basic", "label": "MQTT for pub/sub messaging"},
+        {"code": "multiple_protocols", "label": "Multiple protocols: MQTT, CoAP, BLE, Zigbee"},
+        {"code": "protocol_design", "label": "Designed protocol selection strategy based on power, latency, and range requirements"}
+      ]
+    },
+    {
+      "id": "iot_data_pipeline",
+      "question": "How have you handled IoT data collection and processing?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_pipeline", "label": "No pipeline — raw serial output only"},
+        {"code": "basic_logging", "label": "Basic data logging to files or a database"},
+        {"code": "streaming_pipeline", "label": "Real-time streaming to cloud with time-series storage"},
+        {"code": "edge_cloud_pipeline", "label": "Edge computing with local processing and selective cloud sync"}
+      ]
+    },
+    {
+      "id": "iot_power_management",
+      "question": "Have you designed for power efficiency in an IoT system?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_power_mgmt", "label": "No — always mains-powered"},
+        {"code": "aware_power", "label": "Aware of power consumption but not optimized"},
+        {"code": "sleep_modes", "label": "Used deep sleep modes and duty cycling"},
+        {"code": "battery_life_design", "label": "Designed for years of battery life with measured power budget"}
+      ]
+    },
+    {
+      "id": "iot_security",
+      "question": "How have you secured an IoT device or system?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_security", "label": "No security measures"},
+        {"code": "basic_auth", "label": "Basic authentication (API key or password)"},
+        {"code": "tls_certificates", "label": "TLS/SSL encryption and device certificates"},
+        {"code": "full_security", "label": "Secure boot, OTA update signing, and device attestation"}
+      ]
+    }
+  ],
+  "Embedded Engineer": [
+    {
+      "id": "emb_rtos_experience",
+      "question": "Have you developed software for a Real-Time Operating System (RTOS)?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_rtos", "label": "No — bare-metal or Arduino only"},
+        {"code": "basic_rtos", "label": "Basic task creation with FreeRTOS or similar"},
+        {"code": "rtos_features", "label": "Used semaphores, mutexes, queues, and interrupt handling"},
+        {"code": "rtos_design", "label": "Designed real-time task priorities and schedulability analysis"}
+      ]
+    },
+    {
+      "id": "emb_peripheral_drivers",
+      "question": "Have you written peripheral drivers or low-level hardware interfaces?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_drivers", "label": "No — used provided HAL/BSP libraries only"},
+        {"code": "configured_hal", "label": "Configured peripherals using HAL/SDK"},
+        {"code": "register_level", "label": "Written register-level code for SPI, I2C, UART, or GPIO"},
+        {"code": "custom_driver", "label": "Written complete device driver with interrupt handling and DMA"}
+      ]
+    },
+    {
+      "id": "emb_debugging",
+      "question": "What tools have you used for embedded system debugging?",
+      "type": "single_select",
+      "options": [
+        {"code": "serial_print", "label": "Serial/UART print statements only"},
+        {"code": "jtag_basic", "label": "JTAG/SWD debugger with breakpoints"},
+        {"code": "logic_analyzer", "label": "Logic analyzer and oscilloscope for signal analysis"},
+        {"code": "advanced_debugging", "label": "Trace debugger (ETM), memory profiling, and timing analysis"}
+      ]
+    },
+    {
+      "id": "emb_memory_constraints",
+      "question": "Have you optimized code for memory-constrained embedded systems?",
+      "type": "single_select",
+      "options": [
+        {"code": "not_constrained", "label": "Used hardware with plenty of RAM/Flash — not a concern"},
+        {"code": "aware_constraints", "label": "Aware of memory constraints but no active optimization"},
+        {"code": "memory_optimization", "label": "Used static allocation, avoided dynamic memory, reduced stack usage"},
+        {"code": "tight_memory", "label": "Worked within tight budgets (under 8KB RAM), using custom allocators or linker scripts"}
+      ]
+    },
+    {
+      "id": "emb_communication",
+      "question": "Which embedded communication protocols have you implemented?",
+      "type": "single_select",
+      "options": [
+        {"code": "uart_only", "label": "UART/serial only"},
+        {"code": "spi_i2c", "label": "SPI and I2C for sensor communication"},
+        {"code": "can_usb", "label": "CAN bus, USB, or Ethernet"},
+        {"code": "multiple_protocols", "label": "Multiple protocols with custom framing and error correction"}
+      ]
+    }
+  ],
+  "Product Manager": [
+    {
+      "id": "pm_product_discovery",
+      "question": "Have you conducted product discovery or user research to define a product?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_discovery", "label": "No — worked from requirements given by others"},
+        {"code": "informal_research", "label": "Informal user conversations or surveys"},
+        {"code": "structured_research", "label": "Structured interviews, journey maps, and pain point analysis"},
+        {"code": "continuous_discovery", "label": "Continuous discovery with user testing, analytics, and hypothesis validation"}
+      ]
+    },
+    {
+      "id": "pm_prioritization",
+      "question": "How do you prioritize features in a product backlog?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_framework", "label": "Based on intuition or stakeholder requests"},
+        {"code": "basic_priority", "label": "Simple high/medium/low tagging"},
+        {"code": "scoring_framework", "label": "Scoring framework (RICE, MoSCoW, or ICE)"},
+        {"code": "data_driven", "label": "Data-driven: impact metrics, A/B test results, and strategic alignment"}
+      ]
+    },
+    {
+      "id": "pm_roadmap_delivery",
+      "question": "Have you managed a product roadmap and delivered features on time?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_roadmap", "label": "No roadmap experience"},
+        {"code": "contributed_roadmap", "label": "Contributed to a roadmap maintained by someone else"},
+        {"code": "owned_roadmap", "label": "Owned a roadmap with milestones and tracked delivery"},
+        {"code": "shipped_impact", "label": "Shipped multiple features with measured business impact"}
+      ]
+    },
+    {
+      "id": "pm_stakeholder_management",
+      "question": "How do you handle conflicting stakeholder priorities?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_experience", "label": "No experience with stakeholder conflicts"},
+        {"code": "escalated", "label": "Escalated to manager for resolution"},
+        {"code": "facilitated_alignment", "label": "Facilitated alignment meetings with data to support decisions"},
+        {"code": "systematic_management", "label": "Systematic stakeholder management with documented trade-offs and buy-in"}
+      ]
+    },
+    {
+      "id": "pm_metrics_success",
+      "question": "How do you define and measure product success?",
+      "type": "single_select",
+      "options": [
+        {"code": "no_metrics", "label": "No formal metrics — success is subjective"},
+        {"code": "vanity_metrics", "label": "Basic metrics like downloads or page views"},
+        {"code": "business_metrics", "label": "Business metrics: retention, conversion, revenue impact"},
+        {"code": "north_star", "label": "North Star metric with guardrail metrics and a measurement plan pre-launch"}
+      ]
+    }
+  ]
+}

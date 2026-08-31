@@ -1,0 +1,391 @@
+[
+  {
+    "id": "PY001", "title": "Python for Everybody", "provider": "Coursera (University of Michigan)",
+    "url": "https://www.coursera.org/specializations/python", "level": "beginner", "duration_hours": 20,
+    "topics": ["variables", "functions", "loops", "conditionals", "data types"],
+    "skills_taught": ["Python", "Programming Fundamentals"], "prerequisites": [], "domain": "Python",
+    "rating": 4.8, "description": "The most popular Python course online. Covers fundamentals with practical exercises.", "is_free": true
+  },
+  {
+    "id": "PY002", "title": "Python Data Structures & Algorithms", "provider": "Udemy",
+    "url": "https://www.udemy.com/course/data-structures-algorithms-python/", "level": "intermediate", "duration_hours": 25,
+    "topics": ["lists", "dicts", "trees", "sorting", "searching", "time complexity"],
+    "skills_taught": ["Python", "Data Structures", "Algorithms"], "prerequisites": ["PY001"], "domain": "Python",
+    "rating": 4.7, "description": "Master data structures and algorithms using Python. Essential for coding interviews.", "is_free": false
+  },
+  {
+    "id": "PY003", "title": "Advanced Python: OOP, Decorators & Design Patterns", "provider": "Real Python",
+    "url": "https://realpython.com/learning-paths/object-oriented-programming-oop-python/", "level": "advanced", "duration_hours": 18,
+    "topics": ["OOP", "decorators", "generators", "metaclasses", "design patterns"],
+    "skills_taught": ["Python", "Object-Oriented Programming", "Design Patterns"], "prerequisites": ["PY002"], "domain": "Python",
+    "rating": 4.9, "description": "Deep dive into advanced Python features used in production codebases.", "is_free": true
+  },
+  {
+    "id": "ML001", "title": "Machine Learning by Andrew Ng", "provider": "Coursera (Stanford)",
+    "url": "https://www.coursera.org/specializations/machine-learning-introduction", "level": "intermediate", "duration_hours": 60,
+    "topics": ["supervised learning", "unsupervised learning", "neural networks", "regression", "classification"],
+    "skills_taught": ["Machine Learning", "NumPy", "Statistics", "Scikit-learn"], "prerequisites": ["PY001", "DS002"],
+    "domain": "Machine Learning", "rating": 4.9,
+    "description": "The gold standard ML course by Andrew Ng. Comprehensive theory and practice.", "is_free": true
+  },
+  {
+    "id": "ML002", "title": "Hands-On Machine Learning with Scikit-Learn & TensorFlow", "provider": "O'Reilly (Book + Labs)",
+    "url": "https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/", "level": "intermediate", "duration_hours": 40,
+    "topics": ["scikit-learn", "decision trees", "random forest", "SVMs", "ensemble methods"],
+    "skills_taught": ["Scikit-learn", "Machine Learning", "Feature Engineering"], "prerequisites": ["ML001", "DS001"],
+    "domain": "Machine Learning", "rating": 4.8,
+    "description": "The practitioner's ML book. Build real models end-to-end with hands-on labs.", "is_free": false
+  },
+  {
+    "id": "ML003", "title": "Deep Learning Specialization", "provider": "Coursera (deeplearning.ai)",
+    "url": "https://www.coursera.org/specializations/deep-learning", "level": "advanced", "duration_hours": 80,
+    "topics": ["neural networks", "CNN", "RNN", "transformers", "hyperparameter tuning", "batch norm"],
+    "skills_taught": ["Deep Learning", "TensorFlow", "Neural Networks", "Computer Vision", "NLP"],
+    "prerequisites": ["ML001", "PY002"], "domain": "Machine Learning", "rating": 4.9,
+    "description": "5-course specialization covering all aspects of deep learning by Andrew Ng.", "is_free": false
+  },
+  {
+    "id": "ML004", "title": "Practical Deep Learning for Coders", "provider": "fast.ai",
+    "url": "https://course.fast.ai/", "level": "intermediate", "duration_hours": 35,
+    "topics": ["fastai", "transfer learning", "fine-tuning", "computer vision", "NLP basics"],
+    "skills_taught": ["PyTorch", "Deep Learning", "Transfer Learning"], "prerequisites": ["PY002", "ML001"],
+    "domain": "Machine Learning", "rating": 4.8,
+    "description": "Top-down practical approach to deep learning. Build working models from day 1.", "is_free": true
+  },
+  {
+    "id": "ML005", "title": "MLOps Specialization", "provider": "Coursera (deeplearning.ai)",
+    "url": "https://www.coursera.org/specializations/machine-learning-engineering-for-production-mlops", "level": "advanced", "duration_hours": 50,
+    "topics": ["model deployment", "CI/CD for ML", "data pipeline", "monitoring", "feature store"],
+    "skills_taught": ["MLOps", "Docker", "Kubernetes", "ML Pipelines", "Model Monitoring"],
+    "prerequisites": ["ML003", "DO001"], "domain": "Machine Learning", "rating": 4.7,
+    "description": "Deploy, monitor, and maintain ML models in production. End-to-end MLOps workflows.", "is_free": false
+  },
+  {
+    "id": "DS001", "title": "Data Analysis with Pandas & NumPy", "provider": "Kaggle (Free)",
+    "url": "https://www.kaggle.com/learn/pandas", "level": "beginner", "duration_hours": 8,
+    "topics": ["pandas", "numpy", "dataframes", "data cleaning", "aggregation"],
+    "skills_taught": ["Pandas", "NumPy", "Data Manipulation"], "prerequisites": ["PY001"],
+    "domain": "Data Science", "rating": 4.8,
+    "description": "The fastest way to learn pandas for data analysis. Free with certificates.", "is_free": true
+  },
+  {
+    "id": "DS002", "title": "Statistics & Probability for Data Science", "provider": "Khan Academy / StatQuest",
+    "url": "https://www.youtube.com/c/joshstarmer", "level": "beginner", "duration_hours": 20,
+    "topics": ["probability", "distributions", "hypothesis testing", "regression", "bayesian thinking"],
+    "skills_taught": ["Statistics", "Probability", "Statistical Inference"], "prerequisites": [],
+    "domain": "Data Science", "rating": 4.9,
+    "description": "StatQuest makes statistics visual and intuitive. Essential foundation for ML.", "is_free": true
+  },
+  {
+    "id": "DS003", "title": "Data Visualization with Python (Matplotlib, Seaborn, Plotly)", "provider": "DataCamp",
+    "url": "https://www.datacamp.com/courses/introduction-to-data-visualization-with-matplotlib", "level": "intermediate", "duration_hours": 15,
+    "topics": ["matplotlib", "seaborn", "plotly", "dashboards", "charts"],
+    "skills_taught": ["Data Visualization", "Matplotlib", "Seaborn", "Plotly"], "prerequisites": ["DS001"],
+    "domain": "Data Science", "rating": 4.6,
+    "description": "Create compelling data visualizations with Python's leading libraries.", "is_free": false
+  },
+  {
+    "id": "DS004", "title": "SQL for Data Science", "provider": "Coursera (UC Davis)",
+    "url": "https://www.coursera.org/learn/sql-for-data-science", "level": "beginner", "duration_hours": 16,
+    "topics": ["SQL", "SELECT", "JOIN", "subqueries", "aggregation", "window functions"],
+    "skills_taught": ["SQL", "Database Querying", "Data Analysis"], "prerequisites": [],
+    "domain": "Data Science", "rating": 4.7,
+    "description": "Learn SQL from scratch through real-world data science scenarios.", "is_free": true
+  },
+  {
+    "id": "DS005", "title": "Applied Data Science Capstone", "provider": "Coursera (IBM)",
+    "url": "https://www.coursera.org/learn/applied-data-science-capstone", "level": "advanced", "duration_hours": 20,
+    "topics": ["end-to-end project", "EDA", "model selection", "storytelling", "deployment"],
+    "skills_taught": ["Data Science", "EDA", "Model Deployment", "Storytelling"],
+    "prerequisites": ["DS001", "DS003", "ML001"], "domain": "Data Science", "rating": 4.5,
+    "description": "Build a complete data science project from raw data to deployed insight.", "is_free": false
+  },
+  {
+    "id": "WD001", "title": "Responsive Web Design", "provider": "freeCodeCamp",
+    "url": "https://www.freecodecamp.org/learn/2022/responsive-web-design/", "level": "beginner", "duration_hours": 20,
+    "topics": ["HTML5", "CSS3", "Flexbox", "CSS Grid", "responsive design", "accessibility"],
+    "skills_taught": ["HTML", "CSS", "Responsive Design"], "prerequisites": [],
+    "domain": "Web Development", "rating": 4.8,
+    "description": "The definitive free course for HTML and CSS. Build 5 certification projects.", "is_free": true
+  },
+  {
+    "id": "WD002", "title": "JavaScript: The Complete Guide", "provider": "Udemy (Maximilian Schwarzmüller)",
+    "url": "https://www.udemy.com/course/javascript-the-complete-guide-2020-beginner-advanced/", "level": "beginner", "duration_hours": 52,
+    "topics": ["JS fundamentals", "DOM", "async/await", "promises", "ES6+", "OOP", "modules"],
+    "skills_taught": ["JavaScript", "DOM Manipulation", "Async Programming"], "prerequisites": ["WD001"],
+    "domain": "Web Development", "rating": 4.7,
+    "description": "The most comprehensive JavaScript course from beginner to advanced.", "is_free": false
+  },
+  {
+    "id": "WD003", "title": "React — The Complete Guide", "provider": "Udemy (Maximilian Schwarzmüller)",
+    "url": "https://www.udemy.com/course/react-the-complete-guide-incl-redux/", "level": "intermediate", "duration_hours": 48,
+    "topics": ["React", "hooks", "context", "Redux", "React Router", "Next.js intro"],
+    "skills_taught": ["React", "Redux", "React Router", "Component Design"], "prerequisites": ["WD002"],
+    "domain": "Web Development", "rating": 4.8,
+    "description": "Build large-scale React applications. Covers all modern patterns and hooks.", "is_free": false
+  },
+  {
+    "id": "WD004", "title": "Next.js 14 — App Router & Full Stack", "provider": "Vercel / Next.js Docs",
+    "url": "https://nextjs.org/learn", "level": "intermediate", "duration_hours": 20,
+    "topics": ["App Router", "Server Components", "API Routes", "Vercel deployment", "TypeScript"],
+    "skills_taught": ["Next.js", "TypeScript", "Full Stack Development"], "prerequisites": ["WD003"],
+    "domain": "Web Development", "rating": 4.9,
+    "description": "Official Next.js 14 course covering the App Router from the creators themselves.", "is_free": true
+  },
+  {
+    "id": "WD005", "title": "TypeScript Deep Dive", "provider": "Basarat Ali (Free Book)",
+    "url": "https://basarat.gitbook.io/typescript/", "level": "intermediate", "duration_hours": 15,
+    "topics": ["TypeScript types", "interfaces", "generics", "decorators", "TS config"],
+    "skills_taught": ["TypeScript"], "prerequisites": ["WD002"],
+    "domain": "Web Development", "rating": 4.8,
+    "description": "The best free TypeScript resource. Comprehensive and practical.", "is_free": true
+  },
+  {
+    "id": "BE001", "title": "Node.js — The Complete Guide", "provider": "Udemy (Maximilian Schwarzmüller)",
+    "url": "https://www.udemy.com/course/nodejs-the-complete-guide/", "level": "intermediate", "duration_hours": 40,
+    "topics": ["Node.js", "Express", "REST API", "authentication", "MongoDB", "deployment"],
+    "skills_taught": ["Node.js", "Express", "REST API Design", "MongoDB"], "prerequisites": ["WD002"],
+    "domain": "Backend Development", "rating": 4.7,
+    "description": "Build scalable backend applications with Node.js and Express.", "is_free": false
+  },
+  {
+    "id": "BE002", "title": "FastAPI — Modern Python Web APIs", "provider": "Official Docs + TestDriven.io",
+    "url": "https://fastapi.tiangolo.com/tutorial/", "level": "intermediate", "duration_hours": 20,
+    "topics": ["FastAPI", "Pydantic", "async", "OpenAPI", "dependency injection"],
+    "skills_taught": ["FastAPI", "REST API", "Python Backend"], "prerequisites": ["PY003"],
+    "domain": "Backend Development", "rating": 4.9,
+    "description": "Build production-grade APIs with FastAPI. The fastest Python framework.", "is_free": true
+  },
+  {
+    "id": "BE003", "title": "PostgreSQL & Database Design", "provider": "DataCamp / PostgreSQL Tutorial",
+    "url": "https://www.postgresqltutorial.com/", "level": "intermediate", "duration_hours": 18,
+    "topics": ["PostgreSQL", "schema design", "indexes", "transactions", "stored procedures"],
+    "skills_taught": ["PostgreSQL", "SQL", "Database Design"], "prerequisites": ["DS004"],
+    "domain": "Backend Development", "rating": 4.7,
+    "description": "Master PostgreSQL from schema design to performance optimization.", "is_free": true
+  },
+  {
+    "id": "BE004", "title": "System Design Interview — An Insider's Guide", "provider": "ByteByteGo",
+    "url": "https://bytebytego.com/courses/system-design-interview", "level": "advanced", "duration_hours": 30,
+    "topics": ["scalability", "load balancing", "caching", "databases", "microservices", "CAP theorem"],
+    "skills_taught": ["System Design", "Scalability", "Distributed Systems"], "prerequisites": ["BE001", "BE003"],
+    "domain": "Backend Development", "rating": 4.9,
+    "description": "Industry-standard system design preparation. Visual explanations of complex systems.", "is_free": false
+  },
+  {
+    "id": "CL001", "title": "AWS Cloud Practitioner Essentials", "provider": "AWS Training (Free)",
+    "url": "https://aws.amazon.com/training/digital/aws-cloud-practitioner-essentials/", "level": "beginner", "duration_hours": 10,
+    "topics": ["cloud concepts", "AWS services", "pricing", "security", "global infrastructure"],
+    "skills_taught": ["AWS", "Cloud Computing", "Cloud Fundamentals"], "prerequisites": [],
+    "domain": "Cloud Computing", "rating": 4.7,
+    "description": "Official free AWS foundational course. Perfect for CCP certification prep.", "is_free": true
+  },
+  {
+    "id": "CL002", "title": "AWS Solutions Architect Associate", "provider": "A Cloud Guru",
+    "url": "https://acloudguru.com/course/aws-certified-solutions-architect-associate-saa-c03", "level": "intermediate", "duration_hours": 45,
+    "topics": ["EC2", "S3", "RDS", "VPC", "IAM", "Lambda", "CloudFormation"],
+    "skills_taught": ["AWS", "Cloud Architecture", "Infrastructure Design"], "prerequisites": ["CL001"],
+    "domain": "Cloud Computing", "rating": 4.8,
+    "description": "The most in-demand cloud certification. Covers core AWS services in depth.", "is_free": false
+  },
+  {
+    "id": "CL003", "title": "Google Cloud Professional Data Engineer", "provider": "Coursera (Google)",
+    "url": "https://www.coursera.org/professional-certificates/gcp-data-engineering", "level": "advanced", "duration_hours": 60,
+    "topics": ["BigQuery", "Dataflow", "Pub/Sub", "Cloud Storage", "ML on GCP"],
+    "skills_taught": ["Google Cloud", "BigQuery", "Data Engineering", "Cloud ML"], "prerequisites": ["DS001", "CL001"],
+    "domain": "Cloud Computing", "rating": 4.6,
+    "description": "Official Google Cloud data engineering cert prep covering the full GCP data stack.", "is_free": false
+  },
+  {
+    "id": "DO001", "title": "Docker & Kubernetes: The Complete Guide", "provider": "Udemy (Stephen Grider)",
+    "url": "https://www.udemy.com/course/docker-and-kubernetes-the-complete-guide/", "level": "intermediate", "duration_hours": 22,
+    "topics": ["Docker", "containers", "Kubernetes", "pods", "services", "deployments"],
+    "skills_taught": ["Docker", "Kubernetes", "DevOps", "Containerization"], "prerequisites": ["BE001"],
+    "domain": "DevOps", "rating": 4.8,
+    "description": "Container orchestration from scratch. Docker to Kubernetes production deployment.", "is_free": false
+  },
+  {
+    "id": "DO002", "title": "GitHub Actions — CI/CD Complete Guide", "provider": "YouTube / GitHub Docs",
+    "url": "https://docs.github.com/en/actions", "level": "intermediate", "duration_hours": 10,
+    "topics": ["CI/CD", "GitHub Actions", "workflows", "automated testing", "deployment pipelines"],
+    "skills_taught": ["CI/CD", "GitHub Actions", "DevOps Automation"], "prerequisites": ["DO001"],
+    "domain": "DevOps", "rating": 4.7,
+    "description": "Automate testing and deployment with GitHub Actions. Industry-standard CI/CD.", "is_free": true
+  },
+  {
+    "id": "DO003", "title": "Linux Command Line Fundamentals", "provider": "The Odin Project",
+    "url": "https://www.theodinproject.com/paths/foundations", "level": "beginner", "duration_hours": 12,
+    "topics": ["bash", "shell scripting", "file system", "processes", "SSH", "permissions"],
+    "skills_taught": ["Linux", "Bash", "Shell Scripting", "Command Line"], "prerequisites": [],
+    "domain": "DevOps", "rating": 4.8,
+    "description": "Master the Linux command line — essential for any DevOps or backend engineer.", "is_free": true
+  },
+  {
+    "id": "MOB001", "title": "React Native — The Practical Guide", "provider": "Udemy (Maximilian Schwarzmüller)",
+    "url": "https://www.udemy.com/course/react-native-the-practical-guide/", "level": "intermediate", "duration_hours": 35,
+    "topics": ["React Native", "Expo", "navigation", "native APIs", "state management"],
+    "skills_taught": ["React Native", "Mobile Development", "Expo"], "prerequisites": ["WD003"],
+    "domain": "Mobile Development", "rating": 4.7,
+    "description": "Build iOS and Android apps with React Native. Cross-platform mobile development.", "is_free": false
+  },
+  {
+    "id": "MOB002", "title": "Flutter & Dart — The Complete Guide", "provider": "Udemy (Maximilian Schwarzmüller)",
+    "url": "https://www.udemy.com/course/learn-flutter-dart-to-build-ios-android-apps/", "level": "intermediate", "duration_hours": 42,
+    "topics": ["Flutter", "Dart", "widgets", "state management", "Firebase integration"],
+    "skills_taught": ["Flutter", "Dart", "Cross-Platform Development"], "prerequisites": [],
+    "domain": "Mobile Development", "rating": 4.7,
+    "description": "Build beautiful native apps for iOS and Android from a single codebase.", "is_free": false
+  },
+  {
+    "id": "CY001", "title": "Google Cybersecurity Professional Certificate", "provider": "Coursera (Google)",
+    "url": "https://www.coursera.org/professional-certificates/google-cybersecurity", "level": "beginner", "duration_hours": 120,
+    "topics": ["network security", "threat analysis", "SIEM", "Python for security", "Linux security"],
+    "skills_taught": ["Cybersecurity", "Network Security", "SIEM", "Python for Security"], "prerequisites": [],
+    "domain": "Cybersecurity", "rating": 4.8,
+    "description": "Job-ready cybersecurity skills in 6 months. Official Google certification program.", "is_free": false
+  },
+  {
+    "id": "CY002", "title": "Ethical Hacking — CEH Prep", "provider": "Udemy (Nathan House)",
+    "url": "https://www.udemy.com/course/complete-ethical-hacking-bootcamp-zero-to-mastery/", "level": "intermediate", "duration_hours": 30,
+    "topics": ["penetration testing", "reconnaissance", "exploitation", "social engineering", "Metasploit"],
+    "skills_taught": ["Ethical Hacking", "Penetration Testing", "Security Testing"], "prerequisites": ["CY001"],
+    "domain": "Cybersecurity", "rating": 4.7,
+    "description": "Complete ethical hacking bootcamp covering all CEH domains with hands-on labs.", "is_free": false
+  },
+  {
+    "id": "UX001", "title": "Google UX Design Professional Certificate", "provider": "Coursera (Google)",
+    "url": "https://www.coursera.org/professional-certificates/google-ux-design", "level": "beginner", "duration_hours": 100,
+    "topics": ["user research", "wireframing", "prototyping", "Figma", "usability testing", "design thinking"],
+    "skills_taught": ["UX Design", "Figma", "Wireframing", "User Research", "Prototyping"], "prerequisites": [],
+    "domain": "UI/UX Design", "rating": 4.8,
+    "description": "Industry-standard UX design foundation. Build a professional portfolio with 3 case studies.", "is_free": false
+  },
+  {
+    "id": "UX002", "title": "Figma for Beginners — UI Design Crash Course", "provider": "YouTube (DesignCourse)",
+    "url": "https://www.youtube.com/c/DesignCourse", "level": "beginner", "duration_hours": 8,
+    "topics": ["Figma basics", "frames", "components", "auto layout", "design systems"],
+    "skills_taught": ["Figma", "UI Design", "Design Systems"], "prerequisites": [],
+    "domain": "UI/UX Design", "rating": 4.9,
+    "description": "The fastest way to get started with Figma. Visual, practical, and free.", "is_free": true
+  },
+  {
+    "id": "UX003", "title": "Advanced UI Design: Design Systems & Tokens", "provider": "Figma Community",
+    "url": "https://www.figma.com/community/", "level": "advanced", "duration_hours": 15,
+    "topics": ["design tokens", "component library", "variant components", "design handoff"],
+    "skills_taught": ["Design Systems", "Advanced Figma", "UI Architecture"], "prerequisites": ["UX002"],
+    "domain": "UI/UX Design", "rating": 4.7,
+    "description": "Build scalable design systems that bridge the gap between design and development.", "is_free": true
+  },
+  {
+    "id": "DB001", "title": "Databases and SQL for Data Science with Python", "provider": "Coursera (IBM)",
+    "url": "https://www.coursera.org/learn/sql-data-science", "level": "beginner", "duration_hours": 20,
+    "topics": ["SQL", "relational databases", "joins", "subqueries", "Python-SQL integration"],
+    "skills_taught": ["SQL", "Relational Databases", "Database Design"], "prerequisites": ["PY001"],
+    "domain": "Database Engineering", "rating": 4.6,
+    "description": "Comprehensive SQL + Python integration for data-heavy applications.", "is_free": false
+  },
+  {
+    "id": "DB002", "title": "MongoDB — The Complete Developer's Guide", "provider": "Udemy (Maximilian Schwarzmüller)",
+    "url": "https://www.udemy.com/course/mongodb-the-complete-developers-guide/", "level": "intermediate", "duration_hours": 18,
+    "topics": ["MongoDB", "documents", "aggregation pipeline", "indexes", "Atlas"],
+    "skills_taught": ["MongoDB", "NoSQL", "Database Design"], "prerequisites": ["DS004"],
+    "domain": "Database Engineering", "rating": 4.7,
+    "description": "Master MongoDB from beginner to advanced. Covers aggregation, performance, and Atlas.", "is_free": false
+  },
+  {
+    "id": "DB003", "title": "Redis — The Complete Developer's Guide", "provider": "Udemy",
+    "url": "https://www.udemy.com/course/redis-the-complete-developers-guide-p/", "level": "intermediate", "duration_hours": 16,
+    "topics": ["Redis", "caching", "pub/sub", "streams", "data structures", "sessions"],
+    "skills_taught": ["Redis", "Caching", "Session Management"], "prerequisites": ["BE001"],
+    "domain": "Database Engineering", "rating": 4.8,
+    "description": "Build high-performance applications with Redis caching, pub/sub, and more.", "is_free": false
+  },
+  {
+    "id": "AI001", "title": "LangChain & LLM Apps — Full Course", "provider": "YouTube (freeCodeCamp)",
+    "url": "https://www.youtube.com/watch?v=lG7Uxts9SXs", "level": "intermediate", "duration_hours": 15,
+    "topics": ["LangChain", "LLMs", "RAG", "vector databases", "agents", "prompt engineering"],
+    "skills_taught": ["LangChain", "LLM Development", "RAG", "Prompt Engineering"], "prerequisites": ["PY002", "ML001"],
+    "domain": "AI Engineering", "rating": 4.8,
+    "description": "Build production LLM applications with LangChain. RAG, agents, chains, and more.", "is_free": true
+  },
+  {
+    "id": "AI002", "title": "Prompt Engineering for Developers", "provider": "DeepLearning.AI (Free)",
+    "url": "https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/", "level": "beginner", "duration_hours": 3,
+    "topics": ["prompt engineering", "zero-shot", "few-shot", "chain-of-thought", "output formatting"],
+    "skills_taught": ["Prompt Engineering", "LLM APIs", "AI Product Development"], "prerequisites": [],
+    "domain": "AI Engineering", "rating": 4.9,
+    "description": "Short course on prompt engineering by OpenAI + DeepLearning.AI. Essential for AI devs.", "is_free": true
+  },
+  {
+    "id": "AI003", "title": "Hugging Face NLP Course", "provider": "Hugging Face (Free)",
+    "url": "https://huggingface.co/learn/nlp-course/", "level": "intermediate", "duration_hours": 25,
+    "topics": ["transformers", "BERT", "fine-tuning", "tokenization", "text classification", "NER"],
+    "skills_taught": ["NLP", "Transformers", "Hugging Face", "Fine-Tuning"], "prerequisites": ["ML003"],
+    "domain": "AI Engineering", "rating": 4.8,
+    "description": "The official Hugging Face NLP course. Train and deploy transformer models.", "is_free": true
+  },
+  {
+    "id": "GIT001", "title": "Git & GitHub — The Complete Git Guide", "provider": "Udemy",
+    "url": "https://www.udemy.com/course/git-the-complete-guide/", "level": "beginner", "duration_hours": 8,
+    "topics": ["git basics", "branching", "merging", "pull requests", "rebasing", "GitHub workflows"],
+    "skills_taught": ["Git", "GitHub", "Version Control"], "prerequisites": [],
+    "domain": "DevOps", "rating": 4.8,
+    "description": "Master Git from scratch. Essential skill for every developer.", "is_free": false
+  },
+  {
+    "id": "TS001", "title": "TypeScript for React Developers", "provider": "YouTube (Jack Herrington)",
+    "url": "https://www.youtube.com/c/JackHerrington", "level": "intermediate", "duration_hours": 10,
+    "topics": ["TypeScript with React", "generics", "type guards", "utility types", "strict mode"],
+    "skills_taught": ["TypeScript", "React", "Type Safety"], "prerequisites": ["WD003", "WD005"],
+    "domain": "Web Development", "rating": 4.8,
+    "description": "Practical TypeScript patterns for building large-scale React applications.", "is_free": true
+  },
+  {
+    "id": "VIZ001", "title": "Tableau for Data Science & Business Intelligence", "provider": "Udemy",
+    "url": "https://www.udemy.com/course/tableau10/", "level": "beginner", "duration_hours": 10,
+    "topics": ["Tableau", "dashboards", "calculated fields", "LOD expressions", "story points"],
+    "skills_taught": ["Tableau", "Data Visualization", "Business Intelligence"], "prerequisites": [],
+    "domain": "Data Science", "rating": 4.6,
+    "description": "Build interactive dashboards in Tableau. Widely used in data analyst roles.", "is_free": false
+  },
+  {
+    "id": "SPARK001", "title": "Apache Spark with Python (PySpark)", "provider": "Udemy",
+    "url": "https://www.udemy.com/course/spark-and-python-for-big-data-with-pyspark/", "level": "advanced", "duration_hours": 14,
+    "topics": ["PySpark", "RDDs", "DataFrames", "Spark SQL", "machine learning on Spark"],
+    "skills_taught": ["Apache Spark", "PySpark", "Big Data", "Distributed Computing"],
+    "prerequisites": ["DS001", "PY002"], "domain": "Data Science", "rating": 4.7,
+    "description": "Big data processing with Apache Spark and Python. Handle datasets at scale.", "is_free": false
+  },
+  {
+    "id": "TF001", "title": "TensorFlow Developer Certificate Prep", "provider": "Coursera (deeplearning.ai)",
+    "url": "https://www.coursera.org/professional-certificates/tensorflow-in-practice", "level": "intermediate", "duration_hours": 40,
+    "topics": ["TensorFlow", "Keras", "CNNs", "NLP with TensorFlow", "time series"],
+    "skills_taught": ["TensorFlow", "Keras", "Deep Learning", "Computer Vision"],
+    "prerequisites": ["ML001", "PY002"], "domain": "Machine Learning", "rating": 4.8,
+    "description": "Official TensorFlow certification prep by deeplearning.ai. Build and deploy TF models.", "is_free": false
+  },
+  {
+    "id": "DJANGO001", "title": "Django for Beginners", "provider": "William Vincent (Book)",
+    "url": "https://djangoforbeginners.com/", "level": "intermediate", "duration_hours": 15,
+    "topics": ["Django", "ORM", "views", "templates", "authentication", "REST APIs"],
+    "skills_taught": ["Django", "Python Web Development", "ORM"], "prerequisites": ["PY003", "DS004"],
+    "domain": "Backend Development", "rating": 4.7,
+    "description": "Build production web applications with Django. From hello world to deployment.", "is_free": false
+  },
+  {
+    "id": "K8S001", "title": "Kubernetes for Developers", "provider": "Linux Foundation",
+    "url": "https://training.linuxfoundation.org/training/kubernetes-for-developers/", "level": "advanced", "duration_hours": 35,
+    "topics": ["pods", "deployments", "services", "ingress", "Helm", "persistent volumes", "RBAC"],
+    "skills_taught": ["Kubernetes", "Container Orchestration", "Cloud Native"], "prerequisites": ["DO001", "CL001"],
+    "domain": "DevOps", "rating": 4.8,
+    "description": "Production-grade Kubernetes for developers. Covers CKAD exam topics in depth.", "is_free": false
+  },
+  {
+    "id": "GRAPH001", "title": "Full Stack GraphQL — Apollo & React", "provider": "Odyssey by Apollo",
+    "url": "https://www.apollographql.com/tutorials/", "level": "intermediate", "duration_hours": 12,
+    "topics": ["GraphQL", "Apollo Server", "Apollo Client", "mutations", "subscriptions", "schema design"],
+    "skills_taught": ["GraphQL", "Apollo", "API Design"], "prerequisites": ["WD003", "BE001"],
+    "domain": "Backend Development", "rating": 4.7,
+    "description": "Official Apollo GraphQL tutorials. Build full-stack apps with GraphQL from scratch.", "is_free": true
+  }
+]

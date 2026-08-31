@@ -1,0 +1,82 @@
+[
+  {
+    "project_id": "PROJ001",
+    "project_name": "Role-Based REST API Platform",
+    "description": "Build a backend service with JWT authentication, role-based access control, PostgreSQL persistence, validation, logging, and OpenAPI documentation.",
+    "difficulty_level": "Intermediate",
+    "primary_skills": ["REST APIs", "Authentication", "PostgreSQL", "Node.js", "Express.js"],
+    "tech_stack": ["Node.js", "Express.js", "PostgreSQL", "JWT", "Docker"],
+    "role_alignment": ["Backend Developer", "Full Stack Developer", "Software Developer"],
+    "expected_outcomes": ["Secure login flow", "CRUD APIs", "database schema design", "API documentation", "containerized deployment"]
+  },
+  {
+    "project_id": "PROJ002",
+    "project_name": "Placement Analytics Dashboard",
+    "description": "Create an analytics dashboard that ingests CSV placement data, cleans it, models KPIs, and visualizes trends by branch, role, company, package, and skill demand.",
+    "difficulty_level": "Beginner",
+    "primary_skills": ["SQL", "Power BI", "Data Visualization", "Excel"],
+    "tech_stack": ["SQL", "Power BI", "Excel", "Python"],
+    "role_alignment": ["Data Analyst"],
+    "expected_outcomes": ["Cleaned dataset", "KPI model", "interactive dashboard", "insight summary"]
+  },
+  {
+    "project_id": "PROJ003",
+    "project_name": "Resume Skill Gap Analyzer",
+    "description": "Build an NLP pipeline that extracts resume skills, compares them against a selected role, and recommends missing skills with explainable matching.",
+    "difficulty_level": "Advanced",
+    "primary_skills": ["Python", "NLP", "Machine Learning", "FastAPI", "REST APIs"],
+    "tech_stack": ["Python", "FastAPI", "Sentence Transformers", "PostgreSQL", "Docker"],
+    "role_alignment": ["AI Engineer", "Backend Developer", "Machine Learning Engineer"],
+    "expected_outcomes": ["Skill extraction", "semantic matching", "readiness score API", "recommendation output"]
+  },
+  {
+    "project_id": "PROJ004",
+    "project_name": "MLOps Model Serving Pipeline",
+    "description": "Train a machine learning model, expose it through an API, containerize it, and add basic monitoring and CI/CD for repeatable deployment.",
+    "difficulty_level": "Advanced",
+    "primary_skills": ["Machine Learning", "Docker", "CI/CD", "FastAPI", "Python"],
+    "tech_stack": ["Python", "Scikit-learn", "FastAPI", "Docker", "GitHub Actions"],
+    "role_alignment": ["AI Engineer", "Machine Learning Engineer", "DevOps Engineer"],
+    "expected_outcomes": ["Trained model", "prediction API", "Docker image", "CI workflow", "deployment notes"]
+  },
+  {
+    "project_id": "PROJ005",
+    "project_name": "SOC Alert Triage Lab",
+    "description": "Create a cybersecurity lab that parses sample logs, maps suspicious events, assigns severity, and produces an incident response report.",
+    "difficulty_level": "Intermediate",
+    "primary_skills": ["Network Security", "SIEM", "Linux", "Incident Response", "Python"],
+    "tech_stack": ["Linux", "Python", "Wireshark", "ELK Stack"],
+    "role_alignment": ["Cybersecurity Analyst"],
+    "expected_outcomes": ["Log parser", "alert classification", "incident timeline", "response checklist"]
+  },
+  {
+    "project_id": "PROJ006",
+    "project_name": "Cloud-Native Deployment Pipeline",
+    "description": "Deploy a web service with Docker, CI/CD, cloud hosting, health checks, and rollback-ready release documentation.",
+    "difficulty_level": "Advanced",
+    "primary_skills": ["Docker", "CI/CD", "AWS", "Linux", "REST APIs"],
+    "tech_stack": ["Docker", "GitHub Actions", "AWS", "Nginx", "Linux"],
+    "role_alignment": ["DevOps Engineer", "Cloud Engineer", "Backend Developer"],
+    "expected_outcomes": ["Automated build", "cloud deployment", "health endpoint", "release checklist"]
+  },
+  {
+    "project_id": "PROJ007",
+    "project_name": "Full Stack Issue Tracker",
+    "description": "Build a Jira-style issue tracker with projects, tickets, comments, status workflows, filters, and team roles.",
+    "difficulty_level": "Intermediate",
+    "primary_skills": ["React.js", "Node.js", "REST APIs", "PostgreSQL", "Authentication"],
+    "tech_stack": ["React.js", "Node.js", "Express.js", "PostgreSQL", "Docker"],
+    "role_alignment": ["Full Stack Developer", "Frontend Developer", "Backend Developer"],
+    "expected_outcomes": ["Kanban workflow", "team permissions", "search filters", "API-backed UI"]
+  },
+  {
+    "project_id": "PROJ008",
+    "project_name": "Recommendation System Prototype",
+    "description": "Build a content-based or collaborative-filtering recommendation prototype with evaluation metrics and an API for serving recommendations.",
+    "difficulty_level": "Advanced",
+    "primary_skills": ["Machine Learning", "Python", "Pandas", "FastAPI"],
+    "tech_stack": ["Python", "Pandas", "Scikit-learn", "FastAPI"],
+    "role_alignment": ["AI Engineer", "Data Scientist", "Machine Learning Engineer"],
+    "expected_outcomes": ["Feature pipeline", "ranking logic", "evaluation metrics", "serving API"]
+  }
+]

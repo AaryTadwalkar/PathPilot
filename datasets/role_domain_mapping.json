@@ -1,0 +1,103 @@
+{
+  "Backend Developer": [
+    "Backend Systems",
+    "API Development",
+    "Database Applications",
+    "Cloud Services",
+    "Authentication Systems"
+  ],
+  "Frontend Developer": [
+    "Web Applications",
+    "User Interfaces",
+    "Design Systems",
+    "Single Page Applications"
+  ],
+  "Full Stack Developer": [
+    "Web Applications",
+    "Backend Systems",
+    "Database Applications",
+    "Cloud Services"
+  ],
+  "Software Developer": [
+    "Software Engineering",
+    "Web Applications",
+    "Automation",
+    "Data Structures"
+  ],
+  "Data Analyst": [
+    "Business Intelligence",
+    "Data Visualization",
+    "Reporting Analytics",
+    "SQL Analytics"
+  ],
+  "AI Engineer": [
+    "Machine Learning",
+    "NLP",
+    "Computer Vision",
+    "Recommendation Systems",
+    "Generative AI"
+  ],
+  "Cybersecurity Analyst": [
+    "Network Security",
+    "SOC Monitoring",
+    "Incident Response",
+    "Threat Detection",
+    "Vulnerability Assessment"
+  ],
+  "DevOps Engineer": [
+    "Cloud Infrastructure",
+    "CI/CD Automation",
+    "Container Orchestration",
+    "Monitoring",
+    "Infrastructure as Code"
+  ],
+  "Machine Learning Engineer": [
+    "Machine Learning Pipelines",
+    "Model Deployment",
+    "Feature Engineering",
+    "Experiment Tracking",
+    "Data Preprocessing"
+  ],
+  "Data Scientist": [
+    "Statistical Analysis",
+    "Machine Learning",
+    "Data Visualization",
+    "Predictive Modelling",
+    "Business Intelligence"
+  ],
+  "Cloud Engineer": [
+    "Cloud Infrastructure",
+    "Infrastructure as Code",
+    "Container Orchestration",
+    "Cost Optimization",
+    "Cloud Security"
+  ],
+  "Mobile App Developer": [
+    "Cross-Platform Development",
+    "Native Mobile Apps",
+    "Push Notifications",
+    "Mobile UI/UX",
+    "App Store Deployment"
+  ],
+  "IoT Engineer": [
+    "Embedded Systems",
+    "Sensor Integration",
+    "Real-Time Data Streams",
+    "Edge Computing",
+    "IoT Protocols"
+  ],
+  "Embedded Engineer": [
+    "Firmware Development",
+    "Real-Time Systems",
+    "Low-Level Hardware",
+    "Microcontroller Programming",
+    "Signal Processing"
+  ],
+  "Product Manager": [
+    "Product Roadmapping",
+    "Stakeholder Management",
+    "Market Research",
+    "Agile Delivery",
+    "User Story Mapping"
+  ]
+}

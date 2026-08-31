@@ -1,0 +1,253 @@
+[
+  {
+    "role": "Software Developer",
+
+    "primary_stack": [
+      "Python",
+      "Java",
+      "C++",
+      "Git",
+      "PostgreSQL"
+    ],
+
+    "secondary_stack": [
+      "Docker",
+      "Linux",
+      "CI/CD"
+    ]
+  },
+
+  {
+    "role": "Full Stack Developer",
+
+    "primary_stack": [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "PostgreSQL"
+    ],
+
+    "secondary_stack": [
+      "Docker",
+      "Redis",
+      "Next.js"
+    ]
+  },
+
+  {
+    "role": "Backend Developer",
+
+    "primary_stack": [
+      "Node.js",
+      "Express.js",
+      "FastAPI",
+      "PostgreSQL",
+      "Redis"
+    ],
+
+    "secondary_stack": [
+      "Docker",
+      "Kafka",
+      "CI/CD"
+    ]
+  },
+
+  {
+    "role": "Frontend Developer",
+
+    "primary_stack": [
+      "React.js",
+      "Next.js",
+      "JavaScript",
+      "TypeScript"
+    ],
+
+    "secondary_stack": [
+      "Redux",
+      "Tailwind CSS",
+      "Vite"
+    ]
+  },
+
+  {
+    "role": "AI Engineer",
+
+    "primary_stack": [
+      "Python",
+      "PyTorch",
+      "TensorFlow",
+      "FastAPI",
+      "Docker"
+    ],
+
+    "secondary_stack": [
+      "LangChain",
+      "FAISS",
+      "AWS"
+    ]
+  },
+
+  {
+    "role": "Machine Learning Engineer",
+
+    "primary_stack": [
+      "Python",
+      "Scikit-learn",
+      "PyTorch",
+      "TensorFlow",
+      "Docker"
+    ],
+
+    "secondary_stack": [
+      "MLflow",
+      "Kubeflow",
+      "FastAPI"
+    ]
+  },
+
+  {
+    "role": "Data Analyst",
+
+    "primary_stack": [
+      "SQL",
+      "Excel",
+      "Power BI",
+      "Tableau"
+    ],
+
+    "secondary_stack": [
+      "Python",
+      "Pandas"
+    ]
+  },
+
+  {
+    "role": "Data Scientist",
+
+    "primary_stack": [
+      "Python",
+      "Pandas",
+      "Scikit-learn",
+      "TensorFlow"
+    ],
+
+    "secondary_stack": [
+      "Jupyter",
+      "PyTorch",
+      "BigQuery"
+    ]
+  },
+
+  {
+    "role": "Cybersecurity Analyst",
+
+    "primary_stack": [
+      "Linux",
+      "Wireshark",
+      "Nmap",
+      "SIEM"
+    ],
+
+    "secondary_stack": [
+      "Metasploit",
+      "Burp Suite"
+    ]
+  },
+
+  {
+    "role": "DevOps Engineer",
+
+    "primary_stack": [
+      "Docker",
+      "Kubernetes",
+      "Terraform",
+      "Linux",
+      "AWS"
+    ],
+
+    "secondary_stack": [
+      "Jenkins",
+      "Ansible",
+      "Prometheus"
+    ]
+  },
+
+  {
+    "role": "Cloud Engineer",
+
+    "primary_stack": [
+      "AWS",
+      "Azure",
+      "GCP",
+      "Docker"
+    ],
+
+    "secondary_stack": [
+      "Terraform",
+      "Kubernetes"
+    ]
+  },
+
+  {
+    "role": "Mobile App Developer",
+
+    "primary_stack": [
+      "Flutter",
+      "React Native",
+      "Firebase"
+    ],
+
+    "secondary_stack": [
+      "Android Studio",
+      "Swift"
+    ]
+  },
+
+  {
+    "role": "IoT Engineer",
+
+    "primary_stack": [
+      "ESP32",
+      "Arduino",
+      "MQTT",
+      "Embedded C++"
+    ],
+
+    "secondary_stack": [
+      "Raspberry Pi",
+      "Firebase"
+    ]
+  },
+
+  {
+    "role": "Embedded Engineer",
+
+    "primary_stack": [
+      "Embedded C++",
+      "STM32",
+      "RTOS",
+      "UART"
+    ],
+
+    "secondary_stack": [
+      "Embedded Linux",
+      "PCB Design"
+    ]
+  },
+
+  {
+    "role": "Product Manager",
+
+    "primary_stack": [
+      "Jira",
+      "Confluence",
+      "Google Analytics"
+    ],
+
+    "secondary_stack": [
+      "Mixpanel",
+      "Figma"
+    ]
+  }
+]

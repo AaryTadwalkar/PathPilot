@@ -1,0 +1,19 @@
+{
+  "fundamentals": 35,
+  "beginner": 40,
+
+  "associate": 60,
+  "intermediate": 70,
+
+  "professional": 85,
+  "advanced": 100,
+
+  "expert": 100,
+
+  "specialization": 90,
+
+  "research": 95,
+
+  "unknown": 50
+}
+

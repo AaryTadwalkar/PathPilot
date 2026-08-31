@@ -1,0 +1,85 @@
+{
+  "functionality": [
+    {
+      "id": "PRJ_FUNCTIONALITY",
+      "question": "What is the highest level of functionality your strongest project currently supports?",
+      "type": "single_select",
+      "weight": 30,
+      "options": {
+        "idea_or_design_only": 10,
+        "basic_working_prototype": 45,
+        "complete_core_features": 75,
+        "production_like_feature_set": 100
+      }
+    }
+  ],
+  "deployment_exposure": [
+    {
+      "id": "PRJ_DEPLOYMENT",
+      "question": "Where has your strongest project been run or deployed?",
+      "type": "single_select",
+      "weight": 25,
+      "options": {
+        "not_deployed": 0,
+        "local_only": 40,
+        "public_hosting": 85,
+        "production_cloud_deployment": 100
+      }
+    }
+  ],
+  "workflow_exposure": [
+    {
+      "id": "PRJ_WORKFLOW",
+      "question": "Which engineering workflow practices did you use in the project?",
+      "type": "single_select",
+      "weight": 25,
+      "options": {
+        "none": 0,
+        "git_or_readme_only": 45,
+        "git_readme_and_testing": 75,
+        "git_testing_ci_cd_or_reviews": 100
+      }
+    }
+  ],
+  "ownership_contribution": [
+    {
+      "id": "PRJ_OWNERSHIP",
+      "question": "How much of the core implementation did you personally own?",
+      "type": "single_select",
+      "weight": 20,
+      "options": {
+        "less_than_25_percent": 25,
+        "25_to_50_percent": 55,
+        "50_to_80_percent": 80,
+        "more_than_80_percent": 100
+      }
+    }
+  ],
+  "experience_evaluation": [
+    {
+      "id": "EXP_DURATION",
+      "question": "How much practical software or technology experience do you have through internships, freelance work, open source, labs, or major projects?",
+      "type": "single_select",
+      "weight": 55,
+      "options": {
+        "none": 0,
+        "less_than_3_months": 30,
+        "3_to_6_months": 50,
+        "6_to_12_months": 75,
+        "more_than_12_months": 100
+      }
+    },
+    {
+      "id": "EXP_ENVIRONMENT",
+      "question": "What is the strongest environment where you have applied your skills?",
+      "type": "single_select",
+      "weight": 45,
+      "options": {
+        "course_or_classroom_only": 30,
+        "personal_projects": 55,
+        "team_or_hackathon_projects": 75,
+        "internship_freelance_or_production": 100
+      }
+    }
+  ]
+}

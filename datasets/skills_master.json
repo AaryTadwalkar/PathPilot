@@ -1,0 +1,170 @@
+[
+  {
+    "skill_name": "Python",
+    "category": "Programming Language",
+    "aliases": ["py", "python3"],
+    "cluster": "Software Engineering"
+  },
+  {
+    "skill_name": "JavaScript",
+    "category": "Programming Language",
+    "aliases": ["js", "ecmascript"],
+    "cluster": "Web Development"
+  },
+  {
+    "skill_name": "TypeScript",
+    "category": "Programming Language",
+    "aliases": ["ts"],
+    "cluster": "Web Development"
+  },
+  {
+    "skill_name": "React.js",
+    "category": "Frontend Framework",
+    "aliases": ["react", "reactjs"],
+    "cluster": "Frontend Engineering"
+  },
+  {
+    "skill_name": "Next.js",
+    "category": "Frontend Framework",
+    "aliases": ["next", "nextjs"],
+    "cluster": "Frontend Engineering"
+  },
+  {
+    "skill_name": "Node.js",
+    "category": "Runtime",
+    "aliases": ["node", "nodejs"],
+    "cluster": "Backend Engineering"
+  },
+  {
+    "skill_name": "Express.js",
+    "category": "Backend Framework",
+    "aliases": ["express", "expressjs"],
+    "cluster": "Backend Engineering"
+  },
+  {
+    "skill_name": "FastAPI",
+    "category": "Backend Framework",
+    "aliases": ["fast api"],
+    "cluster": "Backend Engineering"
+  },
+  {
+    "skill_name": "REST APIs",
+    "category": "API Design",
+    "aliases": ["rest", "restful api", "apis"],
+    "cluster": "Backend Engineering"
+  },
+  {
+    "skill_name": "Authentication",
+    "category": "Security",
+    "aliases": ["auth", "jwt", "oauth"],
+    "cluster": "Backend Engineering"
+  },
+  {
+    "skill_name": "PostgreSQL",
+    "category": "Database",
+    "aliases": ["postgres", "postgresql database"],
+    "cluster": "Databases"
+  },
+  {
+    "skill_name": "MongoDB",
+    "category": "Database",
+    "aliases": ["mongo", "mongodb database"],
+    "cluster": "Databases"
+  },
+  {
+    "skill_name": "SQL",
+    "category": "Database Query Language",
+    "aliases": ["structured query language"],
+    "cluster": "Data"
+  },
+  {
+    "skill_name": "Docker",
+    "category": "DevOps",
+    "aliases": ["containerization", "containers"],
+    "cluster": "Cloud and DevOps"
+  },
+  {
+    "skill_name": "Kubernetes",
+    "category": "DevOps",
+    "aliases": ["k8s"],
+    "cluster": "Cloud and DevOps"
+  },
+  {
+    "skill_name": "CI/CD",
+    "category": "DevOps",
+    "aliases": ["continuous integration", "continuous deployment"],
+    "cluster": "Cloud and DevOps"
+  },
+  {
+    "skill_name": "AWS",
+    "category": "Cloud",
+    "aliases": ["amazon web services"],
+    "cluster": "Cloud and DevOps"
+  },
+  {
+    "skill_name": "Azure",
+    "category": "Cloud",
+    "aliases": ["microsoft azure"],
+    "cluster": "Cloud and DevOps"
+  },
+  {
+    "skill_name": "Pandas",
+    "category": "Data Analysis",
+    "aliases": ["python pandas"],
+    "cluster": "Data"
+  },
+  {
+    "skill_name": "Power BI",
+    "category": "Business Intelligence",
+    "aliases": ["powerbi"],
+    "cluster": "Data"
+  },
+  {
+    "skill_name": "Tableau",
+    "category": "Business Intelligence",
+    "aliases": [],
+    "cluster": "Data"
+  },
+  {
+    "skill_name": "Machine Learning",
+    "category": "AI",
+    "aliases": ["ml"],
+    "cluster": "Artificial Intelligence"
+  },
+  {
+    "skill_name": "PyTorch",
+    "category": "AI Framework",
+    "aliases": ["torch"],
+    "cluster": "Artificial Intelligence"
+  },
+  {
+    "skill_name": "TensorFlow",
+    "category": "AI Framework",
+    "aliases": ["tf"],
+    "cluster": "Artificial Intelligence"
+  },
+  {
+    "skill_name": "NLP",
+    "category": "AI",
+    "aliases": ["natural language processing"],
+    "cluster": "Artificial Intelligence"
+  },
+  {
+    "skill_name": "Linux",
+    "category": "Operating System",
+    "aliases": ["unix"],
+    "cluster": "Systems"
+  },
+  {
+    "skill_name": "Network Security",
+    "category": "Cybersecurity",
+    "aliases": ["cyber security", "cybersecurity"],
+    "cluster": "Security"
+  },
+  {
+    "skill_name": "SIEM",
+    "category": "Cybersecurity",
+    "aliases": ["security information and event management"],
+    "cluster": "Security"
+  }
+]

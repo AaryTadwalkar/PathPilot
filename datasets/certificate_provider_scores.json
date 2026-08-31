@@ -1,0 +1,30 @@
+{
+  "Google": 95,
+  "AWS": 95,
+  "Amazon": 95,
+  "Microsoft": 92,
+  "Meta": 90,
+  "IBM": 88,
+  "Oracle": 85,
+  "Cisco": 85,
+  "NVIDIA": 90,
+  "DeepLearning.AI": 88,
+  "Docker": 82,
+
+  "Coursera": 75,
+  "Udemy": 65,
+  "edX": 78,
+  "Great Learning": 68,
+  "Simplilearn": 65,
+  "Scaler": 78,
+  "NPTEL": 85,
+  "Infosys Springboard": 70,
+  "LinkedIn Learning": 72,
+
+  "Harvard": 95,
+  "Stanford": 95,
+  "MIT": 98,
+
+  "Unknown": 50
+}
+

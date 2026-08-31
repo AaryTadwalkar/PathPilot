@@ -1,0 +1,54 @@
+{
+  "JS": "JavaScript",
+
+  "TS": "TypeScript",
+
+  "Node": "Node.js",
+
+  "Express": "Express.js",
+
+  "Mongo": "MongoDB",
+
+  "Postgres": "PostgreSQL",
+
+  "Postgre": "PostgreSQL",
+
+  "My SQL": "MySQL",
+
+  "PyTorch Lightning": "PyTorch",
+
+  "Tensorflow": "TensorFlow",
+
+  "Scikit Learn": "Scikit-learn",
+
+  "Fast API": "FastAPI",
+
+  "Flask API": "Flask",
+
+  "React Native": "React Native",
+
+  "NextJS": "Next.js",
+
+  "Firebase Realtime DB": "Firebase",
+
+  "AWS": "AWS/Azure/GCP",
+
+  "Azure": "AWS/Azure/GCP",
+
+  "GCP": "AWS/Azure/GCP",
+
+  "K8s": "Kubernetes",
+
+  "Docker Containers": "Docker",
+
+  "Redis Cache": "Redis",
+
+  "Linux OS": "Linux",
+
+  "MQTT Protocol": "MQTT",
+
+  "Arduino Uno": "Arduino",
+
+  "ESP": "ESP32"
+}
+

@@ -1,0 +1,52 @@
+{
+  "_comment_skill_effort": "Keys = role_criticality + _ + foundational_type from role_skill_mapping.json. Values = MINIMUM realistic hours (not average). Reduced from prior over-estimates.",
+  "skill_effort": {
+    "critical_foundational": 20,
+    "critical_specialized": 30,
+    "important_foundational": 8,
+    "important_specialized": 15,
+    "nice_to_have_foundational": 4,
+    "nice_to_have_specialized": 8
+  },
+  "_comment_project_effort": "Keys = difficulty_level from projects_dataset.json. Minimum hours for someone with relevant background.",
+  "project_effort": {
+    "Beginner": 8,
+    "Intermediate": 20,
+    "Advanced": 40
+  },
+  "_comment_cert_effort": "Keys = difficulty_level from certificates_dataset.json",
+  "cert_effort": {
+    "Beginner": 8,
+    "Intermediate": 15,
+    "Advanced": 30,
+    "Professional": 25
+  },
+  "_comment_resume_effort": "Keys = weak area labels from resume_engine weak_areas output",
+  "resume_action_effort": {
+    "low_impact_score": 3,
+    "low_grammar_score": 2,
+    "missing_keywords": 1,
+    "short_descriptions": 2,
+    "filler_words": 1,
+    "no_quantification": 2
+  },
+  "_comment_profile_effort": "Keys = profile field names checked by role_alignment_engine",
+  "profile_action_effort": {
+    "add_github": 0.5,
+    "add_linkedin": 0.5,
+    "add_career_interest": 0.25
+  },
+  "_comment_goal_buckets": "Week thresholds for Immediate/Short-Term/Medium-Term/Long-Term labels",
+  "goal_buckets": {
+    "Immediate": 2,
+    "Short-Term": 6,
+    "Medium-Term": 12
+  },
+  "_comment_defaults": "Fallback values used when a key is not found in the above maps",
+  "defaults": {
+    "skill_effort_hours": 12,
+    "project_effort_hours": 20,
+    "cert_effort_hours": 15,
+    "study_hours_per_week": 10
+  }
+}

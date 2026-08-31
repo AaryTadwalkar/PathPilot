@@ -1,0 +1,733 @@
+[
+  {
+    "role": "Backend Developer",
+    "skills": [
+      {
+        "skill_name": "REST APIs",
+        "category": "core",
+        "role_criticality": "critical",
+        "industry_demand": "very_high",
+        "practical_impact": "high",
+        "foundational_type": "foundational"
+      },
+      {
+        "skill_name": "Node.js",
+        "category": "core",
+        "role_criticality": "critical",
+        "industry_demand": "high",
+        "practical_impact": "high",
+        "foundational_type": "foundational"
+      },
+      {
+        "skill_name": "Express.js",
+        "category": "core",
+        "role_criticality": "important",
+        "industry_demand": "high",
+        "practical_impact": "high",
+        "foundational_type": "foundational"
+      },
+      {
+        "skill_name": "PostgreSQL",
+        "category": "core",
+        "role_criticality": "critical",
+        "industry_demand": "high",
+        "practical_impact": "high",
+        "foundational_type": "foundational"
+      },
+      {
+        "skill_name": "Authentication",
+        "category": "core",
+        "role_criticality": "critical",
+        "industry_demand": "high",
+        "practical_impact": "high",
+        "foundational_type": "foundational"
+      },
+      {
+        "skill_name": "Docker",
+        "category": "supporting",
+        "role_criticality": "important",
+        "industry_demand": "high",
+        "practical_impact": "medium",
+        "foundational_type": "specialized"
+      },
+      {
+        "skill_name": "CI/CD",
+        "category": "supporting",
+        "role_criticality": "important",
+        "industry_demand": "high",
+        "practical_impact": "medium",
+        "foundational_type": "specialized"
+      }
+    ]
+  },
+  {
+    "role": "Frontend Developer",
+    "skills": [
+      {
+        "skill_name": "JavaScript",
+        "category": "core",
+        "role_criticality": "critical",
+        "industry_demand": "very_high",
+        "practical_impact": "high",
+        "foundational_type": "foundational"
+      },
+      {
+        "skill_name": "TypeScript",
+        "category": "core",
+        "role_criticality": "important",
+        "industry_demand": "high",
+        "practical_impact": "high",
+        "foundational_type": "foundational"
+      },
+      {
+        "skill_name": "React.js",
+        "category": "core",
+        "role_criticality": "critical",
+        "industry_demand": "very_high",
+        "practical_impact": "high",
+        "foundational_type": "foundational"
+      },
+      {
+        "skill_name": "Next.js",
+        "category": "supporting",
+        "role_criticality": "important",
+        "industry_demand": "high",
+        "practical_impact": "medium",
+        "foundational_type": "specialized"
+      },
+      {
+        "skill_name": "REST APIs",
+        "category": "supporting",
+        "role_criticality": "important",
+        "industry_demand": "high",
+        "practical_impact": "medium",
+        "foundational_type": "foundational"
+      }
+    ]
+  },
+  {
+    "role": "Full Stack Developer",
+    "skills": [
+      {
+        "skill_name": "React.js",
+        "category": "core",
+        "role_criticality": "critical",
+        "industry_demand": "very_high",
+        "practical_impact": "high",
+        "foundational_type": "foundational"
+      },
+      {
+        "skill_name": "Node.js",
+        "category": "core",
+        "role_criticality": "critical",
+        "industry_demand": "high",
+        "practical_impact": "high",
+        "foundational_type": "foundational"
+      },
+      {
+        "skill_name": "REST APIs",
+        "category": "core",
+        "role_criticality": "critical",
+        "industry_demand": "very_high",
+        "practical_impact": "high",
+        "foundational_type": "foundational"
+      },
+      {
+        "skill_name": "PostgreSQL",
+        "category": "core",
+        "role_criticality": "important",
+        "industry_demand": "high",
+        "practical_impact": "high",
+        "foundational_type": "foundational"
+      },
+      {
+        "skill_name": "Authentication",
+        "category": "supporting",
+        "role_criticality": "important",
+        "industry_demand": "high",
+        "practical_impact": "medium",
+        "foundational_type": "foundational"
+      },
+      {
+        "skill_name": "Docker",
+        "category": "supporting",
+        "role_criticality": "important",
+        "industry_demand": "high",
+        "practical_impact": "medium",
+        "foundational_type": "specialized"
+      }
+    ]
+  },
+  {
+    "role": "Software Developer",
+    "skills": [
+      {
+        "skill_name": "Python",
+        "category": "core",
+        "role_criticality": "critical",
+        "industry_demand": "very_high",
+        "practical_impact": "high",
+        "foundational_type": "foundational"
+      },
+      {
+        "skill_name": "JavaScript",
+        "category": "core",
+        "role_criticality": "important",
+        "industry_demand": "very_high",
+        "practical_impact": "high",
+        "foundational_type": "foundational"
+      },
+      {
+        "skill_name": "SQL",
+        "category": "core",
+        "role_criticality": "important",
+        "industry_demand": "high",
+        "practical_impact": "high",
+        "foundational_type": "foundational"
+      },
+      {
+        "skill_name": "Git",
+        "category": "supporting",
+        "role_criticality": "important",
+        "industry_demand": "high",
+        "practical_impact": "medium",
+        "foundational_type": "foundational"
+      },
+      {
+        "skill_name": "REST APIs",
+        "category": "supporting",
+        "role_criticality": "important",
+        "industry_demand": "high",
+        "practical_impact": "medium",
+        "foundational_type": "foundational"
+      }
+    ]
+  },
+  {
+    "role": "Data Analyst",
+    "skills": [
+      {
+        "skill_name": "SQL",
+        "category": "core",
+        "role_criticality": "critical",
+        "industry_demand": "very_high",
+        "practical_impact": "high",
+        "foundational_type": "foundational"
+      },
+      {
+        "skill_name": "Excel",
+        "category": "core",
+        "role_criticality": "critical",
+        "industry_demand": "high",
+        "practical_impact": "high",
+        "foundational_type": "foundational"
+      },
+      {
+        "skill_name": "Power BI",
+        "category": "core",
+        "role_criticality": "important",
+        "industry_demand": "high",
+        "practical_impact": "high",
+        "foundational_type": "specialized"
+      },
+      {
+        "skill_name": "Tableau",
+        "category": "supporting",
+        "role_criticality": "important",
+        "industry_demand": "high",
+        "practical_impact": "medium",
+        "foundational_type": "specialized"
+      },
+      {
+        "skill_name": "Pandas",
+        "category": "supporting",
+        "role_criticality": "important",
+        "industry_demand": "high",
+        "practical_impact": "medium",
+        "foundational_type": "specialized"
+      }
+    ]
+  },
+  {
+    "role": "AI Engineer",
+    "skills": [
+      {
+        "skill_name": "Python",
+        "category": "core",
+        "role_criticality": "critical",
+        "industry_demand": "very_high",
+        "practical_impact": "high",
+        "foundational_type": "foundational"
+      },
+      {
+        "skill_name": "Machine Learning",
+        "category": "core",
+        "role_criticality": "critical",
+        "industry_demand": "very_high",
+        "practical_impact": "high",
+        "foundational_type": "foundational"
+      },
+      {
+        "skill_name": "PyTorch",
+        "category": "core",
+        "role_criticality": "important",
+        "industry_demand": "high",
+        "practical_impact": "high",
+        "foundational_type": "specialized"
+      },
+      {
+        "skill_name": "TensorFlow",
+        "category": "core",
+        "role_criticality": "important",
+        "industry_demand": "high",
+        "practical_impact": "high",
+        "foundational_type": "specialized"
+      },
+      {
+        "skill_name": "NLP",
+        "category": "supporting",
+        "role_criticality": "important",
+        "industry_demand": "high",
+        "practical_impact": "medium",
+        "foundational_type": "specialized"
+      },
+      {
+        "skill_name": "FastAPI",
+        "category": "supporting",
+        "role_criticality": "important",
+        "industry_demand": "high",
+        "practical_impact": "medium",
+        "foundational_type": "specialized"
+      }
+    ]
+  },
+  {
+    "role": "Cybersecurity Analyst",
+    "skills": [
+      {
+        "skill_name": "Linux",
+        "category": "core",
+        "role_criticality": "critical",
+        "industry_demand": "high",
+        "practical_impact": "high",
+        "foundational_type": "foundational"
+      },
+      {
+        "skill_name": "Network Security",
+        "category": "core",
+        "role_criticality": "critical",
+        "industry_demand": "very_high",
+        "practical_impact": "high",
+        "foundational_type": "foundational"
+      },
+      {
+        "skill_name": "SIEM",
+        "category": "core",
+        "role_criticality": "important",
+        "industry_demand": "high",
+        "practical_impact": "high",
+        "foundational_type": "specialized"
+      },
+      {
+        "skill_name": "Python",
+        "category": "supporting",
+        "role_criticality": "important",
+        "industry_demand": "high",
+        "practical_impact": "medium",
+        "foundational_type": "foundational"
+      },
+      {
+        "skill_name": "Incident Response",
+        "category": "supporting",
+        "role_criticality": "important",
+        "industry_demand": "high",
+        "practical_impact": "high",
+        "foundational_type": "specialized"
+      }
+    ]
+  },
+  {
+    "role": "DevOps Engineer",
+    "skills": [
+      {
+        "skill_name": "Linux",
+        "category": "core",
+        "role_criticality": "critical",
+        "industry_demand": "high",
+        "practical_impact": "high",
+        "foundational_type": "foundational"
+      },
+      {
+        "skill_name": "Docker",
+        "category": "core",
+        "role_criticality": "critical",
+        "industry_demand": "very_high",
+        "practical_impact": "high",
+        "foundational_type": "foundational"
+      },
+      {
+        "skill_name": "Kubernetes",
+        "category": "core",
+        "role_criticality": "critical",
+        "industry_demand": "very_high",
+        "practical_impact": "high",
+        "foundational_type": "specialized"
+      },
+      {
+        "skill_name": "CI/CD",
+        "category": "core",
+        "role_criticality": "critical",
+        "industry_demand": "high",
+        "practical_impact": "high",
+        "foundational_type": "foundational"
+      },
+      {
+        "skill_name": "AWS",
+        "category": "supporting",
+        "role_criticality": "important",
+        "industry_demand": "high",
+        "practical_impact": "medium",
+        "foundational_type": "specialized"
+      }
+    ]
+  },
+  {
+    "role": "Machine Learning Engineer",
+    "skills": [
+      {
+        "skill_name": "Python",
+        "category": "core",
+        "role_criticality": "critical",
+        "industry_demand": "very_high",
+        "practical_impact": "high",
+        "foundational_type": "foundational"
+      },
+      {
+        "skill_name": "Scikit-learn",
+        "category": "core",
+        "role_criticality": "critical",
+        "industry_demand": "high",
+        "practical_impact": "high",
+        "foundational_type": "specialized"
+      },
+      {
+        "skill_name": "PyTorch",
+        "category": "core",
+        "role_criticality": "critical",
+        "industry_demand": "high",
+        "practical_impact": "high",
+        "foundational_type": "specialized"
+      },
+      {
+        "skill_name": "MLflow",
+        "category": "supporting",
+        "role_criticality": "important",
+        "industry_demand": "high",
+        "practical_impact": "medium",
+        "foundational_type": "specialized"
+      },
+      {
+        "skill_name": "Docker",
+        "category": "supporting",
+        "role_criticality": "important",
+        "industry_demand": "high",
+        "practical_impact": "medium",
+        "foundational_type": "specialized"
+      },
+      {
+        "skill_name": "SQL",
+        "category": "supporting",
+        "role_criticality": "important",
+        "industry_demand": "high",
+        "practical_impact": "medium",
+        "foundational_type": "foundational"
+      }
+    ]
+  },
+  {
+    "role": "Data Scientist",
+    "skills": [
+      {
+        "skill_name": "Python",
+        "category": "core",
+        "role_criticality": "critical",
+        "industry_demand": "very_high",
+        "practical_impact": "high",
+        "foundational_type": "foundational"
+      },
+      {
+        "skill_name": "Pandas",
+        "category": "core",
+        "role_criticality": "critical",
+        "industry_demand": "high",
+        "practical_impact": "high",
+        "foundational_type": "specialized"
+      },
+      {
+        "skill_name": "Scikit-learn",
+        "category": "core",
+        "role_criticality": "critical",
+        "industry_demand": "high",
+        "practical_impact": "high",
+        "foundational_type": "specialized"
+      },
+      {
+        "skill_name": "Statistics",
+        "category": "core",
+        "role_criticality": "critical",
+        "industry_demand": "high",
+        "practical_impact": "high",
+        "foundational_type": "foundational"
+      },
+      {
+        "skill_name": "TensorFlow",
+        "category": "supporting",
+        "role_criticality": "important",
+        "industry_demand": "high",
+        "practical_impact": "medium",
+        "foundational_type": "specialized"
+      },
+      {
+        "skill_name": "SQL",
+        "category": "supporting",
+        "role_criticality": "important",
+        "industry_demand": "high",
+        "practical_impact": "medium",
+        "foundational_type": "foundational"
+      }
+    ]
+  },
+  {
+    "role": "Cloud Engineer",
+    "skills": [
+      {
+        "skill_name": "AWS",
+        "category": "core",
+        "role_criticality": "critical",
+        "industry_demand": "very_high",
+        "practical_impact": "high",
+        "foundational_type": "specialized"
+      },
+      {
+        "skill_name": "Terraform",
+        "category": "core",
+        "role_criticality": "critical",
+        "industry_demand": "high",
+        "practical_impact": "high",
+        "foundational_type": "specialized"
+      },
+      {
+        "skill_name": "Docker",
+        "category": "core",
+        "role_criticality": "critical",
+        "industry_demand": "very_high",
+        "practical_impact": "high",
+        "foundational_type": "foundational"
+      },
+      {
+        "skill_name": "Linux",
+        "category": "core",
+        "role_criticality": "important",
+        "industry_demand": "high",
+        "practical_impact": "high",
+        "foundational_type": "foundational"
+      },
+      {
+        "skill_name": "Kubernetes",
+        "category": "supporting",
+        "role_criticality": "important",
+        "industry_demand": "high",
+        "practical_impact": "medium",
+        "foundational_type": "specialized"
+      }
+    ]
+  },
+  {
+    "role": "Mobile App Developer",
+    "skills": [
+      {
+        "skill_name": "Flutter",
+        "category": "core",
+        "role_criticality": "critical",
+        "industry_demand": "high",
+        "practical_impact": "high",
+        "foundational_type": "specialized"
+      },
+      {
+        "skill_name": "Dart",
+        "category": "core",
+        "role_criticality": "important",
+        "industry_demand": "high",
+        "practical_impact": "high",
+        "foundational_type": "foundational"
+      },
+      {
+        "skill_name": "React Native",
+        "category": "supporting",
+        "role_criticality": "important",
+        "industry_demand": "high",
+        "practical_impact": "high",
+        "foundational_type": "specialized"
+      },
+      {
+        "skill_name": "Firebase",
+        "category": "core",
+        "role_criticality": "important",
+        "industry_demand": "high",
+        "practical_impact": "high",
+        "foundational_type": "specialized"
+      },
+      {
+        "skill_name": "REST APIs",
+        "category": "supporting",
+        "role_criticality": "important",
+        "industry_demand": "high",
+        "practical_impact": "medium",
+        "foundational_type": "foundational"
+      },
+      {
+        "skill_name": "JavaScript",
+        "category": "supporting",
+        "role_criticality": "important",
+        "industry_demand": "very_high",
+        "practical_impact": "medium",
+        "foundational_type": "foundational"
+      }
+    ]
+  },
+  {
+    "role": "IoT Engineer",
+    "skills": [
+      {
+        "skill_name": "Embedded C++",
+        "category": "core",
+        "role_criticality": "critical",
+        "industry_demand": "high",
+        "practical_impact": "high",
+        "foundational_type": "foundational"
+      },
+      {
+        "skill_name": "MQTT",
+        "category": "core",
+        "role_criticality": "critical",
+        "industry_demand": "high",
+        "practical_impact": "high",
+        "foundational_type": "specialized"
+      },
+      {
+        "skill_name": "Arduino",
+        "category": "core",
+        "role_criticality": "important",
+        "industry_demand": "high",
+        "practical_impact": "high",
+        "foundational_type": "foundational"
+      },
+      {
+        "skill_name": "Python",
+        "category": "supporting",
+        "role_criticality": "important",
+        "industry_demand": "high",
+        "practical_impact": "medium",
+        "foundational_type": "foundational"
+      },
+      {
+        "skill_name": "Linux",
+        "category": "supporting",
+        "role_criticality": "important",
+        "industry_demand": "high",
+        "practical_impact": "medium",
+        "foundational_type": "foundational"
+      }
+    ]
+  },
+  {
+    "role": "Embedded Engineer",
+    "skills": [
+      {
+        "skill_name": "Embedded C++",
+        "category": "core",
+        "role_criticality": "critical",
+        "industry_demand": "high",
+        "practical_impact": "high",
+        "foundational_type": "foundational"
+      },
+      {
+        "skill_name": "RTOS",
+        "category": "core",
+        "role_criticality": "critical",
+        "industry_demand": "high",
+        "practical_impact": "high",
+        "foundational_type": "specialized"
+      },
+      {
+        "skill_name": "STM32",
+        "category": "core",
+        "role_criticality": "important",
+        "industry_demand": "high",
+        "practical_impact": "high",
+        "foundational_type": "specialized"
+      },
+      {
+        "skill_name": "Linux",
+        "category": "supporting",
+        "role_criticality": "important",
+        "industry_demand": "high",
+        "practical_impact": "medium",
+        "foundational_type": "foundational"
+      },
+      {
+        "skill_name": "UART",
+        "category": "supporting",
+        "role_criticality": "important",
+        "industry_demand": "high",
+        "practical_impact": "medium",
+        "foundational_type": "specialized"
+      }
+    ]
+  },
+  {
+    "role": "Product Manager",
+    "skills": [
+      {
+        "skill_name": "Product Strategy",
+        "category": "core",
+        "role_criticality": "critical",
+        "industry_demand": "very_high",
+        "practical_impact": "high",
+        "foundational_type": "foundational"
+      },
+      {
+        "skill_name": "Jira",
+        "category": "core",
+        "role_criticality": "critical",
+        "industry_demand": "high",
+        "practical_impact": "high",
+        "foundational_type": "foundational"
+      },
+      {
+        "skill_name": "User Research",
+        "category": "core",
+        "role_criticality": "important",
+        "industry_demand": "high",
+        "practical_impact": "high",
+        "foundational_type": "foundational"
+      },
+      {
+        "skill_name": "Data Analysis",
+        "category": "supporting",
+        "role_criticality": "important",
+        "industry_demand": "high",
+        "practical_impact": "medium",
+        "foundational_type": "specialized"
+      },
+      {
+        "skill_name": "Agile",
+        "category": "supporting",
+        "role_criticality": "important",
+        "industry_demand": "high",
+        "practical_impact": "medium",
+        "foundational_type": "foundational"
+      }
+    ]
+  }
+]

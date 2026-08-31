@@ -1,0 +1,94 @@
+{
+  "DSA": "Data Structures & Algorithms",
+  "Data Structures": "Data Structures & Algorithms",
+  "Algorithms": "Data Structures & Algorithms",
+
+  "OOP": "OOPs",
+  "Object Oriented Programming": "OOPs",
+
+  "REST API": "REST APIs",
+  "RESTful APIs": "REST APIs",
+  "RESTful API": "REST APIs",
+
+  "GitHub": "Git/GitHub",
+  "Git and GitHub": "Git/GitHub",
+
+  "DBMS": "Database Basics",
+  "Databases": "Databases",
+
+  "ML": "Machine Learning",
+  "Machine Learning Algorithms": "Machine Learning Algorithms",
+
+  "DL": "Deep Learning",
+
+  "NLP Processing": "NLP",
+
+  "Computer Visioning": "Computer Vision",
+
+  "LLM": "LLMs",
+  "Large Language Models": "LLMs",
+
+  "Retrieval Augmented Generation": "RAG",
+
+  "CI CD": "CI/CD",
+  "CI-CD": "CI/CD",
+  "Continuous Integration": "CI/CD",
+
+  "K8s": "Kubernetes",
+
+  "Tensorflow": "TensorFlow/PyTorch",
+  "PyTorch": "TensorFlow/PyTorch",
+
+  "Frontend Frameworks": "React.js / Angular / Vue",
+  "React": "React.js / Angular / Vue",
+  "Angular": "React.js / Angular / Vue",
+  "Vue": "React.js / Angular / Vue",
+
+  "Backend Framework": "Backend Frameworks",
+
+  "Auth": "Authentication",
+  "Authentication Authorization": "Authentication & Authorization",
+
+  "Caching": "Redis/Caching",
+
+  "Infra as Code": "Infrastructure as Code",
+
+  "IaC": "Infrastructure as Code",
+
+  "Cloud Platforms": "AWS/Azure/GCP",
+
+  "Mobile Development": "Flutter / React Native / Android / iOS",
+
+  "Embedded Systems": "Embedded C/C++",
+
+  "IoT": "IoT Protocols",
+
+  "MQ Telemetry Transport": "MQTT",
+
+  "CV": "Computer Vision",
+
+  "Stats": "Statistics",
+
+  "EDA Analysis": "EDA",
+
+  "UI UX": "UI/UX Basics",
+
+  "SSR": "SSR/Next.js",
+
+  "NextJS": "SSR/Next.js",
+
+  "Next.js": "SSR/Next.js",
+
+  "API Integration Layer": "API Integration",
+
+  "Scalable Systems": "Scalable Architecture",
+
+  "System Scalability": "Scalability",
+
+  "Message Brokers": "Message Queues",
+
+  "Cloud Deployments": "Cloud Deployment",
+
+  "Model Serving": "Model Deployment"
+}
+

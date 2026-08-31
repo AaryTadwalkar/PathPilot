@@ -1,0 +1,57 @@
+
+{
+  "aws cloud practitioner": "AWS Certified Cloud Practitioner",
+  "aws certified cloud practitioner": "AWS Certified Cloud Practitioner",
+  "amazon cloud practitioner": "AWS Certified Cloud Practitioner",
+  "aws ccp": "AWS Certified Cloud Practitioner",
+
+  "aws solutions architect associate": "AWS Solutions Architect Associate",
+  "aws saa": "AWS Solutions Architect Associate",
+
+  "google data analytics": "Google Data Analytics Professional Certificate",
+  "google data analytics professional certificate": "Google Data Analytics Professional Certificate",
+
+  "google ux design": "Google UX Design Professional Certificate",
+
+  "google cybersecurity": "Google Cybersecurity Professional Certificate",
+
+  "azure fundamentals": "Microsoft Azure Fundamentals",
+  "az-900": "Microsoft Azure Fundamentals",
+
+  "azure developer associate": "Microsoft Azure Developer Associate",
+
+  "tensorflow developer": "TensorFlow Developer Certificate",
+
+  "deep learning specialization": "Deep Learning Specialization",
+
+  "machine learning specialization": "Machine Learning Specialization",
+
+  "meta frontend developer": "Meta Front-End Developer Certificate",
+  "meta backend developer": "Meta Back-End Developer Certificate",
+
+  "oracle java certification": "Oracle Java Certification",
+
+  "ccna": "Cisco CCNA",
+
+  "ibm data science": "IBM Data Science Professional Certificate",
+
+  "nptel dbms": "NPTEL DBMS",
+  "nptel python": "NPTEL Python",
+
+  "coursera python": "Coursera Python",
+
+  "udemy web development": "Udemy Web Development Bootcamp",
+
+  "full stack web development": "Full Stack Web Development",
+
+  "react certification": "React Development Certification",
+
+  "nodejs certification": "Node.js Development Certification",
+
+  "docker certification": "Docker Certification",
+
+  "kubernetes certification": "Kubernetes Certification",
+
+  "devops certification": "DevOps Certification"
+}
+
