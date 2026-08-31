@@ -350,16 +350,3 @@ docker logs pathpilot-db
 
 ---
 
-## 🤝 Contributors
-
-Built for the **AI-Powered Personalized Learning Path Recommender Hackathon 2026**
-
-| Name | Role |
-|---|---|
-| Aary Tadwalkar | Full-Stack AI Engineer |
-
----
-
-## 📄 License
-
-MIT License — see [LICENSE](LICENSE) for details.
