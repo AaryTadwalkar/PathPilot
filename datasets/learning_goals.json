@@ -1,204 +1,204 @@
 {
   "goals": [
     {
-      "id": "G001",
-      "name": "Master Python",
-      "description": "Become an expert in Python",
-      "keywords": ["Python", "Expert", "Master"],
-      "required_skills": ["Python"],
-      "recommended_course_ids": ["C001", "C002", "C003"],
-      "difficulty": "Hard",
+      "id": "GOAL_ML_ENGINEER",
+      "name": "Become a Machine Learning Engineer",
+      "description": "Master machine learning algorithms, deep learning, and deploy production ML models",
+      "keywords": ["machine learning", "ml engineer", "artificial intelligence", "ai", "deep learning", "data science ml"],
+      "required_skills": ["Python", "NumPy", "Pandas", "Statistics", "Scikit-learn", "TensorFlow", "PyTorch", "SQL", "Git", "Docker"],
+      "recommended_course_ids": ["PY001", "PY002", "DS002", "DS001", "DS004", "ML001", "ML002", "ML003", "ML005", "DO001"],
+      "difficulty": "intermediate",
+      "estimated_weeks": 32
+    },
+    {
+      "id": "GOAL_DATA_SCIENTIST",
+      "name": "Become a Data Scientist",
+      "description": "Master data analysis, statistical modeling, visualization, and storytelling with data",
+      "keywords": ["data scientist", "data science", "analytics", "data analysis", "statistics"],
+      "required_skills": ["Python", "Pandas", "NumPy", "Statistics", "SQL", "Matplotlib", "Scikit-learn", "Tableau"],
+      "recommended_course_ids": ["PY001", "DS004", "DS002", "DS001", "DS003", "ML001", "ML002", "DS005", "VIZ001", "SPARK001"],
+      "difficulty": "intermediate",
+      "estimated_weeks": 28
+    },
+    {
+      "id": "GOAL_FRONTEND_DEV",
+      "name": "Become a Frontend Developer",
+      "description": "Build beautiful, responsive web interfaces using modern frameworks like React and Next.js",
+      "keywords": ["frontend developer", "react developer", "web developer", "ui developer", "frontend", "react"],
+      "required_skills": ["HTML", "CSS", "JavaScript", "React", "TypeScript", "Next.js", "Git"],
+      "recommended_course_ids": ["GIT001", "WD001", "WD002", "WD003", "WD005", "WD004", "TS001"],
+      "difficulty": "beginner",
+      "estimated_weeks": 20
+    },
+    {
+      "id": "GOAL_FULLSTACK_DEV",
+      "name": "Become a Full Stack Developer",
+      "description": "Build complete web applications from frontend to backend, databases, and deployment",
+      "keywords": ["full stack developer", "fullstack", "web developer", "mern", "next.js developer"],
+      "required_skills": ["HTML", "CSS", "JavaScript", "React", "TypeScript", "Node.js", "SQL", "PostgreSQL", "Git", "Docker"],
+      "recommended_course_ids": ["GIT001", "WD001", "WD002", "WD003", "BE001", "DS004", "BE003", "DO001", "WD004", "BE004"],
+      "difficulty": "intermediate",
+      "estimated_weeks": 36
+    },
+    {
+      "id": "GOAL_BACKEND_DEV",
+      "name": "Become a Backend Developer",
+      "description": "Build scalable, high-performance server applications and REST APIs",
+      "keywords": ["backend developer", "api developer", "server-side", "node.js", "python backend", "fastapi"],
+      "required_skills": ["Python", "Node.js", "SQL", "PostgreSQL", "REST API", "Git", "Docker", "Redis"],
+      "recommended_course_ids": ["PY001", "PY003", "DS004", "BE002", "BE003", "DO003", "GIT001", "DO001", "DB003", "BE004"],
+      "difficulty": "intermediate",
+      "estimated_weeks": 24
+    },
+    {
+      "id": "GOAL_DEVOPS_ENGINEER",
+      "name": "Become a DevOps Engineer",
+      "description": "Automate infrastructure, build CI/CD pipelines, and manage cloud deployments at scale",
+      "keywords": ["devops", "devops engineer", "sre", "platform engineer", "cloud devops", "infrastructure"],
+      "required_skills": ["Linux", "Bash", "Git", "Docker", "Kubernetes", "CI/CD", "AWS", "Terraform"],
+      "recommended_course_ids": ["DO003", "GIT001", "DO001", "DO002", "CL001", "CL002", "K8S001"],
+      "difficulty": "intermediate",
+      "estimated_weeks": 26
+    },
+    {
+      "id": "GOAL_CLOUD_ARCHITECT",
+      "name": "Become a Cloud Architect",
+      "description": "Design and build scalable, secure cloud infrastructure on AWS, GCP, or Azure",
+      "keywords": ["cloud architect", "cloud engineer", "aws architect", "solution architect", "cloud"],
+      "required_skills": ["AWS", "Cloud Computing", "Networking", "Security", "Docker", "Kubernetes", "System Design"],
+      "recommended_course_ids": ["CL001", "CL002", "DO001", "K8S001", "BE004"],
+      "difficulty": "advanced",
+      "estimated_weeks": 30
+    },
+    {
+      "id": "GOAL_MOBILE_DEV_RN",
+      "name": "Become a React Native Mobile Developer",
+      "description": "Build cross-platform iOS and Android apps using React Native",
+      "keywords": ["mobile developer", "react native", "ios developer", "android developer", "mobile app"],
+      "required_skills": ["JavaScript", "React", "React Native", "TypeScript", "Git"],
+      "recommended_course_ids": ["WD001", "WD002", "WD003", "GIT001", "MOB001"],
+      "difficulty": "intermediate",
+      "estimated_weeks": 22
+    },
+    {
+      "id": "GOAL_FLUTTER_DEV",
+      "name": "Become a Flutter Developer",
+      "description": "Build beautiful cross-platform mobile apps with Flutter and Dart",
+      "keywords": ["flutter developer", "flutter", "dart", "cross platform mobile"],
+      "required_skills": ["Dart", "Flutter", "Mobile Development", "Git"],
+      "recommended_course_ids": ["GIT001", "MOB002"],
+      "difficulty": "beginner",
+      "estimated_weeks": 18
+    },
+    {
+      "id": "GOAL_CYBERSECURITY",
+      "name": "Become a Cybersecurity Analyst",
+      "description": "Protect systems, detect threats, and respond to security incidents",
+      "keywords": ["cybersecurity", "security analyst", "ethical hacker", "penetration testing", "infosec"],
+      "required_skills": ["Networking", "Linux", "Python", "SIEM", "Cybersecurity", "Ethical Hacking"],
+      "recommended_course_ids": ["DO003", "CY001", "CY002"],
+      "difficulty": "intermediate",
+      "estimated_weeks": 24
+    },
+    {
+      "id": "GOAL_UX_DESIGNER",
+      "name": "Become a UX/UI Designer",
+      "description": "Design intuitive, beautiful user interfaces with user research and Figma",
+      "keywords": ["ux designer", "ui designer", "product designer", "figma", "user experience"],
+      "required_skills": ["Figma", "User Research", "Wireframing", "Prototyping", "Design Systems"],
+      "recommended_course_ids": ["UX002", "UX001", "UX003"],
+      "difficulty": "beginner",
+      "estimated_weeks": 20
+    },
+    {
+      "id": "GOAL_DATA_ENGINEER",
+      "name": "Become a Data Engineer",
+      "description": "Build data pipelines, warehouses, and infrastructure that powers analytics and ML",
+      "keywords": ["data engineer", "data pipeline", "etl", "spark", "kafka", "data warehouse"],
+      "required_skills": ["Python", "SQL", "Apache Spark", "Cloud", "PostgreSQL", "BigQuery"],
+      "recommended_course_ids": ["PY001", "DS004", "DS001", "BE003", "SPARK001", "CL003"],
+      "difficulty": "advanced",
+      "estimated_weeks": 30
+    },
+    {
+      "id": "GOAL_AI_ENGINEER",
+      "name": "Become an AI Engineer",
+      "description": "Build AI-powered applications using LLMs, RAG, vector databases, and AI agents",
+      "keywords": ["ai engineer", "llm developer", "generative ai", "langchain", "ai application", "gpt"],
+      "required_skills": ["Python", "Prompt Engineering", "LangChain", "LLM APIs", "Vector Databases", "RAG"],
+      "recommended_course_ids": ["PY001", "PY002", "ML001", "AI002", "AI001", "AI003"],
+      "difficulty": "intermediate",
+      "estimated_weeks": 22
+    },
+    {
+      "id": "GOAL_PYTHON_DEV",
+      "name": "Master Python Programming",
+      "description": "Go from Python basics to advanced OOP, data structures, and production-grade code",
+      "keywords": ["python", "python developer", "python programming", "learn python"],
+      "required_skills": ["Python", "Data Structures", "Algorithms", "OOP", "Git"],
+      "recommended_course_ids": ["PY001", "PY002", "PY003", "GIT001"],
+      "difficulty": "beginner",
       "estimated_weeks": 12
     },
     {
-      "id": "G002",
-      "name": "Master Machine Learning",
-      "description": "Become an expert in Machine Learning",
-      "keywords": ["Machine Learning", "Expert", "Master"],
-      "required_skills": ["Machine Learning"],
-      "recommended_course_ids": ["C006", "C007", "C008"],
-      "difficulty": "Hard",
-      "estimated_weeks": 12
+      "id": "GOAL_DB_ENGINEER",
+      "name": "Become a Database Engineer",
+      "description": "Master relational and NoSQL databases, schema design, and performance tuning",
+      "keywords": ["database engineer", "dba", "sql developer", "database administrator", "mongodb"],
+      "required_skills": ["SQL", "PostgreSQL", "MongoDB", "Redis", "Database Design"],
+      "recommended_course_ids": ["DS004", "DB001", "BE003", "DB002", "DB003"],
+      "difficulty": "intermediate",
+      "estimated_weeks": 20
     },
     {
-      "id": "G003",
-      "name": "Master Deep Learning",
-      "description": "Become an expert in Deep Learning",
-      "keywords": ["Deep Learning", "Expert", "Master"],
-      "required_skills": ["Deep Learning"],
-      "recommended_course_ids": ["C011", "C012", "C013"],
-      "difficulty": "Hard",
-      "estimated_weeks": 12
+      "id": "GOAL_NLP_ENGINEER",
+      "name": "Become an NLP/NLU Engineer",
+      "description": "Build systems that understand and generate natural language using transformers and LLMs",
+      "keywords": ["nlp engineer", "natural language processing", "nlp", "transformers", "bert", "llm"],
+      "required_skills": ["Python", "NLP", "Transformers", "Hugging Face", "TensorFlow", "PyTorch"],
+      "recommended_course_ids": ["PY001", "PY002", "ML001", "ML003", "AI003", "AI001"],
+      "difficulty": "advanced",
+      "estimated_weeks": 28
     },
     {
-      "id": "G004",
-      "name": "Master Web Development",
-      "description": "Become an expert in Web Development",
-      "keywords": ["Web Development", "Expert", "Master"],
-      "required_skills": ["Web Development"],
-      "recommended_course_ids": ["C016", "C017", "C018"],
-      "difficulty": "Hard",
-      "estimated_weeks": 12
+      "id": "GOAL_SYSTEM_DESIGN",
+      "name": "Master System Design",
+      "description": "Design large-scale distributed systems for tech interviews and production architecture",
+      "keywords": ["system design", "distributed systems", "scalability", "architecture", "backend architecture"],
+      "required_skills": ["System Design", "Databases", "Caching", "Load Balancing", "Microservices"],
+      "recommended_course_ids": ["BE003", "DB003", "DO001", "BE004"],
+      "difficulty": "advanced",
+      "estimated_weeks": 16
     },
     {
-      "id": "G005",
-      "name": "Master Backend Development",
-      "description": "Become an expert in Backend Development",
-      "keywords": ["Backend Development", "Expert", "Master"],
-      "required_skills": ["Backend Development"],
-      "recommended_course_ids": ["C021", "C022", "C023"],
-      "difficulty": "Hard",
-      "estimated_weeks": 12
+      "id": "GOAL_DATA_ANALYST",
+      "name": "Become a Data Analyst",
+      "description": "Turn raw data into actionable insights using SQL, Excel, and visualization tools",
+      "keywords": ["data analyst", "business analyst", "analytics", "reporting", "tableau", "power bi"],
+      "required_skills": ["SQL", "Python", "Pandas", "Data Visualization", "Tableau", "Statistics"],
+      "recommended_course_ids": ["DS004", "DS002", "DS001", "DS003", "VIZ001"],
+      "difficulty": "beginner",
+      "estimated_weeks": 16
     },
     {
-      "id": "G006",
-      "name": "Master Data Science",
-      "description": "Become an expert in Data Science",
-      "keywords": ["Data Science", "Expert", "Master"],
-      "required_skills": ["Data Science"],
-      "recommended_course_ids": ["C026", "C027", "C028"],
-      "difficulty": "Hard",
-      "estimated_weeks": 12
+      "id": "GOAL_GRAPHQL_DEV",
+      "name": "Master GraphQL Development",
+      "description": "Build modern APIs with GraphQL, Apollo Server, and React integration",
+      "keywords": ["graphql", "apollo developer", "api developer graphql"],
+      "required_skills": ["GraphQL", "Apollo", "JavaScript", "React", "Node.js"],
+      "recommended_course_ids": ["WD002", "WD003", "BE001", "GRAPH001"],
+      "difficulty": "intermediate",
+      "estimated_weeks": 14
     },
     {
-      "id": "G007",
-      "name": "Master Cloud Computing",
-      "description": "Become an expert in Cloud Computing",
-      "keywords": ["Cloud Computing", "Expert", "Master"],
-      "required_skills": ["Cloud Computing"],
-      "recommended_course_ids": ["C031", "C032", "C033"],
-      "difficulty": "Hard",
-      "estimated_weeks": 12
-    },
-    {
-      "id": "G008",
-      "name": "Master DevOps",
-      "description": "Become an expert in DevOps",
-      "keywords": ["DevOps", "Expert", "Master"],
-      "required_skills": ["DevOps"],
-      "recommended_course_ids": ["C036", "C037", "C038"],
-      "difficulty": "Hard",
-      "estimated_weeks": 12
-    },
-    {
-      "id": "G009",
-      "name": "Master Cybersecurity",
-      "description": "Become an expert in Cybersecurity",
-      "keywords": ["Cybersecurity", "Expert", "Master"],
-      "required_skills": ["Cybersecurity"],
-      "recommended_course_ids": ["C041", "C042", "C043"],
-      "difficulty": "Hard",
-      "estimated_weeks": 12
-    },
-    {
-      "id": "G010",
-      "name": "Master Mobile Development",
-      "description": "Become an expert in Mobile Development",
-      "keywords": ["Mobile Development", "Expert", "Master"],
-      "required_skills": ["Mobile Development"],
-      "recommended_course_ids": ["C046", "C047", "C048"],
-      "difficulty": "Hard",
-      "estimated_weeks": 12
-    },
-    {
-      "id": "G011",
-      "name": "Master UI/UX Design",
-      "description": "Become an expert in UI/UX Design",
-      "keywords": ["UI/UX Design", "Expert", "Master"],
-      "required_skills": ["UI/UX Design"],
-      "recommended_course_ids": ["C051", "C052", "C053"],
-      "difficulty": "Hard",
-      "estimated_weeks": 12
-    },
-    {
-      "id": "G012",
-      "name": "Master Database Engineering",
-      "description": "Become an expert in Database Engineering",
-      "keywords": ["Database Engineering", "Expert", "Master"],
-      "required_skills": ["Database Engineering"],
-      "recommended_course_ids": ["C056", "C057", "C058"],
-      "difficulty": "Hard",
-      "estimated_weeks": 12
-    },
-    {
-      "id": "G013",
-      "name": "Master Advanced Python",
-      "description": "Become an expert in Advanced Python",
-      "keywords": ["Python", "Expert", "Master"],
-      "required_skills": ["Python"],
-      "recommended_course_ids": ["C003", "C004", "C005"],
-      "difficulty": "Hard",
-      "estimated_weeks": 12
-    },
-    {
-      "id": "G014",
-      "name": "Master Advanced Machine Learning",
-      "description": "Become an expert in Advanced Machine Learning",
-      "keywords": ["Machine Learning", "Expert", "Master"],
-      "required_skills": ["Machine Learning"],
-      "recommended_course_ids": ["C008", "C009", "C010"],
-      "difficulty": "Hard",
-      "estimated_weeks": 12
-    },
-    {
-      "id": "G015",
-      "name": "Master Advanced Deep Learning",
-      "description": "Become an expert in Advanced Deep Learning",
-      "keywords": ["Deep Learning", "Expert", "Master"],
-      "required_skills": ["Deep Learning"],
-      "recommended_course_ids": ["C013", "C014", "C015"],
-      "difficulty": "Hard",
-      "estimated_weeks": 12
-    },
-    {
-      "id": "G016",
-      "name": "Master Advanced Web Development",
-      "description": "Become an expert in Advanced Web Development",
-      "keywords": ["Web Development", "Expert", "Master"],
-      "required_skills": ["Web Development"],
-      "recommended_course_ids": ["C018", "C019", "C020"],
-      "difficulty": "Hard",
-      "estimated_weeks": 12
-    },
-    {
-      "id": "G017",
-      "name": "Master Advanced Backend Development",
-      "description": "Become an expert in Advanced Backend Development",
-      "keywords": ["Backend Development", "Expert", "Master"],
-      "required_skills": ["Backend Development"],
-      "recommended_course_ids": ["C023", "C024", "C025"],
-      "difficulty": "Hard",
-      "estimated_weeks": 12
-    },
-    {
-      "id": "G018",
-      "name": "Master Advanced Data Science",
-      "description": "Become an expert in Advanced Data Science",
-      "keywords": ["Data Science", "Expert", "Master"],
-      "required_skills": ["Data Science"],
-      "recommended_course_ids": ["C028", "C029", "C030"],
-      "difficulty": "Hard",
-      "estimated_weeks": 12
-    },
-    {
-      "id": "G019",
-      "name": "Master Advanced Cloud Computing",
-      "description": "Become an expert in Advanced Cloud Computing",
-      "keywords": ["Cloud Computing", "Expert", "Master"],
-      "required_skills": ["Cloud Computing"],
-      "recommended_course_ids": ["C033", "C034", "C035"],
-      "difficulty": "Hard",
-      "estimated_weeks": 12
-    },
-    {
-      "id": "G020",
-      "name": "Master Advanced DevOps",
-      "description": "Become an expert in Advanced DevOps",
-      "keywords": ["DevOps", "Expert", "Master"],
-      "required_skills": ["DevOps"],
-      "recommended_course_ids": ["C038", "C039", "C040"],
-      "difficulty": "Hard",
-      "estimated_weeks": 12
+      "id": "GOAL_MLOPS",
+      "name": "Become an MLOps Engineer",
+      "description": "Bridge the gap between ML and DevOps: deploy, monitor, and maintain ML models in production",
+      "keywords": ["mlops", "ml engineer production", "model deployment", "ml pipeline"],
+      "required_skills": ["Python", "Docker", "Kubernetes", "CI/CD", "ML Pipelines", "Monitoring"],
+      "recommended_course_ids": ["PY002", "ML001", "ML003", "DO001", "DO002", "K8S001", "ML005"],
+      "difficulty": "advanced",
+      "estimated_weeks": 30
     }
   ]
 }
