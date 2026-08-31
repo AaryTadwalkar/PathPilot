@@ -1,36 +1,12 @@
-export const dynamic = 'force-dynamic'
-
 "use client";
 
 /**
  * app/career-path/weekly-plan/page.tsx
  * ======================================
  * Dedicated full-page Weekly Study Plan view for a Career Path.
- *
- * What this file does:
- *   Renders a detailed week-by-week study plan for a saved career path.
- *   Fetches path data from GET /career/path/{id} using the id passed as
- *   a URL search param (?id=N).
- *
- * Overall design:
- *   Standalone page, dark theme matching the career-path page.
- *   Each week is a card showing:
- *     - Week number + goal bucket badge
- *     - Total effort hours (milestone effort) vs study capacity
- *     - Actual weeks this spans at current pace (effort / study_hours_per_week)
- *     - Each milestone: icon, title, delta, type badge, primary skills
- *   Summary header shows total milestones, total hours, total ETA weeks,
- *   study hours/week.
- *
- * Elements:
- *   WeekCard       One week's card with milestone rows inside
- *   WeeklyPlanPage Main page component (default export)
- *
- * Final output:
- *   A clean, scrollable weekly plan view. Linked from /career-path results.
  */
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import {
   ArrowLeft, Clock, Brain, Code2, Award, Zap,
   CheckCircle2, Circle, CalendarDays, Target,
@@ -93,7 +69,7 @@ function WeekCard({
   const accentClass = BUCKET_ACCENT[bucket] ?? "border-l-slate-500";
   const totalEffortHours = week.hours_this_week;
   const spansWeeks = Math.ceil(totalEffortHours / studyHoursPerWeek);
-  const allDone = milestones.every(m => completedIds.has(m.id));
+  const allDone = milestones.length > 0 && milestones.every(m => completedIds.has(m.id));
   const doneCnt = milestones.filter(m => completedIds.has(m.id)).length;
 
   return (
@@ -205,10 +181,10 @@ function WeekCard({
 }
 
 // ============================================================
-// Main Page
+// Main Page Content
 // ============================================================
 
-export default function WeeklyPlanPage() {
+function WeeklyPlanContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const pathId = searchParams.get("id");
@@ -361,4 +337,13 @@ export default function WeeklyPlanPage() {
       </div>
     </div>
   );
+}
+
+// 2. Export the main page wrapped inside a Suspense block
+export default function Page() {
+  return (
+    <Suspense fallback={<div className="p-8 text-center text-gray-500">Loading Weekly Plan...</div>}>
+      <WeeklyPlanContent />
+    </Suspense>
+  )
 }
