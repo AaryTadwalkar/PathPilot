@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: pathpilot-backend
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: DATABASE_URL
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: SECRET_KEY
+        sync: false
+      - key: SMTP_USERNAME
+        sync: false
+      - key: SMTP_PASSWORD
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
+      - key: PRS_DETERMINISTIC_MODE
+        value: "false"
+      - key: PATHPILOT_DATASET_DIR
+        value: "../datasets"

@@ -138,7 +138,7 @@ from fastapi.middleware.cors import CORSMiddleware
 # Make sure this block is right under your 'app = FastAPI()' line!
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=os.getenv("ALLOWED_ORIGINS", "*").split(","),
+    allow_origins=os.getenv("FRONTEND_URL", "*").split(","),
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
